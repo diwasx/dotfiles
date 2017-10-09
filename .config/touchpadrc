@@ -1,0 +1,14 @@
+[autodisable]
+DisableWhenMousePluggedIn=true
+KeyboardActivityTimeoutMs=240
+
+[parameters]
+CircScrollDelta=5.73
+HorizScrollDelta=2.6
+InvertVertScroll=true
+MaxTapMove=3.7
+OneFingerTapButton=LeftButton
+Tapping=false
+ThreeFingerTapButton=MiddleButton
+TwoFingerTapButton=RightButton
+VertScrollDelta=2.2

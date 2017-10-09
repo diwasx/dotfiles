@@ -26,6 +26,7 @@ set clipboard=unnamedplus
 nnoremap j gj
 nnoremap k gk
 inoremap { {<CR>}<up><end><CR>
+nnoremap <C-n> :noh<CR>
 
 set nocompatible              " be iMproved, required
 filetype off                  " required

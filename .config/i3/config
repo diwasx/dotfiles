@@ -30,11 +30,23 @@ exec banshee
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+#mode "moveit" {
+#    bindsym Up move up 20px
+#    bindsym Left move left 20px
+#    bindsym Down move down 20px
+#    bindsym Right move right 20px
+#    bindsym Mod4+m mode "default"
+#}
+#bindsym Mod4+m focus floating; mode "moveit"
+
+#<super>+m will focus the last active floating wind
 # start a terminal
-bindsym $mod+Return exec konsole #i3-sensible-terminal
+bindsym $mod+Shift+Return exec konsole #i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run -font "System San Francisco Display 17"
@@ -57,10 +69,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left 30
+bindsym $mod+Shift+j move down 30
+bindsym $mod+Shift+k move up 30
+bindsym $mod+Shift+l move right 30
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -69,10 +81,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+g split h
+#bindsym $mod+g split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+#bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -80,7 +92,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
 
-bindsym $mod+w layout tabbed
+#bindsym $mod+w layout tabbed
 #bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -106,7 +118,7 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id urxvt -name dropdown -e tmux
+exec --no-startup-id urxvt -name dropdown #-e tmux
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 
 
@@ -189,7 +201,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r exec terminator -e ranger
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -232,8 +244,12 @@ bindsym mod1+control+comma exec banshee --stop --set-volume=80
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod+Shift+equal exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod+Shift+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 
 # Sreen brightness controls
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -244,6 +260,7 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /home/lanaya/Documents/Script/toggletouchpad.sh
+bindsym $mod+Print exec ~/Documents/Script/ScreenShot.sh
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -253,9 +270,12 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+Shift+e exec XDG_CURRENT_DESKTOP=kde dolphin 
 for_window [class="dolphin"] floating enable
-for_window [class="vlc"] floating enable
+#for_window [class="vlc"] floating enable
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+
+bindsym mod1+control+m exec firefox /home/lanaya/Documents/SavedPages/VimMovement.htm 
+bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 
 #startup
 exec pactl set-sink-volume 0 32768

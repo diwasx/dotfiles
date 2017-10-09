@@ -1,0 +1,70 @@
+firewall-cmd --add-port=3306/tcp 
+firewall-cmd --permanent --add-port=3306/tcp
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.%' IDENTIFIED BY '' WITH GRANT OPTION;
+archey      //logo
+du -sh
+du -hs * | sort -h
+ctrl w  //bash bs word
+alt d   //bash del word
+systemctl | grep running
+nmap -sP 192.168.1.* //scan all ip
+cat /etc/resolv.conf        //dns 
+grep -rnw '/path/to/somewhere/' -e 'pattern'        //find text from files
+ln -s <new path> <new shortcut>
+udisksctl mount -b /dev/sd
+ctrl+h //backspace 
+
+#git
+git config --global user.email "diwasx@gmail.com"
+git remote add origin https*
+git push        
+git push origin master
+//config gitpage mai lekhcha
+
+#pacman
+pacman -Scc
+yaourt -Syu --aur
+vblank_mode=0 optirun glxgears
+optirun -b none nvidia-settings -c :8
+kwin_x11
+/usr/share/grub/background.png
+
+#vim
+
+    Shift+<< - shift current line left
+    Shift+>> - shift current line right
+    :noh //no highlighting
+    w-e,b-ge   0,$
+    alt+ctrl+m
+@windows
+    vim -p (with tabs)
+    vim -o -O verti/horizontally
+    ctrl-w
+        s //split verti
+        w //split hori
+        :new //split hori with new file
+        T //window to tab
+        :all //make one window for all files including tabs
+
+
+#vscode
+dotnet new console
+dotnet run
+
+#python
+repr        #convert to string
+input       #take input,input is always as a string
+
+#java
+<projectDescription>
+    <name>PROJECTNAME</name>
+</projectDescription>
+
+:ProjectCreate . -n java
+
+#i3
+xmodmap     //keys
+xprop       //detail about window
+feh --bg-scale <wallpaper>
+
+

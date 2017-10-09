@@ -1,0 +1,13 @@
+search pack
+noh
+search idm
+open_with
+shell ls
+shell cd ..
+find P
+
+-la
+shell -la
+find h
+find 
+find b
