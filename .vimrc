@@ -26,7 +26,9 @@ set clipboard=unnamedplus
 nnoremap j gj
 nnoremap k gk
 inoremap { {<CR>}<up><end><CR>
-nnoremap <C-n> :noh<CR>
+nnoremap <C-N> :noh<CR>
+nnoremap <C-F> :FZF<CR>
+
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -43,12 +45,22 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'hzchirs/vim-material'
 Plugin 'beigebrucewayne/Turtles'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
+Plugin 'junegunn/fzf.vim'
+Plugin 'dylanaraps/wal'
+
 "colorscheme vim-material
-colorscheme turtles
-hi MatchParen cterm=none ctermbg=green ctermfg=blue
+"colorscheme turtles
+"colorscheme wal
+"automatically use wal scheme if not selected
+hi MatchParen cterm=none ctermbg=grey ctermfg=blue
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
-highlight LineNr ctermfg=grey
+highlight LineNr ctermfg=grey 
+hi Normal guibg=NONE ctermbg=NONE
 let g:EclimCompletionMethod = 'omnifunc'
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

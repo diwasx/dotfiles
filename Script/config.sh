@@ -13,3 +13,5 @@ cp -r ~/.config/vis/ /DriveE/Projects/Git/i3wm/.config
 mkdir /DriveE/Projects/Git/i3wm/Script
 cp -r ~/Documents/Script /DriveE/Projects/Git/i3wm
 cp ~/Desktop/ManjFoo /DriveE/Projects/Git/i3wm/.config/
+cp -r ~/.ncmpcpp /DriveE/Projects/Git/i3wm/
+cp -r ~/.config/pulse/ /DriveE/Projects/Git/i3wm/.config

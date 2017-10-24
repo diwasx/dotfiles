@@ -4,6 +4,13 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+#Dependency
+#wal
+#rofi
+#font-awesome
+#compton
+#expect
+
 
 # i3 config file (v4)
 #
@@ -15,7 +22,6 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:System San Francisco Display 8
-exec banshee 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -41,8 +47,11 @@ floating_modifier $mod
 
 #<super>+m will focus the last active floating wind
 # start a terminal
-bindsym $mod+Shift+Return exec konsole #i3-sensible-terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Shift+Return exec terminator #i3-sensible-terminal
+bindsym $mod+Return exec urxvt
+
+#hide titlebar
+new_window 1pixel
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -94,6 +103,7 @@ bindsym $mod+f fullscreen toggle
 
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout toggle split
+bindsym $mod+e exec terminator -e vis
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -111,14 +121,13 @@ set $workspace1 "1. Terminal"
 set $workspace2 "2. FireFox"
 set $workspace8 "8. VirtualBox"
 set $workspace9 "9. Downloads"
-set $workspace10 "10. Music"
-
+set $workspace10 "10. Music"
 ###---Dropdown---###
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] resize set 700 500 #625 400
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id urxvt -name dropdown #-e tmux
+exec --no-startup-id urxvt -name dropdown -e tmux
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 
 
@@ -130,10 +139,10 @@ workspace $workspace8 gaps inner 0
 workspace $workspace8 gaps outer 0
 workspace $workspace10 gaps inner 0
 workspace $workspace10 gaps outer 0
-bindsym $mod+Shift+y resize shrink width 10 px or 10ppt
-bindsym $mod+Shift+u resize shrink height 10 px or 10ppt
+bindsym $mod+Shift+u resize shrink width 10 px or 10ppt
+bindsym $mod+Shift+o resize shrink height 10 px or 10ppt
 bindsym $mod+Shift+i resize grow height 10 px or 10ppt
-bindsym $mod+Shift+o resize grow width 10 px or 10ppt
+bindsym $mod+Shift+y resize grow width 10 px or 10ppt
 
 bindsym $mod+t split toggle
 bindsym $mod+Shift+t gaps inner current set 15; gaps outer current set 15
@@ -201,13 +210,15 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r exec terminator -e ranger
+bindsym $mod+r exec urxvt -e ranger
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-set $bg-color 	         #2f343f
-set $blue                #395c96 
+set $bg-color 	         #243166
+#2f343f
+set $blue                #2525d1
+set $blue1               #395c96 
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -215,41 +226,106 @@ set $urgent-bg-color     #E53935
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $blue           $blue          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+# client.focused          $blue1           $blue1          $text-color          #00ff00
+# client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+# client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+# client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 
 bar {
         position top
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         colors {
-		background $bg-color
-	    	separator #757575
+		background $bg-color 
+	    	separator $bg ##757575
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		focused_workspace  $bg          $bg           $text-color
+		inactive_workspace $bg-color $bg-color $inactive-text-color
         urgent_workspace $urgent-bg-color $urgent-bg-color $text-color
         }
 
 
 }
+#wal -i /Wallpaper
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources for some reason.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg  #ffffff   #00ff00   #ffffff
+client.focused_inactive $bg     $bg     $fg  #00ff00       $bg
+client.unfocused        $bg     $bg     $fg  #00ff00       $bg
+client.urgent           $bg     $bg     $fg  #00ff00       $bg
+client.placeholder      $bg     $bg     $fg  #00ff00       $bg
+
+client.background       $bg
+
+# PROTIP: You can also dynamically set dmenu's colors this way:
+#bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
+
+
 bindsym mod1+control+l exec i3lock -i /DriveE/Pictures/music.png 
-bindsym mod1+control+apostrophe exec banshee --toggle-playing --set-volume=80
-bindsym mod1+control+slash exec banshee --next --set-volume=80
-bindsym mod1+control+period exec banshee --previous --set-volume=80
-bindsym mod1+control+comma exec banshee --stop --set-volume=80
+
+# #--Music Player--#
+
+# #banshee
+# exec banshee 
+# bindsym mod1+control+apostrophe exec banshee --toggle-playing --set-volume=80
+# bindsym mod1+control+slash exec banshee --next --set-volume=80
+# bindsym mod1+control+period exec banshee --previous --set-volume=80
+# bindsym mod1+control+comma exec banshee --stop --set-volume=80
+
+###---Audio and Music Definitions---###
+##For mpc:
+set $next --no-startup-id mpc next
+set $prev --no-startup-id mpc prev
+set $lilfor --no-startup-id mpc seek +10
+set $bigfor --no-startup-id mpc seek +120
+set $lilbak --no-startup-id mpc seek -10
+set $bigbak --no-startup-id mpc seek -120
+set $beg --no-startup-id mpc seek 0%
+#For advancing forward/backward in an mpd song
+bindsym $mod+bracketleft 	exec $lilbak
+bindsym $mod+control+bracketleft 	exec $bigbak
+bindsym $mod+bracketright 	exec $lilfor
+bindsym $mod+control+bracketright exec $bigfor
+bindsym $mod+control+apostrophe exec --no-startup-id mpc toggle
+bindsym $mod+control+slash exec --no-startup-id mpc next
+bindsym $mod+control+period exec --no-startup-id mpc prev
+#bindsym mod1+control+comma exec banshee --stop --set-volume=80
+
+bindsym $mod+m exec urxvt -e ncmpcpp 
+bindsym $mod+Shift+m workspace $workspace10; exec urxvt -e ncmpcpp 
+exec --no-startup-id i3-msg 'workspace $workspace10; exec urxvt -e ncmpcpp'
+
+## FOR ALSA/AMIXER ##
+set $inc --no-startup-id amixer sset Master 2%+
+set $biginc --no-startup-id amixer sset Master 5%+
+set $dec --no-startup-id amixer sset Master 2%-
+set $bigdec --no-startup-id amixer sset Master 5%-
+set $mute --no-startup-id amixer sset Master toggle
+#set $truemute --no-startup-id amixer sset Master mute
+#set $screencast  --no-startup-id bash ~/.config/Scripts/screencast_alsa.sh
+#set $audio --no-startup-id bash ~/.config/Scripts/audio_alsa.sh
+# bindsym XF86AudioMute		exec $mute
+# bindsym XF86AudioLowerVolume	exec $dec
+# bindsym XF86AudioRaiseVolume	exec $inc
+#bindsym $mod+Shift+equal 	exec $inc
+#bindsym $mod+Shift+minus exec $dec
 
 
-# Pulse Audio controls
+## Pulse Audio controls ##
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym $mod+Shift+equal exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod+control+equal exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym $mod+Shift+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod+control+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
+exec pactl set-sink-volume 0 32768
 
 # Sreen brightness controls
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -274,11 +350,13 @@ for_window [class="dolphin"] floating enable
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
+bindsym $mod+BackSpace		exec /home/lanaya/Documents/Script/flash_win.sh
 bindsym mod1+control+m exec firefox /home/lanaya/Documents/SavedPages/VimMovement.htm 
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
+bindsym mod1+control+d exec uget-gtk
+
 
 #startup
-exec pactl set-sink-volume 0 32768
 assign [class="banshee"] $workspace10
 exec firefox
 assign [class="Firefox"] $workspace2
@@ -287,7 +365,10 @@ assign [class="Kget"] $workspace9
 assign [class="VirtualBox"] $workspace8
 
 #exec_always feh --bg-scale /DriveE/Pictures/Wallpapers/4K-Wallpaper-5F.jpg
-exec compton
-exec nm-applet
-exec /home/lanaya/Documents/Script/Wallpaper.sh
+#exec /home/lanaya/Documents/Script/Wallpaper_xwinwrap.sh
+exec /home/lanaya/Documents/Script/Wall_wal.sh
+bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers
+#exec compton   //slow rendering in urxvt, but no transparent in other terminal
 exec /home/lanaya/Documents/Script/Touchpad.sh
+exec ~/Documents/Script/PulseModule.sh
+exec ~/Documents/Script/nm-applet.sh

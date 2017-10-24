@@ -35,6 +35,9 @@ colors() {
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
+#c-p to copy current command
+#bind '"\C-p": "\C-e\C-u xsel <<"EOF"\n\C-y\nEOF\n\C-y"'
+(wal -r &)
 alias p="ping sgp-1.valve.net"
 #alias op="vblank_mode=0 optirun winefps"
 alias dota="optirun '/home/lanaya/.local/share/Steam/steamapps/common/dota 2 beta/game/dota.sh'"
@@ -42,8 +45,9 @@ alias nvd="optirun -b none nvidia-settings -c :8"
 alias ls="ls --color=auto"
 alias ec="$ECLIPSE_HOME/eclimd"
 alias con="vim ~/.config/i3/config" 
-alias con1="vim ~/.config/ranger/rc.conf"
-alias con2="vim ~/.config/terminator/config"
+alias conran="vim ~/.config/ranger/rc.conf"
+alias conter="vim ~/.config/terminator/config"
+alias conncm="vim ~/.ncmpcpp/bindings"
 
 alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"

@@ -6,13 +6,15 @@ du -sh
 du -hs * | sort -h
 ctrl w  //bash bs word
 alt d   //bash del word
+\r to make enter in bash
 systemctl | grep running
 nmap -sP 192.168.1.* //scan all ip
 cat /etc/resolv.conf        //dns 
 grep -rnw '/path/to/somewhere/' -e 'pattern'        //find text from files
 ln -s <new path> <new shortcut>
-udisksctl mount -b /dev/sd
+udisksctl mount -b /dev/sdc1
 ctrl+h //backspace 
+load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
 
 #git
 git config --global user.email "diwasx@gmail.com"

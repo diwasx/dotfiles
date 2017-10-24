@@ -3,12 +3,15 @@
   enabled_plugins = ,
   focus = mouse
   handle_size = 1
-  inactive_color_offset = 0.79
+#focus value
+  inactive_color_offset = 1 #0.70
   scroll_tabbar = True
   suppress_multiple_term_dialog = True
   title_inactive_bg_color = "#000000"
   title_inactive_fg_color = "#f0f0f0"
   title_transmit_bg_color = "#000000"
+  dbus = False
+
 [keybindings]
   go_down = <Ctrl><Super>j
   go_left = <Ctrl><Super>h
