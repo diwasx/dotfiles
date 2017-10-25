@@ -370,5 +370,7 @@ exec /home/lanaya/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers
 #exec compton   //slow rendering in urxvt, but no transparent in other terminal
 exec /home/lanaya/Documents/Script/Touchpad.sh
-exec ~/Documents/Script/PulseModule.sh
+#exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
+exec ~/.config/i3/hud-menu-service.py
+bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
