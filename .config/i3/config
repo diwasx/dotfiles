@@ -10,6 +10,8 @@
 #font-awesome
 #compton
 #expect
+#torrench
+#sdcv
 
 
 # i3 config file (v4)
@@ -103,7 +105,7 @@ bindsym $mod+f fullscreen toggle
 
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout toggle split
-bindsym $mod+e exec terminator -e vis
+bindsym $mod+e exec urxvt -e vis
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -350,6 +352,7 @@ for_window [class="dolphin"] floating enable
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
+#only works with comptom
 bindsym $mod+BackSpace		exec /home/lanaya/Documents/Script/flash_win.sh
 bindsym mod1+control+m exec firefox /home/lanaya/Documents/SavedPages/VimMovement.htm 
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
@@ -362,7 +365,7 @@ exec firefox
 assign [class="Firefox"] $workspace2
 assign [class="Uget-gtk"] $workspace9
 assign [class="Kget"] $workspace9
-assign [class="VirtualBox"] $workspace8
+#assign [class="VirtualBox"] $workspace8
 
 #exec_always feh --bg-scale /DriveE/Pictures/Wallpapers/4K-Wallpaper-5F.jpg
 #exec /home/lanaya/Documents/Script/Wallpaper_xwinwrap.sh
@@ -370,7 +373,7 @@ exec /home/lanaya/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers
 #exec compton   //slow rendering in urxvt, but no transparent in other terminal
 exec /home/lanaya/Documents/Script/Touchpad.sh
-#exec ~/Documents/Script/PulseModule.sh
+exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
 exec ~/.config/i3/hud-menu-service.py
 bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu

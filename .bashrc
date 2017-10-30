@@ -36,7 +36,7 @@ colors() {
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 #c-[ to copy current command and press again to paste in new
-bind '"\C-[": "\C-e\C-u xsel <<"EOF"\n\C-y\nEOF\n\C-y"'
+#bind '"\C-[": "\C-e\C-u xsel <<"EOF"\n\C-y\nEOF\n\C-y"'
 (wal -r &)
 alias p="ping sgp-1.valve.net"
 #alias op="vblank_mode=0 optirun winefps"
@@ -51,3 +51,4 @@ alias conncm="vim ~/.ncmpcpp/bindings"
 
 alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
+alias ym="youtube-dl-mp3"

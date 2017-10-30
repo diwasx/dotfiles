@@ -110,11 +110,20 @@ URxvt*inheritPixmap:                  true
 URxvt*transparent:                    true
 URxvt*shading:                        20 
 #URxvt*buffered: false
-#URxvt.perl-ext-common:  ...,font-size
-#URxvt.keysym.C-Up:     perl:font-size:increase
-#URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.perl-ext-common:  ...,font-size
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-equal:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-minus:   perl:font-size:decrease
 #URxvt.keysym.C-S-Up:   perl:font-size:incglobal
 #URxvt.keysym.C-S-Down: perl:font-size:decglobal
+URxvt*scrollBar:false
+URxvt*scrollBar_right: false
+#URxvt.keysym.Shift-Up: command:\033]720;1\007
+#URxvt.keysym.Shift-Down: command:\033]721;1\007
+
+URxvt.keysym.M-Control-k: command:\033]720;1\007
+URxvt.keysym.M-Control-j: command:\033]721;1\007
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
