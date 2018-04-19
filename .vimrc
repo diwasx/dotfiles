@@ -21,7 +21,7 @@ set clipboard=unnamedplus
 "echo &compatible
 "set nocompatible
 "filetype
-"filetype plugin indent on
+:filetype plugin indent on
 
 nnoremap j gj
 nnoremap k gk

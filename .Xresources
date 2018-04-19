@@ -1,129 +1,35 @@
-#if __has_include(".extend.Xresources")
-#include ".extend.Xresources"
-#endif
+! do not scroll with output
+URxvt*scrollTtyOutput: false
 
-! ^ The above lines are no comments!
-! Leave them as they are if a file ~/.extend.Xresources is being used on your system.
-! config can be added there or also here below.
-! For comments use "!"
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
 
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
 
-XTerm*background: #2b2b2b
-XTerm*foreground: #e7e7e7
-XTerm*pointerColor: #16A085
-XTerm*faceName: Fixed
-XTerm*faceSize: 11
-!-------------------------------------------------------------------------------
-! Xft settings
-!-------------------------------------------------------------------------------
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
 
-#Xft.dpi:                    96
-#Xft.antialias:              false
-#Xft.rgba:                   rgb
-#Xft.hinting:                true
-#Xft.hintstyle:              hintslight
+URxvt.secondaryWheel: 1
 
-!-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
-!-------------------------------------------------------------------------------
-#urxvt*font:             xft:Terminus:size=10
-! special
-*.foreground:   #d1d1d1
-! *.background:   #221e2d
-*.cursorColor:  #d1d1d1
+URxvt.letterSpace: -1
 
-! black
-*.color0:       #272822
-*.color8:       #75715e
 
-! red
-*.color1:       #f92672
-*.color9:       #f92672
-
-! green
-*.color2:       #a6e22e
-*.color10:      #a6e22e
-
-! yellow
-*.color3:       #f4bf75
-*.color11:      #f4bf75
-
-! blue
-*.color4:       #66d9ef
-*.color12:      #66d9ef
-
-! magenta
-*.color5:       #ae81ff
-*.color13:      #ae81ff
-
-! cyan
-*.color6:       #a1efe4
-*.color14:      #a1efe4
-
-! white
-*.color7:       #f8f8f2
-*.color15:      #f9f8f5
-
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
-Xcursor.theme: Chameleon-Pearl-Regular-0.5
-Xcursor.size:  0
-
-!XTerm*background: #272827
-!XTerm*foreground: #fdf6e3
-XTerm*reverseVideo: on
-XTerm*faceName: DejaVu Sans Mono:size=14:antialias=true
-XTerm*selectToClipboard: true
-
-URxvt.font: xft:Noto Mono:size=10:antialias=true 
-!Bitstream Vera Sans Mono
-!terminus:size=12
-URxvt.depth: 32
-
-!! BACKGROUND TRANSPARENT
+!URxvt.font: xft:Noto Mono:size=10:antialias=true 
+URxvt.font: xft:DejaVu Sans Mono:size=10:antialias=true 
 URxvt.background: [80]#06060a
-
 URxvt*scrollBar:                      false
 URxvt*mouseWheelScrollPage:           false
 URxvt*cursorBlink:                    true
 URxvt*background:                     black
-!URxvt*foreground:                     grey
 URxvt*saveLines:                      5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 URxvt*inheritPixmap:                  true
 URxvt*transparent:                    true
 URxvt*shading:                        20 
-#URxvt*buffered: false
+!URxvt*buffered: false
 URxvt.perl-ext-common:  ...,font-size
-URxvt.keysym.C-Up:     perl:font-size:increase
-URxvt.keysym.C-equal:     perl:font-size:increase
-URxvt.keysym.C-Down:   perl:font-size:decrease
-URxvt.keysym.C-minus:   perl:font-size:decrease
-#URxvt.keysym.C-S-Up:   perl:font-size:incglobal
-#URxvt.keysym.C-S-Down: perl:font-size:decglobal
-URxvt*scrollBar:false
-URxvt*scrollBar_right: false
-#URxvt.keysym.Shift-Up: command:\033]720;1\007
-#URxvt.keysym.Shift-Down: command:\033]721;1\007
-
-URxvt.keysym.M-Control-k: command:\033]720;1\007
-URxvt.keysym.M-Control-j: command:\033]721;1\007
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard

@@ -609,13 +609,3 @@ def_key "g"
 #jump_to_position_in_song
 def_key "U"
   update_database
-
-def_key "D"
-  delete_playlist_items
-
-def_key "D"
-  delete_browser_items
-
-def_key "D"
-  delete_stored_playlist
-

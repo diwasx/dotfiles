@@ -1,6 +1,9 @@
+#sql
 firewall-cmd --add-port=3306/tcp 
 firewall-cmd --permanent --add-port=3306/tcp
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.%' IDENTIFIED BY '' WITH GRANT OPTION;
+mysql -u -h 192.168.* -p
+
 archey      //logo
 du -sh
 du -hs * | sort -h
@@ -15,6 +18,8 @@ ln -s <new path> <new shortcut>
 udisksctl mount -b /dev/sdc1
 ctrl+h //backspace 
 load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
+dd if=/path_to_iso_without_space.iso of=/dev/sdb
+dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 #git
 git config --global user.email "diwasx@gmail.com"
@@ -63,9 +68,11 @@ input       #take input,input is always as a string
 </projectDescription>
 
 :ProjectCreate . -n java
+make files in scr folder
 
 #i3
 xmodmap     //keys
 xprop       //detail about window
 feh --bg-scale <wallpaper>
+
 

@@ -16,5 +16,3 @@ cp ~/Desktop/ManjFoo /DriveE/Projects/Git/i3wm/.config/
 cp -r ~/.ncmpcpp /DriveE/Projects/Git/i3wm/
 cp -r ~/.config/pulse/ /DriveE/Projects/Git/i3wm/.config
 cp ~/.profile /DriveE/Projects/Git/i3wm/
-cp -r ~/.urxvt/ /DriveE/Projects/Git/i3wm/
-cp -r ~/.config/torrench/ /DriveE/Projects/Git/i3wm/.config
