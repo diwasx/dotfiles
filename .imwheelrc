@@ -1,0 +1,13 @@
+# Speed up scrolling for the document viewer
+"^Navigator$"
+    None, Up, Button4, 4
+    None, Down, Button5, 4
+
+"^okular$"
+    None, Up, Button4, 4
+    None, Down, Button5, 4
+
+"^chromium$"
+    None, Up, Button4, 2.5
+    None, Down, Button5, 2.5
+

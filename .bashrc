@@ -65,4 +65,5 @@ alias conx="vim ~/.Xresources"
 
 alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
+alias yt="mpsyt"
 #export WINEDEBUG=fps

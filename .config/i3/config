@@ -4,6 +4,7 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+#
 #Dependency
 #wal
 #rofi
@@ -380,4 +381,5 @@ exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
 exec ~/.config/i3/hud-menu-service.py
 exec xscreensaver &
+exec imwheel
 bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
