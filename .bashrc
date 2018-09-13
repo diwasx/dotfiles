@@ -62,8 +62,11 @@ alias conran="vim ~/.config/ranger/rc.conf"
 alias conter="vim ~/.config/terminator/config"
 alias conncm="vim ~/.ncmpcpp/bindings"
 alias conx="vim ~/.Xresources"
+alias conblock="vim ~/.config/i3/i3blocks.conf"
+
 
 alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
 alias yt="mpsyt"
 #export WINEDEBUG=fps
+~/Documents/Script/checkMouse.sh

@@ -4,8 +4,8 @@
     None, Down, Button5, 4
 
 "^okular$"
-    None, Up, Button4, 4
-    None, Down, Button5, 4
+    None, Up, Button4, 2.5
+    None, Down, Button5, 2.5
 
 "^chromium$"
     None, Up, Button4, 2.5

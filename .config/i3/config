@@ -121,7 +121,7 @@ bindsym $mod+a focus parent
 bindsym $mod+c focus child
 
 set $workspace1 "1. Terminal" 
-set $workspace2 "2. FireFox"
+set $workspace2 "2. Web"
 set $workspace8 "8. VirtualBox"
 set $workspace9 "9. Downloads"
 set $workspace10 "10. Music"
@@ -365,8 +365,8 @@ bindsym mod1+control+d exec uget-gtk
 
 #startup
 assign [class="banshee"] $workspace10
-exec firefox
-assign [class="Firefox"] $workspace2
+exec chromium
+assign [class="Chromium"] $workspace2
 assign [class="Uget-gtk"] $workspace9
 assign [class="Kget"] $workspace9
 #assign [class="VirtualBox"] $workspace8
