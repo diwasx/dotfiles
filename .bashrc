@@ -68,5 +68,6 @@ alias conblock="vim ~/.config/i3/i3blocks.conf"
 alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
 alias yt="mpsyt"
+alias ym="youtube-dl-mp3"
 #export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh

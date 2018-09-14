@@ -20,3 +20,4 @@ cp -r ~/.mplayer/ /DriveE/Projects/Git/i3wm/
 cp ~/.imwheelrc /DriveE/Projects/Git/i3wm/
 mkdir /DriveE/Projects/Git/i3wm/etc/
 cp /etc/issue /DriveE/Projects/Git/i3wm/etc/
+cp ~/.xscreensaver /DriveE/Projects/Git/i3wm/

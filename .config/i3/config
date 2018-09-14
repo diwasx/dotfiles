@@ -276,7 +276,6 @@ client.background       $bg
 
 bindsym mod1+control+l exec xscreensaver-command -lock 
 bindsym $mod+control+l exec i3lock -i /DriveE/Pictures/music.png && xset dpms force off
-
 # #--Music Player--#
 
 # #banshee
@@ -381,5 +380,6 @@ exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
 exec ~/.config/i3/hud-menu-service.py
 exec xscreensaver &
+#exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
 bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
