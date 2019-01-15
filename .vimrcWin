@@ -17,52 +17,37 @@ set lazyredraw
 set foldenable
 set foldlevelstart=10
 set clipboard=unnamedplus
+set backspace=2
+set backspace=indent,eol,start
 
-let mapleader=" "
+":autocmd InsertEnter,InsertLeave * set cul!
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" optional reset cursor on start:
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
 
 
-" For mouse click in NERDTree
-:set mouse=a
-let g:NERDTreeMouseMode=3 
-
-" Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Spell-check set to <leader>o, 'o' for 'orthography':
-map <leader>o :setlocal spell! spelllang=en_us<CR>
+"echo &compatible
+"set nocompatible
+"filetype
+:filetype plugin indent on
 
 nnoremap j gj
 nnoremap k gk
 inoremap { {<CR>}<up><end><CR>
-
-" no highlighting
-map <leader>n :noh<CR>
-
-" fuzzy search
+nnoremap <C-N> :noh<CR>
 nnoremap <C-F> :FZF<CR>
-
-" Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
-set splitbelow splitright
-
-" Shortcutting split navigation, saving a keypress:
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-map <C-e> <C-w>q
-map <leader>i :new<CR>
-map <leader>s :vnew<CR>
-nnoremap <Leader>f :NERDTreeToggle<CR>
 
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/fzf
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -72,27 +57,23 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'hzchirs/vim-material'
 Plugin 'beigebrucewayne/Turtles'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
-Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'dylanaraps/wal'
-Plugin 'jiangmiao/auto-pairs'
 
 "colorscheme vim-material
 "colorscheme turtles
 "colorscheme wal
 "automatically use wal scheme if not selected
-
 hi MatchParen cterm=none ctermbg=grey ctermfg=blue
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 highlight LineNr ctermfg=grey 
 hi Normal guibg=NONE ctermbg=NONE
 let g:EclimCompletionMethod = 'omnifunc'
-
-" let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

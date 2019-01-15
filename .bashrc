@@ -35,12 +35,13 @@ colors() {
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
+
 #c-[ to copy current command and press again to paste in new
 bind '"\C-[": "\C-e\C-u xsel <<"EOF"\n\C-y\nEOF\n\C-y"'
 (wal -r &)
 alias p="ping sgp-1.valve.net"
+alias f="fzf"
 alias op="vblank_mode=0 optirun /home/lanaya/Documents/Script/winefps"
-alias dota="optirun '/home/lanaya/.local/share/Steam/steamapps/common/dota 2 beta/game/dota.sh'"
 alias nvd="optirun -b none nvidia-settings -c :8"
 alias ls="ls --color=auto"
 alias grep='grep --color=auto'
@@ -69,5 +70,14 @@ alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
 alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
+
 #export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh
+ 
+#For CTRL+S disable that freeze termial 
+stty -ixon
+
+#For Fuzzy Finder
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+

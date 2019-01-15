@@ -1,3 +1,8 @@
+#
+
+kwin_x11
+/usr/share/grub/background.png
+
 #sql
 firewall-cmd --add-port=3306/tcp 
 firewall-cmd --permanent --add-port=3306/tcp
@@ -11,6 +16,7 @@ ctrl w  //bash bs word
 alt d   //bash del word
 \r to make enter in bash
 systemctl | grep running
+ps -u lanaya
 nmap -sP 192.168.1.* //scan all ip
 cat /etc/resolv.conf        //dns 
 grep -rnw '/path/to/somewhere/' -e 'pattern'        //find text from files
@@ -31,10 +37,13 @@ git push origin master
 #pacman
 pacman -Scc
 yaourt -Syu --aur
+
+#bumblebee
 vblank_mode=0 optirun glxgears
+vblank_mode=0 primusrun %command%
+--for steam--csgo and dota---
+LD_PRELOAD=/usLD_PRELOAD=/usr/lib/nvidia/libGL.so optirun %command%r/lib/nvidia/libGL.so optirun %command%
 optirun -b none nvidia-settings -c :8
-kwin_x11
-/usr/share/grub/background.png
 
 #vim
 

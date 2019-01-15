@@ -130,7 +130,7 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 700 500 
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id urxvt -name dropdown -e tmux
+exec --no-startup-id urxvt -name dropdown #-e tmux
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 
 
@@ -237,18 +237,21 @@ set $urgent-bg-color     #E53935
 # client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
 # client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
-
+set $transparent #33333309
 bar {
         position top
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         colors {
-		background $bg-color 
-	    	separator $bg ##757575
+        # background $bg-color 
+		background $transparent
+        separator $bg ##757575
+
 		#                  border             background         text
 		focused_workspace  $bg          $bg           $text-color
 		inactive_workspace $bg-color $bg-color $inactive-text-color
         urgent_workspace $urgent-bg-color $urgent-bg-color $text-color
         }
+
 
 
 }
@@ -303,6 +306,11 @@ bindsym $mod+control+apostrophe exec --no-startup-id mpc toggle
 bindsym $mod+control+slash exec --no-startup-id mpc next
 bindsym $mod+control+period exec --no-startup-id mpc prev
 #bindsym mod1+control+comma exec banshee --stop --set-volume=80
+
+#spotify
+bindsym mod1+control+apostrophe exec playerctl play-pause
+bindsym mod1+control+slash exec playerctl next
+bindsym mod1+control+period exec playerctl previous
 
 bindsym $mod+m exec urxvt -e ncmpcpp 
 bindsym $mod+Shift+m workspace $workspace10; exec urxvt -e ncmpcpp 
@@ -374,12 +382,13 @@ assign [class="Kget"] $workspace9
 #exec /home/lanaya/Documents/Script/Wallpaper_xwinwrap.sh
 exec /home/lanaya/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers
-#exec compton   //slow rendering in urxvt, but no transparent in other terminal
 exec /home/lanaya/Documents/Script/Touchpad.sh
 exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
+exec ~/Documents/Script/Volume.sh
 exec ~/.config/i3/hud-menu-service.py
-exec xscreensaver &
+exec xscreensaver 
+exec compton 
 #exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
 bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
