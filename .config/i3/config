@@ -18,6 +18,8 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+exec ~/Documents/Script/getForecast.sh
 gaps inner 15
 gaps outer 15
 set $mod Mod4
@@ -130,7 +132,7 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 700 500 
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id urxvt -name dropdown #-e tmux
+exec --no-startup-id urxvt -name dropdown -e tmux
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 
 
@@ -391,4 +393,5 @@ exec xscreensaver
 exec compton 
 #exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
+exec ~/Documents/Script/mpdUpdate.sh
 bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu

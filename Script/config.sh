@@ -5,7 +5,9 @@ cp ~/.bashrc /DriveE/Projects/Git/i3wm/
 cp ~/.xsession /DriveE/Projects/Git/i3wm/
 mkdir /DriveE/Projects/Git/i3wm/.config
 cp -r ~/.config/i3/ /DriveE/Projects/Git/i3wm/.config/
+cp -r ~/.config/zathura /DriveE/Projects/Git/i3wm/.config/
 cp -r ~/.config/ranger/ /DriveE/Projects/Git/i3wm/.config
+rm /DriveE/Projects/Git/i3wm/.config/ranger/bookmarks
 cp -r ~/.config/terminator/ /DriveE/Projects/Git/i3wm/.config
 cp ~/.config/touchpadrc /DriveE/Projects/Git/i3wm/.config
 cp -r ~/.config/rofi/ /DriveE/Projects/Git/i3wm/.config
