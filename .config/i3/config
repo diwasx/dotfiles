@@ -19,7 +19,6 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec ~/Documents/Script/getForecast.sh
 gaps inner 15
 gaps outer 15
 set $mod Mod4
@@ -124,8 +123,8 @@ bindsym $mod+c focus child
 
 set $workspace1 "1. Terminal" 
 set $workspace2 "2. Web"
-set $workspace8 "8. VirtualBox"
-set $workspace9 "9. Downloads"
+set $workspace8 "8."
+set $workspace9 "9."
 set $workspace10 "10. Music"
 ###---Dropdown---###
 for_window [instance="dropdown"] floating enable
@@ -133,6 +132,7 @@ for_window [instance="dropdown"] resize set 700 500
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 exec --no-startup-id urxvt -name dropdown -e tmux
+exec ~/Documents/Script/getForecast.sh
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 
 
@@ -385,7 +385,7 @@ assign [class="Kget"] $workspace9
 exec /home/lanaya/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers
 exec /home/lanaya/Documents/Script/Touchpad.sh
-exec ~/Documents/Script/PulseModule.sh
+# exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
 exec ~/Documents/Script/Volume.sh
 exec ~/.config/i3/hud-menu-service.py

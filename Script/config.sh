@@ -1,5 +1,6 @@
 #!/bin/bash
 cp ~/.vimrc /DriveE/Projects/Git/i3wm/
+cp /DriveE/Backup/Cygwin/home/Lanaya/.vimrc /DriveE/Projects/Git/i3wm/.vimrcWin
 cp ~/.Xresources /DriveE/Projects/Git/i3wm/
 cp ~/.bashrc /DriveE/Projects/Git/i3wm/
 cp ~/.xsession /DriveE/Projects/Git/i3wm/
