@@ -40,6 +40,28 @@ font pango:System San Francisco Display 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+#wal -i /Wallpaper
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources for some reason.
+set_from_resource $color1     i3wm.color1     #2e2d2d
+set_from_resource $bg         i3wm.color2    #f0f0f0
+set_from_resource $color3     i3wm.color3     #63B1F1
+set_from_resource $color4     i3wm.color4     #6BC6F8
+set_from_resource $color5     i3wm.color5     #979695
+set_from_resource $color6     i3wm.color6     #D5BE97
+set_from_resource $fg         i3wm.color7     #f0f0f0
+set_from_resource $color8     i3wm.color8     #cbddeb
+set_from_resource $color9     i3wm.color9     #8e9aa4
+set_from_resource $color10    i3wm.color10    #08A2FB
+set_from_resource $color11    i3wm.color11    #63B1F1
+set_from_resource $color12    i3wm.color12    #6BC6F8
+set_from_resource $color13    i3wm.color13    #979695
+set_from_resource $color14    i3wm.color14    #D5BE97
+set_from_resource $color15    i3wm.color15    #95B6DD
+
 #mode "moveit" {
 #    bindsym Up move up 20px
 #    bindsym Left move left 20px
@@ -233,11 +255,6 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # window colors
-#                       border              background         text                 indicator
-# client.focused          $blue1           $blue1          $text-color          #00ff00
-# client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-# client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-# client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 set $transparent #33333309
 bar {
@@ -257,21 +274,13 @@ bar {
 
 
 }
-#wal -i /Wallpaper
-# Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources for some reason.
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
 
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg  #ffffff   #00ff00   #ffffff
-client.focused_inactive $bg     $bg     $fg  #00ff00       $bg
-client.unfocused        $bg     $bg     $fg  #00ff00       $bg
-client.urgent           $bg     $bg     $fg  #00ff00       $bg
-client.placeholder      $bg     $bg     $fg  #00ff00       $bg
+# class                 border    backgr.   text        indicator child_border
+client.focused          $bg       $bg       #ffffff     #00ff00   #ffffff
+client.focused_inactive $bg       $bg       $fg         $color1       $bg
+client.unfocused        $bg       $bg       $fg         $color3       $bg
+client.urgent           $color3   $bg       $fg         $color4       $bg
+client.placeholder      $color7   $bg       $fg         $color5       $bg
 
 client.background       $bg
 
@@ -383,7 +392,7 @@ assign [class="Kget"] $workspace9
 #exec_always feh --bg-scale /DriveE/Pictures/Wallpapers/4K-Wallpaper-5F.jpg
 #exec /home/lanaya/Documents/Script/Wallpaper_xwinwrap.sh
 exec /home/lanaya/Documents/Script/Wall_wal.sh
-bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers
+bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers;/home/lanaya/Documents/Script/reload_dunst.sh
 exec /home/lanaya/Documents/Script/Touchpad.sh
 # exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
@@ -393,5 +402,7 @@ exec xscreensaver
 exec compton 
 #exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
+exec dunst
 exec ~/Documents/Script/mpdUpdate.sh
+bindsym Print exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /DriveE/Pictures/ScreenShot'
 bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu

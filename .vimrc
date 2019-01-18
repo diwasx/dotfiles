@@ -81,15 +81,35 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'dylanaraps/wal'
 Plugin 'jiangmiao/auto-pairs'
 
-"colorscheme vim-material
+" colorscheme vim-material
 "colorscheme turtles
-"colorscheme wal
+" colorscheme wal
 "automatically use wal scheme if not selected
 
-hi MatchParen cterm=none ctermbg=grey ctermfg=blue
+" Dark
+" set background=dark
+" colorscheme vim-material
+
+" Palenight
+" let g:material_style='palenight'
+" set background=dark
+" colorscheme vim-material
+
+" Oceanic
+ " let g:material_style='oceanic'
+ " set background=dark
+ " colorscheme vim-material
+
+" Light
+" set background=light
+" colorscheme vim-material
+
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
-highlight LineNr ctermfg=grey 
+
+hi MatchParen cterm=none ctermbg=grey ctermfg=blue
 hi Normal guibg=NONE ctermbg=NONE
+
+highlight LineNr ctermfg=grey 
 let g:EclimCompletionMethod = 'omnifunc'
 
 " let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'

@@ -4,7 +4,7 @@
 
 case $BLOCK_BUTTON in
     1) $TERMINAL -e less -S ~/.config/weatherreport ;;
-    3) pgrep -x dunst >/dev/null && notify-send "<b>🌈 Weather module:</b>
+    3) pgrep -x dunst >/dev/null && notify-send "<b> ❄️ Weather module:</b>
 - Click for wttr.in forecast.
 ☔: Chance of rain/snow
 ❄: Daily low

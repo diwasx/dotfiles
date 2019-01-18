@@ -12,6 +12,7 @@ rm /DriveE/Projects/Git/i3wm/.config/ranger/bookmarks
 cp -r ~/.config/terminator/ /DriveE/Projects/Git/i3wm/.config
 cp ~/.config/touchpadrc /DriveE/Projects/Git/i3wm/.config
 cp -r ~/.config/rofi/ /DriveE/Projects/Git/i3wm/.config
+cp -r ~/.config/dunst/ /DriveE/Projects/Git/i3wm/.config
 cp -r ~/.config/vis/ /DriveE/Projects/Git/i3wm/.config
 cp -r ~/.config/compton.conf /DriveE/Projects/Git/i3wm/.config
 mkdir /DriveE/Projects/Git/i3wm/Script

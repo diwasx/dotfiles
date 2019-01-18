@@ -38,7 +38,11 @@ export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 
 #c-[ to copy current command and press again to paste in new
 bind '"\C-[": "\C-e\C-u xsel <<"EOF"\n\C-y\nEOF\n\C-y"'
-(wal -r &)
+
+# For pywal
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
 alias p="ping sgp-1.valve.net"
 alias f="fzf"
 alias op="vblank_mode=0 optirun /home/lanaya/Documents/Script/winefps"
