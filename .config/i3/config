@@ -392,7 +392,8 @@ assign [class="Kget"] $workspace9
 #exec_always feh --bg-scale /DriveE/Pictures/Wallpapers/4K-Wallpaper-5F.jpg
 #exec /home/lanaya/Documents/Script/Wallpaper_xwinwrap.sh
 exec /home/lanaya/Documents/Script/Wall_wal.sh
-bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers;/home/lanaya/Documents/Script/reload_dunst.sh
+bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers
+
 exec /home/lanaya/Documents/Script/Touchpad.sh
 # exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
@@ -404,5 +405,5 @@ exec compton
 exec imwheel
 exec dunst
 exec ~/Documents/Script/mpdUpdate.sh
-bindsym Print exec scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /DriveE/Pictures/ScreenShot'
+bindsym Print exec scrot -e 'mv $f /DriveE/Pictures/ScreenShot'
 bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu

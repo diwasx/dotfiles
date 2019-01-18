@@ -4,6 +4,8 @@
 
 [[ $- != *i* ]] && return
 
+source prompt.sh
+
 colors() {
 	local fgc bgc vals seq0
 
