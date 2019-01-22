@@ -14,6 +14,8 @@ URxvt.secondaryWheel: 1
 
 URxvt.letterSpace: -1
 
+Xcursor.theme: Breeze-Hacked
+Xcursor.size: 16
 
 !URxvt.font: xft:Noto Mono:size=10:antialias=true 
 URxvt.font: xft:DejaVu Sans Mono:size=10:antialias=true 

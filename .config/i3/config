@@ -145,8 +145,8 @@ bindsym $mod+c focus child
 
 set $workspace1 "1. Terminal" 
 set $workspace2 "2. Web"
-set $workspace8 "8."
-set $workspace9 "9."
+set $workspace8 "8."
+set $workspace9 "9."
 set $workspace10 "10. Music"
 ###---Dropdown---###
 for_window [instance="dropdown"] floating enable
@@ -323,8 +323,9 @@ bindsym mod1+control+apostrophe exec playerctl play-pause
 bindsym mod1+control+slash exec playerctl next
 bindsym mod1+control+period exec playerctl previous
 
-bindsym $mod+m exec urxvt -e ncmpcpp 
-bindsym $mod+Shift+m workspace $workspace10; exec urxvt -e ncmpcpp 
+# bindsym $mod+m exec urxvt -e ncmpcpp 
+bindsym $mod+m workspace $workspace10; exec urxvt -e ncmpcpp 
+bindsym $mod+control+m workspace $workspace9; exec spotify
 exec --no-startup-id i3-msg 'workspace $workspace10; exec urxvt -e ncmpcpp'
 
 ## FOR ALSA/AMIXER ##
@@ -404,6 +405,7 @@ exec compton
 #exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
 exec dunst
+# exec mpd-notify
 exec ~/Documents/Script/mpdUpdate.sh
 bindsym Print exec scrot -e 'mv $f /DriveE/Pictures/ScreenShot'
 bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu

@@ -145,6 +145,7 @@
 ##### List of unbound actions #####
 ##
 ## The following actions are not bound to any key/command:
+
 ##
 ##  - set_volume
 ##
@@ -609,3 +610,5 @@ def_key "g"
 #jump_to_position_in_song
 def_key "U"
   update_database
+
+
