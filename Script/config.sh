@@ -27,3 +27,4 @@ cp ~/.imwheelrc /DriveE/Projects/Git/i3wm/
 mkdir /DriveE/Projects/Git/i3wm/etc/
 cp /etc/issue /DriveE/Projects/Git/i3wm/etc/
 cp ~/.xscreensaver /DriveE/Projects/Git/i3wm/
+cp ~/.rtorrent.rc /DriveE/Projects/Git/i3wm/

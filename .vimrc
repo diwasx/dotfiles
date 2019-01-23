@@ -4,6 +4,7 @@ set relativenumber
 set smartindent
 set laststatus=2
 set tabstop=4
+set backupdir=/tmp
 set shiftwidth=4
 set expandtab
 set cindent
@@ -80,6 +81,8 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'dylanaraps/wal'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
+Plugin 'jwalton512/vim-blade'
 
 " colorscheme vim-material
 "colorscheme turtles

@@ -4,15 +4,17 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-#
-#Dependency
+
+##DEPENDENCIES##
+
 #wal
 #rofi
-#font-awesome
+#Terminal-font:-font-awesome
 #compton
 #expect
-#/etc/issue
+#loginTheme:-/etc/issue
 #xscreensaver-arch-logo*
+#network:-bmon,nethogs
 
 
 # i3 config file (v4)
@@ -83,7 +85,7 @@ new_window 1pixel
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
+# start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -font "System San Francisco Display 17"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -380,7 +382,11 @@ bindsym $mod+BackSpace		exec /home/lanaya/Documents/Script/flash_win.sh
 
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 bindsym mod1+control+d exec uget-gtk
+bindsym mod1+control+r workspace $workspace8; exec urxvt -e rtorrent
 
+bindsym Print exec scrot -e 'mv $f /DriveE/Pictures/ScreenShot'
+# bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
+bindsym $mod+x exec dmenu_run
 
 #startup
 assign [class="banshee"] $workspace10
@@ -407,5 +413,3 @@ exec imwheel
 exec dunst
 # exec mpd-notify
 exec ~/Documents/Script/mpdUpdate.sh
-bindsym Print exec scrot -e 'mv $f /DriveE/Pictures/ScreenShot'
-bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
