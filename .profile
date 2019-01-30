@@ -19,6 +19,7 @@ appendpath () {
 appendpath '/home/lanaya/.config/composer/vendor/bin'
 appendpath '/home/lanaya/Documents/Script'
 appendpath '/home/lanaya/.vim/bundle/fzf/bin'
+appendpath '/home/lanaya/node_modules/.bin/'
 
 
 unset appendpath

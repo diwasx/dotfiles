@@ -18,7 +18,7 @@ Xcursor.theme: Breeze-Hacked
 Xcursor.size: 16
 
 !URxvt.font: xft:Noto Mono:size=10:antialias=true 
-URxvt.font: xft:DejaVu Sans Mono:size=10:antialias=true 
+URxvt.font: xft:DejaVu Sans Mono:size=11:antialias=true 
 URxvt.background: [80]#06060a
 URxvt*scrollBar:                      false
 URxvt*mouseWheelScrollPage:           false
@@ -54,3 +54,6 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 *color13:  #6398cf
 *color14:  #c28aa3
 *color15:  #926b3e
+
+#DPI of X server
+Xft.dpi:85

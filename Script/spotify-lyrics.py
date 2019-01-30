@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python2
 
 """ A Python script that displays the lyrics to the currently playing song on
 Spotify in your terminal.

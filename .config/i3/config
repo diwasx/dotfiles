@@ -329,7 +329,6 @@ bindsym mod1+control+period exec playerctl previous
 bindsym $mod+m workspace $workspace10; exec urxvt -e ncmpcpp 
 bindsym $mod+control+m workspace $workspace9; exec spotify
 exec --no-startup-id i3-msg 'workspace $workspace10; exec urxvt -e ncmpcpp'
-
 ## FOR ALSA/AMIXER ##
 set $inc --no-startup-id amixer sset Master 2%+
 set $biginc --no-startup-id amixer sset Master 5%+
@@ -353,7 +352,9 @@ bindsym $mod+control+equal exec --no-startup-id pactl set-sink-volume 0 +5% #inc
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym $mod+control+minus exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-exec pactl set-sink-volume 0 32768
+
+#50% volume startup 
+# exec pactl set-sink-volume 0 32768
 
 # Sreen brightness controls
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -381,6 +382,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 bindsym $mod+BackSpace		exec /home/lanaya/Documents/Script/flash_win.sh
 
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
+bindsym mod1+control+s exec SteamWal.sh
 bindsym mod1+control+d exec uget-gtk
 bindsym mod1+control+r workspace $workspace8; exec urxvt -e rtorrent
 
@@ -401,6 +403,10 @@ assign [class="Kget"] $workspace9
 exec /home/lanaya/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers
 
+#arch logo startup
+exec --no-startup-id i3-msg 'workspace $workspace1' #exec urxvt -e tmux new-session sh -c 'neofetch; "$SHELL"''
+
+exec urxvt -e tmux new-session sh -c 'neofetch; "$SHELL"'
 exec /home/lanaya/Documents/Script/Touchpad.sh
 # exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
