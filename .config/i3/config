@@ -310,6 +310,7 @@ set $bigfor --no-startup-id mpc seek +120
 set $lilbak --no-startup-id mpc seek -10
 set $bigbak --no-startup-id mpc seek -120
 set $beg --no-startup-id mpc seek 0%
+
 #For advancing forward/backward in an mpd song
 bindsym $mod+bracketleft 	exec $lilbak
 bindsym $mod+control+bracketleft 	exec $bigbak
@@ -417,5 +418,11 @@ exec compton
 #exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
 exec dunst
+
+#OfflineIMAP 
+exec offlineimap-notify.sh
+bindsym $mod+control+o exec offlineimap-notify.sh
+bindsym mod1+control+o exec urxvt -e neomutt
+
 # exec mpd-notify
 exec ~/Documents/Script/mpdUpdate.sh

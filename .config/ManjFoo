@@ -12,9 +12,13 @@ mysql -u -h 192.168.* -p
 archey      //logo
 du -sh
 du -hs * | sort -h
-ctrl w  //bash bs word
-alt d   //bash del word
+
+#bash
+ctrl w --> bash bs word
+alt d  --> bash del word
 \r to make enter in bash
+ctrl y -->undo
+
 systemctl | grep running
 ps -u lanaya
 nmap -sP 192.168.1.* //scan all ip

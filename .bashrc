@@ -33,6 +33,7 @@ colors() {
 	done
 }
 
+
 [[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
@@ -108,7 +109,7 @@ alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
 alias logo="neofetch" #screenfetch
 
-#export WINEDEBUG=fps
+export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh
  
 #For CTRL+S disable that freeze termial 
@@ -122,3 +123,5 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.
 export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)"
 
 # export NID=0
+
+EDITOR=vim

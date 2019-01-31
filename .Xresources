@@ -56,4 +56,4 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 *color15:  #926b3e
 
 #DPI of X server
-Xft.dpi:85
+Xft.dpi:87
