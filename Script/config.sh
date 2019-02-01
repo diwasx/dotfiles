@@ -30,3 +30,6 @@ cp ~/.xscreensaver /DriveE/Projects/Git/i3wm/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/i3wm/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/i3wm/
 cp ~/.nvidia-xinitrc /DriveE/Projects/Git/i3wm/
+mkdir /DriveE/Projects/Git/i3wm/.config/mutt
+cp ~/.config/mutt/muttrc /DriveE/Projects/Git/i3wm/.config/mutt/
+cp  -r ~/.config/mutt/accounts/ /DriveE/Projects/Git/i3wm/.config/mutt/

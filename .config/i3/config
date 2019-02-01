@@ -420,8 +420,8 @@ exec imwheel
 exec dunst
 
 #OfflineIMAP 
-exec offlineimap-notify.sh
-bindsym $mod+control+o exec offlineimap-notify.sh
+exec urxvt -e offlineimap-notify.sh
+bindsym $mod+control+o exec urxvt -e offlineimap-notify.sh
 bindsym mod1+control+o exec urxvt -e neomutt
 
 # exec mpd-notify
