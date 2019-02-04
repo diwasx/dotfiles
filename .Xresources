@@ -17,8 +17,13 @@ URxvt.letterSpace: -1
 Xcursor.theme: Breeze-Hacked
 Xcursor.size: 16
 
-!URxvt.font: xft:Noto Mono:size=10:antialias=true 
 URxvt.font: xft:DejaVu Sans Mono:size=11:antialias=true 
+!URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=14,xft:PowerlineSymbols
+
+
+!urxvt*font: xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=12
+!urxvt.font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true,xft:Inconsolata\ for\ Powerline:pixelsize=14:antialias=true
+
 URxvt.background: [80]#06060a
 URxvt*scrollBar:                      false
 URxvt*mouseWheelScrollPage:           false
@@ -55,5 +60,5 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 *color14:  #c28aa3
 *color15:  #926b3e
 
-#DPI of X server
+!DPI of X server
 Xft.dpi:87

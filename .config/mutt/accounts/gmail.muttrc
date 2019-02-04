@@ -20,13 +20,11 @@ bind index,pager g noop
 bind index gg first-entry
 unmailboxes *
 # mailboxes =gmail =-------------------
-mailboxes =gmail =------------------- "=INBOX" "=[Gmail].Drafts" "=[Gmail].Important" "=[Gmail].Sent Mail" "=[Gmail].Spam"  "Notes"  "=[Gmail].Bin"
+mailboxes =gmail =------------------- "=INBOX" "=[Gmail].Drafts" "=[Gmail].Sent Mail" "=[Gmail].Spam"  "Notes"  "=[Gmail].Bin"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
 macro index,pager gs "<change-folder>=[Gmail].Sent Mail<enter>" "Go to sent."
 macro index,pager gd "<change-folder>=[Gmail].Drafts<enter>" "Go to drafts."
-macro index,pager gI "<change-folder>=[Gmail].Important<enter>" "Go to archive."
 macro index,pager gS <change-folder>=[Gmail].Spam<enter>
-# macro index,pager g <change-folder>=Deleted<enter>
 macro index,pager gn <change-folder>=Notes<enter>
 macro index,pager gb <change-folder>=[Gmail].Bin<enter>
 set spoolfile = ""

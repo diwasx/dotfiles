@@ -150,14 +150,14 @@ set $workspace2 "2. Web"
 set $workspace8 "8."
 set $workspace9 "9."
 set $workspace10 "10. Music"
+
 ###---Dropdown---###
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 700 500 
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id urxvt -name dropdown -e tmux
-exec ~/Documents/Script/getForecast.sh
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
+exec --no-startup-id urxvt -name dropdown -e tmux
 
 
 workspace $workspace2 gaps inner 0
@@ -418,6 +418,7 @@ exec compton
 #exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
 exec dunst
+exec ~/Documents/Script/getForecast.sh
 
 #OfflineIMAP 
 exec urxvt -e offlineimap-notify.sh

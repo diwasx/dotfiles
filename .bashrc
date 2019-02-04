@@ -52,6 +52,8 @@ alias op="vblank_mode=0 optirun /home/lanaya/Documents/Script/winefps"
 alias nvd="optirun -b none nvidia-settings -c :8"
 alias ls="ls --color=auto"
 alias grep='grep --color=auto'
+
+#Color man pages
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \

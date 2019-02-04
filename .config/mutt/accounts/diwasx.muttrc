@@ -19,7 +19,7 @@ bind index,pager gg noop
 bind index,pager g noop
 bind index gg first-entry
 unmailboxes *
-mailboxes =diwasx =------------------- "=Outbox" "=Junk" "=Archive" "=Notes" "=Inbox" "=Sent" "=Drafts" "=Deleted"
+mailboxes =diwasx =------------------- "=Inbox" "=Drafts" "=Outbox" "=Sent"  "=Junk" "=Archive" "=Notes" "=Deleted"
 macro index,pager gi "<change-folder>=Inbox<enter>" "Go to inbox."
 macro index,pager gs "<change-folder>=Sent<enter>" "Go to sent."
 macro index,pager gd "<change-folder>=Drafts<enter>" "Go to drafts."

@@ -88,4 +88,5 @@ xmodmap     //keys
 xprop       //detail about window
 feh --bg-scale <wallpaper>
 
-
+#OpenVPN
+sudo openvpn <.ovpm file>
