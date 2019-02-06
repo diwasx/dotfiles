@@ -32,6 +32,8 @@ cp ~/.rtorrent.rc /DriveE/Projects/Git/i3wm/
 cp ~/.nvidia-xinitrc /DriveE/Projects/Git/i3wm/
 mkdir /DriveE/Projects/Git/i3wm/.config/mutt
 cp ~/.config/mutt/muttrc /DriveE/Projects/Git/i3wm/.config/mutt/
-cp  -r ~/.config/mutt/accounts/ /DriveE/Projects/Git/i3wm/.config/mutt/
+mkdir /DriveE/Projects/Git/i3wm/.config/mutt/accounts
+cp  ~/.config/mutt/accounts/diwasx.muttrc /DriveE/Projects/Git/i3wm/.config/mutt/accounts
+cp  ~/.config/mutt/accounts/gmail.muttrc /DriveE/Projects/Git/i3wm/.config/mutt/accounts
 cp ~/.zshrc /DriveE/Projects/Git/i3wm/
 cp ~/.zprofile /DriveE/Projects/Git/i3wm/

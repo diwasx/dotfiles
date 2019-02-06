@@ -1,0 +1,30 @@
+#!/usr/bin/python2
+
+# This script only generate 30% lyric. To generate full lyric use musixmax premium api key
+import requests
+import unirest
+import json
+import sys
+
+artist='post malone'
+title='sunflower'
+# pageurl = "https://makeitpersonal.co/lyrics?artist=" + artist + "&title=" + title  #This site is now not working
+# lyrics = requests.get(pageurl).text.strip()
+
+def main():
+    if len(sys.argv) != 3:
+        print ("Error: Artist name and Song name required")
+        print ('Example: lyricMusixMatch "Post Malone" "Sunflower"')
+    else:
+        response = unirest.get("https://musixmatchcom-musixmatch.p.rapidapi.com/wsr/1.1/matcher.lyrics.get?q_artist="+sys.argv[1]+"&q_track="+sys.argv[2],
+          headers={
+            "X-RapidAPI-Key": "2b8bcaa120msh8e79e8d93e17930p1f1469jsne7ecb0b4b470"
+          }
+        )
+        result=(response.raw_body)
+
+        result=json.loads(result)
+        result=result["lyrics_body"]
+        print (result)
+
+main()

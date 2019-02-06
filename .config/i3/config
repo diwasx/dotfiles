@@ -15,6 +15,7 @@
 #loginTheme:-/etc/issue
 #xscreensaver-arch-logo*
 #network:-bmon,nethogs
+#disk:-bleachbit,qdirstat,fdupes
 
 
 # i3 config file (v4)

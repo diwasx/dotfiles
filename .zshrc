@@ -118,6 +118,7 @@ alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
 alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
+alias nx="nvidia-xrun"
 alias logo="neofetch" #screenfetch
 
 export WINEDEBUG=fps
