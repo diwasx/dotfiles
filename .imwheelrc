@@ -7,7 +7,15 @@
     None, Up, Button4, 2.5
     None, Down, Button5, 2.5
 
+"^zathura$"
+    None, Up, Button4, 4
+    None, Down, Button5, 4
+
 "^chromium$"
-    None, Up, Button4, 2.5
-    None, Down, Button5, 2.5
+    None, Up, Button4, 4
+    None, Down, Button5, 4
+
+"^discord$"
+    None, Up, Button4, 4
+    None, Down, Button5, 4
 

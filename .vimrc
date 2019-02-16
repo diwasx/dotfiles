@@ -27,7 +27,9 @@ let mapleader=" "
 let g:NERDTreeMouseMode=3 
 
 " Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" set formatoptions-=cro
+" set paste
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
@@ -35,6 +37,9 @@ map <leader>o :setlocal spell! spelllang=en_us<CR>
 nnoremap j gj
 nnoremap k gk
 inoremap { {<CR>}<up><end><CR>
+
+"Search highlighted words
+vnoremap // y/<C-R>"<CR>
 
 " no highlighting
 map <leader>n :noh<CR>
@@ -83,6 +88,7 @@ Plugin 'dylanaraps/wal'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'jwalton512/vim-blade'
+" Plugin 'ternjs/tern_for_vim'
 
 " colorscheme vim-material
 "colorscheme turtles

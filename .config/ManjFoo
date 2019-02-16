@@ -1,7 +1,11 @@
 #
-
 kwin_x11
 /usr/share/grub/background.png
+xprop -->get class
+
+#apache
+vim /etc/httpd/conf/extra/httpd-vhosts.conf --> virtualhost
+vim /etc/hosts --> For dns port to 127.0.0.1
 
 #sql
 firewall-cmd --add-port=3306/tcp 
@@ -18,6 +22,7 @@ ctrl w --> bash bs word
 alt d  --> bash del word
 \r to make enter in bash
 ctrl y -->undo
+<ctrl-r> -->reverse search (press multiple time to cycle)
 
 systemctl | grep running
 ps -u lanaya
@@ -32,7 +37,7 @@ dd if=/path_to_iso_without_space.iso of=/dev/sdb
 dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 #git
-git config --global user.email "diwasx@gmail.com"
+git config --global user.email <email addr>
 git remote add origin https*
 git push        
 git push origin master
@@ -67,6 +72,9 @@ optirun -b none nvidia-settings -c :8
         :all //make one window for all files including tabs
 
 
+ @youcompleteme (ycm) --> use ~/.vim/bundle/YouCompleteMe/install.py   <additional parameter>
+
+
 #vscode
 dotnet new console
 dotnet run
@@ -74,6 +82,28 @@ dotnet run
 #python
 repr        #convert to string
 input       #take input,input is always as a string
+python -m site  -->show lib folder #.local/lib/
+pip install --user <package>    -->install as user
+
+
+#nodejs 
+npm init -->initialize app
+npm install/unistall/remove/rm <package> -->install in current folder
+npm install <package> --save -->install in current folder and add to package.json (NO LONGER NECESSARY)
+npm install <package> -g -->install globally(/usr/lib/node_modules)
+(can be changed to ~/node_modules using npm_config_prefix)(link:https://wiki.archlinux.org/index.php/Node.js#Allow_user-wide_installations)
+npm install <package> --save-dev -->install as dev
+npm install --> install all dependencies
+npm install --production --> install dependencies without dev
+npm list  -->show all dependencies
+npm list --depth <value>  -->show all dependencies and depth
+
+
+nodemon -->check for change in node app and reload auto
+live-server  -->host project in brower
+
+
+
 
 #java
 <projectDescription>
@@ -90,3 +120,8 @@ feh --bg-scale <wallpaper>
 
 #OpenVPN
 sudo openvpn <.ovpm file>
+
+
+#mouse
+vim ~/.imwheelrc  #for mouse scroll speed
+

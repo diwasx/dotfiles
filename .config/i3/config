@@ -16,6 +16,7 @@
 #xscreensaver-arch-logo*
 #network:-bmon,nethogs
 #disk:-bleachbit,qdirstat,fdupes
+#pdf:- zathura
 
 
 # i3 config file (v4)
@@ -384,8 +385,9 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 bindsym $mod+BackSpace		exec /home/lanaya/Documents/Script/flash_win.sh
 
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
-bindsym mod1+control+s exec SteamWal.sh
-bindsym mod1+control+d exec uget-gtk
+bindsym mod1+control+s exec /home/lanaya/Documents/Script/SteamWal.sh
+bindsym mod1+control+d exec discord
+# bindsym mod1+control+d exec uget-gtk
 bindsym mod1+control+r workspace $workspace8; exec urxvt -e rtorrent
 
 bindsym Print exec scrot -e 'mv $f /DriveE/Pictures/ScreenShot'
@@ -422,8 +424,8 @@ exec dunst
 exec ~/Documents/Script/getForecast.sh
 
 #OfflineIMAP 
-exec urxvt -e offlineimap-notify.sh
-bindsym $mod+control+o exec urxvt -e offlineimap-notify.sh
+exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
+bindsym $mod+control+o exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 bindsym mod1+control+o exec urxvt -e neomutt
 
 # exec mpd-notify
