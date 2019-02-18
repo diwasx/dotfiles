@@ -14,9 +14,11 @@
 #expect
 #loginTheme:-/etc/issue
 #xscreensaver-arch-logo*
+#xclip :-copying current command
 #network:-bmon,nethogs
 #disk:-bleachbit,qdirstat,fdupes
 #pdf:- zathura
+#subtitle :-subliminal (subliminal download -l en The.Imitation.Game.2014.1080p.BluRay.x264.YIFY.mp4)
 
 
 # i3 config file (v4)

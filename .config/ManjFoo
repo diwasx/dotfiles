@@ -1,6 +1,8 @@
-#
+
+#customization
 kwin_x11
 /usr/share/grub/background.png
+/etc/issue
 xprop -->get class
 
 #apache
@@ -89,7 +91,7 @@ pip install --user <package>    -->install as user
 #nodejs 
 npm init -->initialize app
 npm install/unistall/remove/rm <package> -->install in current folder
-npm install <package> --save -->install in current folder and add to package.json (NO LONGER NECESSARY)
+npm install <package> --save -->install in current folder and add to package.json (--save NO LONGER NECESSARY)
 npm install <package> -g -->install globally(/usr/lib/node_modules)
 (can be changed to ~/node_modules using npm_config_prefix)(link:https://wiki.archlinux.org/index.php/Node.js#Allow_user-wide_installations)
 npm install <package> --save-dev -->install as dev
@@ -125,3 +127,5 @@ sudo openvpn <.ovpm file>
 #mouse
 vim ~/.imwheelrc  #for mouse scroll speed
 
+#ranger
+rifle.conf -->/usr/lib/python3.7/site-packages/ranger/config/ (Set File associate)
