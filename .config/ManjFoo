@@ -44,6 +44,8 @@ git remote add origin https*
 git push        
 git push origin master
 //config gitpage mai lekhcha
+git show            -->Chages between latest two commit
+git diff --cached   -->Chages between last commit and staged file
 
 #pacman
 pacman -Scc
@@ -72,6 +74,7 @@ optirun -b none nvidia-settings -c :8
         :new //split hori with new file
         T //window to tab
         :all //make one window for all files including tabs
+    Shift+j -->clear white space
 
 
  @youcompleteme (ycm) --> use ~/.vim/bundle/YouCompleteMe/install.py   <additional parameter>
@@ -87,6 +90,8 @@ input       #take input,input is always as a string
 python -m site  -->show lib folder #.local/lib/
 pip install --user <package>    -->install as user
 
+@Run python from node
+https://stackoverflow.com/questions/23450534/how-to-call-a-python-function-from-node-js
 
 #nodejs 
 npm init -->initialize app

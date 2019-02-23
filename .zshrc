@@ -1,3 +1,13 @@
+#    ▒███████▒  ██████  ██░ ██  ██▀███   ▄████▄  
+#    ▒ ▒ ▒ ▄▀░▒██    ▒ ▓██░ ██▒▓██ ▒ ██▒▒██▀ ▀█  
+#    ░ ▒ ▄▀▒░ ░ ▓██▄   ▒██▀▀██░▓██ ░▄█ ▒▒▓█    ▄ 
+#      ▄▀▒   ░  ▒   ██▒░▓█ ░██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒
+#    ▒███████▒▒██████▒▒░▓█▒░██▓░██▓ ▒██▒▒ ▓███▀ ░
+#    ░▒▒ ▓░▒░▒▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒░ ▒▓ ░▒▓░░ ░▒ ▒  ░
+#    ░░▒ ▒ ░ ▒░ ░▒  ░ ░ ▒ ░▒░ ░  ░▒ ░ ▒░  ░  ▒   
+#    ░ ░ ░ ░ ░░  ░  ░   ░  ░░ ░  ░░   ░ ░        
+#      ░ ░          ░   ░  ░  ░   ░     ░ ░      
+#    ░                                  ░        
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/home/lanaya/.config/composer/vendor/bin:/home/lanaya/.vim/bundle/fzf/bin:/home/lanaya/node_modules/.bin/:/home/lanaya/Documents/Script:/usr/local/bin:$PATH
 # Stored in .zprofile
@@ -117,6 +127,8 @@ alias conx="vim ~/.Xresources"
 alias conblock="vim ~/.config/i3/i3blocks.conf"
 alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
+#Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)
+alias pj="processing-java --sketch=`pwd` --run"
 alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
 alias nx="nvidia-xrun"

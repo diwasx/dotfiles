@@ -1,3 +1,15 @@
+"
+"     ██▒   █▓ ██▓ ███▄ ▄███▓ ██▀███   ▄████▄  
+"    ▓██░   █▒▓██▒▓██▒▀█▀ ██▒▓██ ▒ ██▒▒██▀ ▀█  
+"     ▓██  █▒░▒██▒▓██    ▓██░▓██ ░▄█ ▒▒▓█    ▄ 
+"      ▒██ █░░░██░▒██    ▒██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒
+"       ▒▀█░  ░██░▒██▒   ░██▒░██▓ ▒██▒▒ ▓███▀ ░
+"       ░ ▐░  ░▓  ░ ▒░   ░  ░░ ▒▓ ░▒▓░░ ░▒ ▒  ░
+"       ░ ░░   ▒ ░░  ░      ░  ░▒ ░ ▒░  ░  ▒   
+"         ░░   ▒ ░░      ░     ░░   ░ ░        
+"          ░   ░         ░      ░     ░ ░      
+"         ░                           ░        
+"
 syntax enable
 set number 
 set relativenumber
@@ -35,6 +47,7 @@ let g:NERDTreeMouseMode=3
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 "For preview box show function property
+set completeopt-=preview
 map <leader>= :set completeopt+=preview<CR>
 map <leader>- :set completeopt-=preview<CR>
 
@@ -92,6 +105,7 @@ Plugin 'dylanaraps/wal'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'jwalton512/vim-blade'
+Plugin 'sophacles/vim-processing'
 " Plugin 'ternjs/tern_for_vim'
 
 " colorscheme vim-material

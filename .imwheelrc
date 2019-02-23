@@ -1,21 +1,21 @@
 # Speed up scrolling for the document viewer
 "^Navigator$"
-    None, Up, Button4, 4
-    None, Down, Button5, 4
+    None, Up, Button4, 3
+    None, Down, Button5, 3
 
 "^okular$"
     None, Up, Button4, 2.5
     None, Down, Button5, 2.5
 
 "^zathura$"
-    None, Up, Button4, 4
-    None, Down, Button5, 4
+    None, Up, Button4, 3
+    None, Down, Button5, 3
 
 "^chromium$"
-    None, Up, Button4, 4
-    None, Down, Button5, 4
+    None, Up, Button4, 3
+    None, Down, Button5, 3
 
 "^discord$"
-    None, Up, Button4, 4
-    None, Down, Button5, 4
+    None, Up, Button4, 3
+    None, Down, Button5, 3
 
