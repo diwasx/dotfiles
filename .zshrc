@@ -134,6 +134,25 @@ alias ym="youtube-dl-mp3"
 alias nx="nvidia-xrun"
 alias logo="neofetch" #screenfetch
 
+#Ranger alias
+alias gM='cd /DriveE/Movies'
+alias gr='cd /run/media/lanaya'
+alias gm='cd /DriveE/Music'
+alias gd='cd /home/lanaya/Documents'
+alias gw='cd /DriveE/Pictures/Wallpapers'
+alias gP='cd /DriveE/Projects'
+# alias g[='cd /DriveE/Xampp/htdocs/histogramImage'
+alias gh='cd /DriveE/Xampp/htdocs/'
+alias gi3='cd /DriveE/Projects/Git/i3wm'
+alias gp='cd /DriveE/Pictures'
+alias gD='cd /DriveE/Backup/Downloads'
+alias gE='cd /DriveE/Backup/Program Files'
+alias ge='cd /DriveE'
+alias gk='cd /DriveKhelkud'
+alias gs='cd ~/Documents/Script'
+alias gN='cd /DriveE/Projects/Notes/Sem VII'
+alias gn='cd /DriveE/Projects/Notes/'
+
 export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh
  

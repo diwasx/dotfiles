@@ -4,6 +4,8 @@ kwin_x11
 /usr/share/grub/background.png
 /etc/issue
 xprop -->get class
+xev   -->get keyboard class
+screenkey -->show key pressed
 
 #apache
 vim /etc/httpd/conf/extra/httpd-vhosts.conf --> virtualhost
@@ -46,6 +48,7 @@ git push origin master
 //config gitpage mai lekhcha
 git show            -->Chages between latest two commit
 git diff --cached   -->Chages between last commit and staged file
+git rm -r --cached . -->clear cached and all new file can be added
 
 #pacman
 pacman -Scc
@@ -60,21 +63,28 @@ optirun -b none nvidia-settings -c :8
 
 #vim
 
-    Shift+<< - shift current line left
-    Shift+>> - shift current line right
-    :noh //no highlighting
-    w-e,b-ge   0,$
-    alt+ctrl+m
+Shift+<< - shift current line left
+Shift+>> - shift current line right
+:noh //no highlighting
+w-e,b-ge   0,$
+alt+ctrl+m
+
+@add word to beggining
+Use Ctrl+V to enter visual block mode
+Move Up/Downto select the columns of text in the lines you want to comment.
+Then hit Shift+i and type the text you want to insert.
+Then hit Esc, wait 1 second and the inserted text will appear on every line.
+
 @windows
-    vim -p (with tabs)
-    vim -o -O verti/horizontally
-    ctrl-w
-        s //split verti
-        w //split hori
-        :new //split hori with new file
-        T //window to tab
-        :all //make one window for all files including tabs
-    Shift+j -->clear white space
+vim -p (with tabs)
+vim -o -O verti/horizontally
+ctrl-w
+s //split verti
+w //split hori
+:new //split hori with new file
+T //window to tab
+:all //make one window for all files including tabs
+Shift+j -->clear white space
 
 
  @youcompleteme (ycm) --> use ~/.vim/bundle/YouCompleteMe/install.py   <additional parameter>
