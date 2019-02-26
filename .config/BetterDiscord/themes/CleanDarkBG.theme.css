@@ -1,0 +1,65 @@
+//META{"name":"Clean Dark Wallpaper Edition","description":"Simple & clean dark theme. Basic enhancements. User settings for variety. Transparent with wallpaper. Please use the support server listed below if you need any help.","author":"Satoru","version":"0.6.5","website":"http://discord.gg/fjvwb95"}*//{}
+
+@import url(https://satoru8.github.io/CleanDark/CleanDarkBG.css);
+@import url('https://satoru8.github.io/Addons/FullScreenStatusPicker/fullScreenStatusPicker.css');
+@import url(https://satoru8.github.io/FullSizePfp/FullSizePfp.css);
+@import url(https://satoru8.github.io/Addons/GlowStatus.css);
+@import url(https://satoru8.github.io/Addons/Library.css);
+@import url(https://satoru8.github.io/Addons/LargeChatAvatars.css);
+
+:root {
+
+	--light: rgba(0, 0, 0, 0.5); /* Overall theme brightness. 1= black, 0 = transparent */
+
+	--chatbg: rgba(0, 0, 0, 0);	/* Chat background colour/brightness. */
+
+	--mc: rgba(0, 208, 255, 0.3);	/* Main theme colour. */
+	--sc: rgba(0, 208, 255, 0.8);   /* Secondary/accent colour. */
+	--sb:rgba(53, 149, 255, .3);    /* Scrollbar colour. Change .3 to 0 to hide scrollbar. */
+	--border: rgba(16, 101, 186, 0.41);	/* Border colour. Change .3 to 0 to hide borders. */
+	
+	--font: sans-serif;	
+	--fsize: 13px;	/* Font Size */
+	--text: #ccc;	/* Chat text colour */
+
+	--round: 5%;	/* Icon Roundness. Pfps/Guilds 50% round, 0% Square. */
+
+	--profileradius: 0px; /* Member popout profiles. 0 is normal squared edges. Up to 45px for rounded profiles. */
+
+	--homeicon: url(https://rawgit.com/satoru8/Icons/master/homewhite.svg); /* Custom Home Icon. */
+
+    --block: none;  /* Default - none */
+	
+	/* Library addon*/
+    --bg1: rgba(0, 0, 0, 0.9);	/* Library Background transparency/colour */
+    --bc1:var(--sc);	/* Library Box-shadow  */
+
+	/* Chat Avatars */
+    --size1: 60px; /* Avatar Size */
+	--round1: 5%;  /* Avatar roundness 50% Circle. */
+	--margin1: 0px; /* Margin left/right */
+	--margin2: 3px; /* Margin top/bottom */
+	--shadow1: 0 0 1px #000; /* Shadow for transparent themes. */
+	--compact: 5px;    /* Default 5px, Non-compact 15px. This makes the chat msgs a bit more compact by default. */
+
+	/* Glow Status */
+    --sglow: 0px 2px; /* Blur/Thickness Default: 5px 2px */
+    --online: #43b581;
+    --offline: #747f8d;
+    --idle: #faa61a;
+    --stream: #593695;
+    --dnd: #f04747;
+    --invis: #1a36fa;
+
+    /* Uri's Status Chooser */
+    --sPickerOnlineBGColour: #43b581;
+    --sPickerIdleBGColour: #faa61a;
+    --sPickerDNDBGColour: #f04747;
+    --sPickerInviBGColour: #1a36fa;
+
+    --sPickerOnlineBGIcon: url('https://satoru8.github.io/Addons/FullScreenStatusPicker/Assets/online.svg');
+    --sPickerIdleBGIcon: url('https://satoru8.github.io/Addons/FullScreenStatusPicker/Assets/idle.svg');
+    --sPickerDNDBGIcon:url('https://satoru8.github.io/Addons/FullScreenStatusPicker/Assets/dnd.svg');
+    --sPickerInviBGIcon: url('https://satoru8.github.io/Addons/FullScreenStatusPicker/Assets/invis.svg');
+   }
+#app-mount {background: url(https://images6.alphacoders.com/880/880825.png) center/cover no-repeat} /* Theme Background */

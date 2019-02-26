@@ -15,6 +15,10 @@
     None, Up, Button4, 3
     None, Down, Button5, 3
 
+"^google-chrome$"
+    None, Up, Button4, 3
+    None, Down, Button5, 3
+
 "^discord$"
     None, Up, Button4, 3
     None, Down, Button5, 3

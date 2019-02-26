@@ -177,7 +177,8 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 700 500 
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
+bindsym $mod+u [instance="dropdown"] scratchpad show; 
+#move position center
 exec --no-startup-id urxvt -name dropdown -e tmux
 
 #Send to scratchpad (Hidden Workspace)
@@ -188,8 +189,24 @@ bindsym $mod+control+y scratchpad show
 
 
 #Get only window with title given from scratcpad
-bindsym mod1+control+y [title="mpv"] scratchpad show
-bindsym mod1+control+u [title="fb-messenger-cli"] scratchpad show
+bindsym mod1+control+p [title="mpv"] scratchpad show
+bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
+bindsym mod1+control+b exec /home/lanaya/Documents/Script/scratchpadBrower.sh
+
+#Programs Shortcut
+bindsym mod1+control+e exec pulseaudio-equalizer-gtk
+bindsym mod1+control+s exec /home/lanaya/Documents/Script/SteamWal.sh
+bindsym mod1+control+d exec discord
+# bindsym mod1+control+d exec uget-gtk
+bindsym mod1+control+r workspace $workspace8; exec urxvt -e rtorrent
+bindsym mod1+control+h exec terminator -e gotop
+bindsym mod1+control+n exec urxvt -e newsboat
+bindsym mod1+control+m exec /home/lanaya/Documents/Script/mpvBuffer.sh
+
+#OfflineIMAP 
+exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
+bindsym $mod+control+o exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
+bindsym mod1+control+o exec urxvt -e neomutt
 
 workspace $workspace2 gaps inner 0
 workspace $workspace2 gaps outer 0
@@ -413,14 +430,6 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 bindsym $mod+BackSpace		exec /home/lanaya/Documents/Script/flash_win.sh
 
-bindsym mod1+control+e exec pulseaudio-equalizer-gtk
-bindsym mod1+control+s exec /home/lanaya/Documents/Script/SteamWal.sh
-bindsym mod1+control+d exec discord
-# bindsym mod1+control+d exec uget-gtk
-bindsym mod1+control+r workspace $workspace8; exec urxvt -e rtorrent
-bindsym mod1+control+h exec terminator -e gotop
-bindsym mod1+control+n exec urxvt -e newsboat
-bindsym mod1+control+m exec /home/lanaya/Documents/Script/mpvBuffer.sh
 
 bindsym Print exec scrot -e 'mv $f /DriveE/Pictures/ScreenShot'
 # bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
@@ -456,11 +465,6 @@ exec compton
 exec imwheel
 exec dunst
 exec ~/Documents/Script/getForecast.sh
-
-#OfflineIMAP 
-exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
-bindsym $mod+control+o exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
-bindsym mod1+control+o exec urxvt -e neomutt
 
 # exec mpd-notify
 exec ~/Documents/Script/mpdUpdate.sh
