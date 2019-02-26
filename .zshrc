@@ -150,7 +150,7 @@ alias gE='cd /DriveE/Backup/Program Files'
 alias ge='cd /DriveE'
 alias gk='cd /DriveKhelkud'
 alias gs='cd ~/Documents/Script'
-alias gN='cd /DriveE/Projects/Notes/Sem VII'
+alias gN='cd /DriveE/Projects/Notes/Sem\ VII'
 alias gn='cd /DriveE/Projects/Notes/'
 
 export WINEDEBUG=fps

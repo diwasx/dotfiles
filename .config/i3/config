@@ -40,6 +40,7 @@
 gaps inner 15
 gaps outer 15
 set $mod Mod4
+exec /home/lanaya/Documents/Script/Wall_wal.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -168,7 +169,7 @@ bindsym $mod+c focus child
 
 set $workspace1 "1. Terminal" 
 set $workspace2 "2. Web"
-set $workspace8 "8."
+set $workspace8 "8"
 set $workspace9 "9."
 set $workspace10 "10. Music"
 
@@ -181,6 +182,14 @@ bindsym $mod+u [instance="dropdown"] scratchpad show;
 #move position center
 exec --no-startup-id urxvt -name dropdown -e tmux
 
+###--Messenger--###
+for_window [instance="fb-messenger-cli"] floating enable
+for_window [instance="fb-messenger-cli"] resize set 515 331 
+for_window [instance="fb-messenger-cli"] move position 0 745
+for_window [instance="fb-messenger-cli"] move scratchpad
+exec --no-startup-id urxvt -name fb-messenger-cli -e fb-messenger-cli
+bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
+
 #Send to scratchpad (Hidden Workspace)
 bindsym $mod+y move scratchpad
 
@@ -190,7 +199,7 @@ bindsym $mod+control+y scratchpad show
 
 #Get only window with title given from scratcpad
 bindsym mod1+control+p [title="mpv"] scratchpad show
-bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
+# bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 bindsym mod1+control+b exec /home/lanaya/Documents/Script/scratchpadBrower.sh
 
 #Programs Shortcut
@@ -201,10 +210,11 @@ bindsym mod1+control+d exec discord
 bindsym mod1+control+r workspace $workspace8; exec urxvt -e rtorrent
 bindsym mod1+control+h exec terminator -e gotop
 bindsym mod1+control+n exec urxvt -e newsboat
+# bindsym $mod+control+f exec urxvt -e fb-messenger-cli
 bindsym mod1+control+m exec /home/lanaya/Documents/Script/mpvBuffer.sh
 
 #OfflineIMAP 
-exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
+# exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 bindsym $mod+control+o exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 bindsym mod1+control+o exec urxvt -e neomutt
 
@@ -378,6 +388,7 @@ bindsym mod1+control+period exec playerctl previous
 bindsym $mod+m workspace $workspace10; exec urxvt -e ncmpcpp 
 bindsym $mod+control+m workspace $workspace9; exec spotify
 exec --no-startup-id i3-msg 'workspace $workspace10; exec urxvt -e ncmpcpp'
+
 ## FOR ALSA/AMIXER ##
 set $inc --no-startup-id amixer sset Master 2%+
 set $biginc --no-startup-id amixer sset Master 5%+
@@ -437,7 +448,6 @@ bindsym $mod+x exec dmenu_run
 
 #startup
 assign [class="banshee"] $workspace10
-exec chromium
 assign [class="Chromium"] $workspace2
 assign [class="Uget-gtk"] $workspace9
 assign [class="Kget"] $workspace9
@@ -446,14 +456,10 @@ assign [class="Kget"] $workspace9
 #Wallpaper
 #exec_always feh --bg-scale /DriveE/Pictures/Wallpapers/4K-Wallpaper-5F.jpg
 #exec /home/lanaya/Documents/Script/Wallpaper_xwinwrap.sh
-exec /home/lanaya/Documents/Script/Wall_wal.sh
+# exec /home/lanaya/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers 
 bindsym $mod+control+n exec blurwal -b 4  #Blurr wallpaper
 
-#arch logo startup
-exec --no-startup-id i3-msg 'workspace $workspace1' #exec urxvt -e tmux new-session sh -c 'neofetch; "$SHELL"''
-
-exec urxvt -e tmux new-session sh -c 'neofetch; "$SHELL"'
 exec /home/lanaya/Documents/Script/Touchpad.sh
 # exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
@@ -468,3 +474,9 @@ exec ~/Documents/Script/getForecast.sh
 
 # exec mpd-notify
 exec ~/Documents/Script/mpdUpdate.sh
+
+#arch logo startup
+exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e tmux new-session sh -c 'neofetch; "$SHELL"' 
+# exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
+
+exec chromium

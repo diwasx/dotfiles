@@ -144,3 +144,6 @@ vim ~/.imwheelrc  #for mouse scroll speed
 
 #ranger
 rifle.conf -->/usr/lib/python3.7/site-packages/ranger/config/ (Set File associate)
+
+
+xx (reddit,discord)

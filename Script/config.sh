@@ -6,7 +6,8 @@ cp ~/.bashrc /DriveE/Projects/Git/i3wm/
 cp ~/.xsession /DriveE/Projects/Git/i3wm/
 mkdir /DriveE/Projects/Git/i3wm/.config
 cp -r ~/.config/i3/ /DriveE/Projects/Git/i3wm/.config/
-cp -r ~/.config/BetterDiscord/ /DriveE/Projects/Git/i3wm/.config/
+mkdir /DriveE/Projects/Git/i3wm/.config/BetterDiscord/
+cp -r ~/.config/BetterDiscord/themes /DriveE/Projects/Git/i3wm/.config/BetterDiscord/
 cp -r ~/.config/newsboat/ /DriveE/Projects/Git/i3wm/.config/
 cp -r ~/.config/zathura /DriveE/Projects/Git/i3wm/.config/
 cp -r ~/.config/ranger/ /DriveE/Projects/Git/i3wm/.config
