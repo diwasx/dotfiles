@@ -14,7 +14,10 @@
 
 # wal :-genarate colorsheme based on wallpager
 # blurwal :-blurbackgroundimage
-# rofi
+# cmatrix :-animation 
+# neofetch, screenfetch :- show description
+# cava, vis :- Visualizer
+# rofi :- menu tool
 # font-awesome -->Terminal-font
 # compton
 # expect
@@ -148,6 +151,8 @@ bindsym $mod+e exec urxvt -e vis
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
+
+#Floating bottom left and bottom right corner
 bindsym $mod+Shift+space floating enable; resize set 515 331; move position 1400 745
 bindsym $mod+control+space floating enable; resize set 515 331; move position 0 745
 
@@ -174,6 +179,17 @@ for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 exec --no-startup-id urxvt -name dropdown -e tmux
+
+#Send to scratchpad (Hidden Workspace)
+bindsym $mod+y move scratchpad
+
+#Recieve window one by from scratchpad (Hidden Workspace)
+bindsym $mod+control+y scratchpad show
+
+
+#Get only window with title given from scratcpad
+bindsym mod1+control+y [title="mpv"] scratchpad show
+bindsym mod1+control+u [title="fb-messenger-cli"] scratchpad show
 
 workspace $workspace2 gaps inner 0
 workspace $workspace2 gaps outer 0
