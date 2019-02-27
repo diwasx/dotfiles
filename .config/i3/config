@@ -182,6 +182,8 @@ bindsym $mod+u [instance="dropdown"] scratchpad show;
 #move position center
 exec --no-startup-id urxvt -name dropdown -e tmux
 
+# for_window [class="Nepalical"] floating enable
+
 ###--Messenger--###
 for_window [instance="fb-messenger-cli"] floating enable
 for_window [instance="fb-messenger-cli"] resize set 515 331 
@@ -201,6 +203,9 @@ bindsym $mod+control+y scratchpad show
 bindsym mod1+control+p [title="mpv"] scratchpad show
 # bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 bindsym mod1+control+b exec /home/lanaya/Documents/Script/scratchpadBrower.sh
+
+#Nepali Calender
+bindsym mod1+control+c exec /home/lanaya/Documents/Script/nepalicalCheck.sh
 
 #Programs Shortcut
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
