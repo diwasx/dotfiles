@@ -157,6 +157,9 @@ bindsym $mod+space floating toggle
 bindsym $mod+Shift+space floating enable; resize set 515 331; move position 1400 745
 bindsym $mod+control+space floating enable; resize set 515 331; move position 0 745
 
+#Floating window to center position
+bindsym mod1+control+space floating enable; move position center
+
 
 # change focus between tiling / floating windows
 bindsym mod1+Tab focus mode_toggle
@@ -206,6 +209,9 @@ bindsym mod1+control+b exec /home/lanaya/Documents/Script/scratchpadBrower.sh
 
 #Nepali Calender
 bindsym mod1+control+c exec /home/lanaya/Documents/Script/nepalicalCheck.sh
+
+#Redshift
+bindsym mod1+control+0 exec "/home/lanaya/Documents/Script/redshiftCheck.sh"
 
 #Programs Shortcut
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk

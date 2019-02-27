@@ -41,7 +41,7 @@ timeout = 2
 timeout = 2
 
 [urgency_critical]
-timeout = 0
+timeout = 5
 
 [mpd]
 summary = "Now playing*"

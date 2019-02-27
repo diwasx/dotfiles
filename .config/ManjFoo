@@ -1,4 +1,3 @@
-
 #customization
 kwin_x11
 /usr/share/grub/background.png
@@ -6,6 +5,8 @@ kwin_x11
 xprop -->get class
 xev   -->get keyboard class
 screenkey -->show key pressed
+feh --bg-scale <wallpaper>
+archey      //logo
 
 #apache
 vim /etc/httpd/conf/extra/httpd-vhosts.conf --> virtualhost
@@ -17,26 +18,32 @@ firewall-cmd --permanent --add-port=3306/tcp
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.%' IDENTIFIED BY '' WITH GRANT OPTION;
 mysql -u -h 192.168.* -p
 
-archey      //logo
-du -sh
-du -hs * | sort -h
-
-#bash
+#bash #zsh
 ctrl w --> bash bs word
 alt d  --> bash del word
+ctrl+h //backspace 
 \r to make enter in bash
 ctrl y -->undo
 <ctrl-r> -->reverse search (press multiple time to cycle)
 
+#system
+#
+systemctl --user import-environment DISPLAY
+journalctl -xe --> Check for errors
 systemctl | grep running
-ps -u lanaya
+lsblk --> show disk partation and mount point
+df -h --> disk usage
+ps -u <user> -->processes in user
+ps acux -->a for terminal process,x for non terminal process, u for username, c for actual command name like(ls,grep,cat)
 nmap -sP 192.168.1.* //scan all ip
-cat /etc/resolv.conf        //dns 
-grep -rnw '/path/to/somewhere/' -e 'pattern'        //find text from files
+nmap localhost -->scan port
+du -sh -->folder size
+du -hs * | sort -h
+cat /etc/resolv.conf  -->dns location
+grep -rnw '/path/to/somewhere/' -e 'pattern'  --->find text from files
 ln -s <new path> <new shortcut>
-udisksctl mount -b /dev/sdc1
-ctrl+h //backspace 
-load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1
+udisksctl mount -b /dev/sdc1 --> mount as user
+load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 
 dd if=/path_to_iso_without_space.iso of=/dev/sdb
 dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
@@ -48,11 +55,11 @@ git push origin master
 //config gitpage mai lekhcha
 git show            -->Chages between latest two commit
 git diff --cached   -->Chages between last commit and staged file
-git rm -r --cached . -->clear cached and all new file can be added
+git rm -r --cached . -->clear cached and all new file can be added (usefull when adding folder/file to gitignore)
 
 #pacman
-pacman -Scc
-yaourt -Syu --aur
+pacman -Scc -->clear cache
+yaourt -Syu --aur --> check for aur update
 
 #bumblebee
 vblank_mode=0 optirun glxgears
@@ -86,9 +93,7 @@ T //window to tab
 :all //make one window for all files including tabs
 Shift+j -->clear white space
 
-
- @youcompleteme (ycm) --> use ~/.vim/bundle/YouCompleteMe/install.py   <additional parameter>
-
+@youcompleteme (ycm) --> use ~/.vim/bundle/YouCompleteMe/install.py   <additional parameter>
 
 #vscode
 dotnet new console
@@ -115,12 +120,8 @@ npm install --production --> install dependencies without dev
 npm list  -->show all dependencies
 npm list --depth <value>  -->show all dependencies and depth
 
-
 nodemon -->check for change in node app and reload auto
 live-server  -->host project in brower
-
-
-
 
 #java
 <projectDescription>
@@ -133,7 +134,6 @@ make files in scr folder
 #i3
 xmodmap     //keys
 xprop       //detail about window
-feh --bg-scale <wallpaper>
 
 #OpenVPN
 sudo openvpn <.ovpm file>
@@ -149,7 +149,8 @@ rifle.conf -->/usr/lib/python3.7/site-packages/ranger/config/ (Set File associat
 #scripting  
 >  :- overwrite
 >> :- append
-$? :- exit status of last command
+$? :- exit status of last command. 0 if successfull, 1 if failed
+output=`ls` or  output="$(ls)" :- save output of command to variable
 
 
 xx (reddit,discord)

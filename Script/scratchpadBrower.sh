@@ -1,8 +1,11 @@
 #!/bin/sh
 
-if i3-msg "[title="Chromium"] scratchpad show" | grep -q 'ERROR' 
+i3-msg "[title="Chromium"] scratchpad show" | grep -q 'true' > /dev/null #Hiding terminal result because getting status code is enough
+if [ $? == 0 ]
 then
-    echo "Check for other browers"
+    echo "Found Chromium"
 else
-    i3-msg [instance=google-chrome] scratchpad show
+    echo "Looking for other brower"
+    i3-msg [instance="google-chrome"] scratchpad show > /dev/null
+    # i3-msg [class="Firefox"] scratchpad show
 fi

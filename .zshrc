@@ -125,6 +125,7 @@ alias conter="vim ~/.config/terminator/config"
 alias conncm="vim ~/.ncmpcpp/bindings"
 alias conx="vim ~/.Xresources"
 alias conblock="vim ~/.config/i3/i3blocks.conf"
+alias conman="vim ~/Desktop/ManjFoo"
 alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
 #Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)
