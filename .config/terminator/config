@@ -122,7 +122,7 @@
 [profiles]
   [[default]]
     use_system_font = False
-    font=DejaVu Sans Mono 11
+    font=DejaVu Sans Mono 12
 #font = Noto Mono 10
 #Inconsolata 12
     background_darkness = 0.8

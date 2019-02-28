@@ -31,6 +31,7 @@
 # zathura --> pdf reader
 # newsboat --> rss feed
 # subliminal (subliminal download -l en The.Imitation.Game.2014.1080p.BluRay.x264.YIFY.mp4)--> subtitle downloader
+# urxvt, alacritty :- urxvt for dynamic theme and alacritty for static theme
 
 
 # i3 config file (v4)
@@ -92,7 +93,7 @@ set_from_resource $color15    i3wm.color15    #95B6DD
 
 #<super>+m will focus the last active floating wind
 # start a terminal
-bindsym $mod+Shift+Return exec terminator #i3-sensible-terminal
+bindsym $mod+Shift+Return exec alacritty #i3-sensible-terminal
 bindsym $mod+Return exec urxvt
 
 #hide titlebar
@@ -176,16 +177,22 @@ set $workspace8 "8"
 set $workspace9 "9."
 set $workspace10 "10. Music"
 
-###---Dropdown---###
-for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 700 500 
-for_window [instance="dropdown"] move position center
-for_window [instance="dropdown"] move scratchpad
-bindsym $mod+u [instance="dropdown"] scratchpad show; 
-#move position center
-exec --no-startup-id urxvt -name dropdown -e tmux
+###---Dropdown---###--Urxvt--###
+#for_window [instance="dropdown"] floating enable
+#for_window [instance="dropdown"] resize set 700 500 
+#for_window [instance="dropdown"] move position center
+#for_window [instance="dropdown"] move scratchpad
+#bindsym $mod+u [instance="dropdown"] scratchpad show; 
+##move position center
+#exec --no-startup-id urxvt -name dropdown -e tmux
 
-# for_window [class="Nepalical"] floating enable
+###---Dropdown---###---Alacritty--##
+for_window [title="dropdown"] floating enable
+for_window [title="dropdown"] resize set 700 500 
+for_window [title="dropdown"] move position center
+for_window [title="dropdown"] move scratchpad
+bindsym $mod+u [title="dropdown"] scratchpad show; 
+exec --no-startup-id alacritty -t dropdown 
 
 ###--Messenger--###
 for_window [instance="fb-messenger-cli"] floating enable
@@ -218,16 +225,16 @@ bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 bindsym mod1+control+s exec /home/lanaya/Documents/Script/SteamWal.sh
 bindsym mod1+control+d exec discord
 # bindsym mod1+control+d exec uget-gtk
-bindsym mod1+control+r workspace $workspace8; exec urxvt -e rtorrent
-bindsym mod1+control+h exec terminator -e gotop
-bindsym mod1+control+n exec urxvt -e newsboat
+bindsym mod1+control+r workspace $workspace8; exec alacritty -e rtorrent
+bindsym mod1+control+h exec alacritty -e gotop
+bindsym mod1+control+n exec alacritty -e newsboat
 # bindsym $mod+control+f exec urxvt -e fb-messenger-cli
 bindsym mod1+control+m exec /home/lanaya/Documents/Script/mpvBuffer.sh
 
 #OfflineIMAP 
 # exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 bindsym $mod+control+o exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
-bindsym mod1+control+o exec urxvt -e neomutt
+bindsym mod1+control+o exec alacritty -e neomutt
 
 workspace $workspace2 gaps inner 0
 workspace $workspace2 gaps outer 0
@@ -311,7 +318,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r exec urxvt -e ranger
+bindsym $mod+r exec alacritty -e ranger
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -396,9 +403,9 @@ bindsym mod1+control+slash exec playerctl next
 bindsym mod1+control+period exec playerctl previous
 
 # bindsym $mod+m exec urxvt -e ncmpcpp 
-bindsym $mod+m workspace $workspace10; exec urxvt -e ncmpcpp 
+bindsym $mod+m workspace $workspace10; exec alacritty -e ncmpcpp 
 bindsym $mod+control+m workspace $workspace9; exec spotify
-exec --no-startup-id i3-msg 'workspace $workspace10; exec urxvt -e ncmpcpp'
+exec --no-startup-id i3-msg 'workspace $workspace10; exec alacritty -e ncmpcpp'
 
 ## FOR ALSA/AMIXER ##
 set $inc --no-startup-id amixer sset Master 2%+
@@ -476,7 +483,9 @@ exec /home/lanaya/Documents/Script/Touchpad.sh
 exec ~/Documents/Script/nm-applet.sh
 exec ~/Documents/Script/Volume.sh
 exec ~/.config/i3/hud-menu-service.py
-exec xscreensaver 
+
+#Screensaver
+# exec xscreensaver 
 exec compton 
 #exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
@@ -487,7 +496,8 @@ exec ~/Documents/Script/getForecast.sh
 exec ~/Documents/Script/mpdUpdate.sh
 
 #arch logo startup
-exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e tmux new-session sh -c 'neofetch; "$SHELL"' 
+exec --no-startup-id i3-msg 'workspace $workspace1' && alacritty -e tmux new-session sh -c 'neofetch; "$SHELL"' 
 # exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 
 exec chromium
+exec /home/lanaya/Documents/Script/urxvtAltModifier.sh

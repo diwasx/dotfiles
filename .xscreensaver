@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.38 for lanaya on Wed Jan 30 12:12:03 2019.
+# Written by xscreensaver-demo 5.38 for lanaya on Wed Feb 27 23:23:59 2019.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	1:00:00
@@ -95,7 +95,7 @@ programs:								      \
 				xjack -root				    \n\
 				xlyap -root				    \n\
   GL: 				atlantis -root				    \n\
-				bsod -root				    \n\
+				bsod -root -atari -bsd -sparclinux	    \n\
   GL: 				bubble3d -root				    \n\
   GL: 				cage -root				    \n\
 -				crystal -root				    \n\

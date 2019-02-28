@@ -75,6 +75,8 @@ Shift+>> - shift current line right
 :noh //no highlighting
 w-e,b-ge   0,$
 alt+ctrl+m
+nnoremap :-normal mode map
+inoremap :-insert mode map
 
 @add word to beggining
 Use Ctrl+V to enter visual block mode
@@ -89,6 +91,7 @@ ctrl-w
 s //split verti
 w //split hori
 :new //split hori with new file
+:vnew //split verti with new file
 T //window to tab
 :all //make one window for all files including tabs
 Shift+j -->clear white space
@@ -122,6 +125,10 @@ npm list --depth <value>  -->show all dependencies and depth
 
 nodemon -->check for change in node app and reload auto
 live-server  -->host project in brower
+
+#composer
+composer require <package> -->install package in project dir
+composer global require laravel/installer -->install laravel globally
 
 #java
 <projectDescription>

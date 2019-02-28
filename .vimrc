@@ -32,6 +32,8 @@ set foldlevelstart=10
 set clipboard=unnamedplus
 
 let mapleader=" "
+:imap ii <Esc>
+
 
 
 " For mouse click in NERDTree
@@ -54,6 +56,36 @@ map <leader>- :set completeopt-=preview<CR>
 nnoremap j gj
 nnoremap k gk
 inoremap { {<CR>}<up><end><CR>
+
+
+" Tabs
+map <C-t> :tabnew<CR>
+
+" Problem  Meta (Alt) that keypress to set the 8th bit
+execute "set <A-1>=\e1"
+map <A-1> <Esc>:tabn1<CR>
+execute "set <A-2>=\e2"
+map <A-2> <Esc>:tabn2<CR>
+execute "set <A-3>=\e3"
+map <A-3> <Esc>:tabn3<CR>
+execute "set <A-4>=\e4"
+map <A-4> <Esc>:tabn4<CR>
+execute "set <A-5>=\e5"
+map <A-5> <Esc>:tabn5<CR>
+execute "set <A-6>=\e6"
+map <A-6> <Esc>:tabn6<CR>
+execute "set <A-7>=\e7"
+map <A-7> <Esc>:tabn7<CR>
+execute "set <A-8>=\e8"
+map <A-8> <Esc>:tabn8<CR>
+execute "set <A-9>=\e9"
+map <A-9> <Esc>:tabn9<CR>
+
+" execute "set <A-k>=\ek"
+" map <A-k><Esc>:tabnext<CR>
+" execute "set <A-j>=\ej"
+" map <A-j><Esc>:tabprevious<CR>
+
 
 "Search highlighted words
 vnoremap // y/<C-R>"<CR>
