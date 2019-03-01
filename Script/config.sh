@@ -9,6 +9,7 @@ mkdir /DriveE/Projects/Git/i3wm/.config
 mkdir /DriveE/Projects/Git/i3wm/.config/mps-youtube/
 cp -r ~/.config/mps-youtube/config /DriveE/Projects/Git/i3wm/.config/mps-youtube/
 cp -r ~/.config/i3/ /DriveE/Projects/Git/i3wm/.config/
+cp -r ~/.config/mpv/ /DriveE/Projects/Git/i3wm/.config/
 mkdir /DriveE/Projects/Git/i3wm/.config/BetterDiscord/
 cp -r ~/.config/BetterDiscord/themes /DriveE/Projects/Git/i3wm/.config/BetterDiscord/
 cp -r ~/.config/newsboat/ /DriveE/Projects/Git/i3wm/.config/

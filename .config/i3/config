@@ -229,7 +229,11 @@ bindsym mod1+control+r workspace $workspace8; exec alacritty -e rtorrent
 bindsym mod1+control+h exec alacritty -e gotop
 bindsym mod1+control+n exec alacritty -e newsboat
 # bindsym $mod+control+f exec urxvt -e fb-messenger-cli
-bindsym mod1+control+m exec /home/lanaya/Documents/Script/mpvBuffer.sh
+
+
+bindsym mod1+control+1 exec /home/lanaya/Documents/Script/bufferMpvVideo.sh
+bindsym mod1+control+2 exec /home/lanaya/Documents/Script/bufferMpvAudio.sh
+bindsym mod1+control+3 exec /home/lanaya/Documents/Script/bufferMp3Download.sh
 
 #OfflineIMAP 
 # exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
@@ -403,9 +407,9 @@ bindsym mod1+control+slash exec playerctl next
 bindsym mod1+control+period exec playerctl previous
 
 # bindsym $mod+m exec urxvt -e ncmpcpp 
-bindsym $mod+m workspace $workspace10; exec alacritty -e ncmpcpp 
+bindsym $mod+m workspace $workspace10; exec urxvt -e ncmpcpp 
 bindsym $mod+control+m workspace $workspace9; exec spotify
-exec --no-startup-id i3-msg 'workspace $workspace10; exec alacritty -e ncmpcpp'
+# exec --no-startup-id i3-msg 'workspace $workspace10' && alacritty -e ncmpcpp
 
 ## FOR ALSA/AMIXER ##
 set $inc --no-startup-id amixer sset Master 2%+
@@ -466,6 +470,7 @@ bindsym $mod+x exec dmenu_run
 
 #startup
 assign [class="banshee"] $workspace10
+assign [title="mpsyt"] $workspace10
 assign [class="Chromium"] $workspace2
 assign [class="Uget-gtk"] $workspace9
 assign [class="Kget"] $workspace9
@@ -496,8 +501,7 @@ exec ~/Documents/Script/getForecast.sh
 exec ~/Documents/Script/mpdUpdate.sh
 
 #arch logo startup
-exec --no-startup-id i3-msg 'workspace $workspace1' && alacritty -e tmux new-session sh -c 'neofetch; "$SHELL"' 
+exec --no-startup-id i3-msg 'workspace $workspace1' && alacritty -e /home/lanaya/Documents/Script/startupLogo.sh
 # exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 
 exec chromium
-exec /home/lanaya/Documents/Script/urxvtAltModifier.sh

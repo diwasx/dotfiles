@@ -27,7 +27,6 @@ ctrl y -->undo
 <ctrl-r> -->reverse search (press multiple time to cycle)
 
 #system
-#
 systemctl --user import-environment DISPLAY
 journalctl -xe --> Check for errors
 systemctl | grep running
@@ -46,6 +45,16 @@ udisksctl mount -b /dev/sdc1 --> mount as user
 load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 
 dd if=/path_to_iso_without_space.iso of=/dev/sdb
 dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+mkfs.ntfs -->Format 
+mkfs.ntfs -f -->Quick format
+mkfs.ext4
+
+#clipboard
+xsel -p -->paste primary clipboard (mid mouse button)
+xsel -b -->paste secondary clipboard (keyboard paste button)
+xsel -ip -->copy to primary clipboard 
+xsel -ib -->paste primary clipboard 
+example --> echo pacman -Syu | xsel -ib
 
 #git
 git config --global user.email <email addr>
@@ -129,6 +138,7 @@ live-server  -->host project in brower
 #composer
 composer require <package> -->install package in project dir
 composer global require laravel/installer -->install laravel globally
+composer install
 
 #java
 <projectDescription>
@@ -158,6 +168,11 @@ rifle.conf -->/usr/lib/python3.7/site-packages/ranger/config/ (Set File associat
 >> :- append
 $? :- exit status of last command. 0 if successfull, 1 if failed
 output=`ls` or  output="$(ls)" :- save output of command to variable
+url=`xsel -b | head -n 1` --> piping command is stored in varaible like this
+
+#mps-youtube
+x <number> copy to clipboard
 
 
 xx (reddit,discord)
+

@@ -69,6 +69,6 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 Xft.dpi:87
 
 ! handle Meta (Alt) + keypress to set the 8th bit
-/* causes different key with alt key */
-/* URxvt.meta8: true */
+! causes different key with alt key
+! URxvt.meta8: true
 
