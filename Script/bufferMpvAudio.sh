@@ -5,5 +5,7 @@
 
 # Best practice and clear
 url=`xsel -b | head -n 1`
-notify-send -u critical "Starting in mpv $url"
-urxvt -e mpsyt playurl $url
+notify-send -u critical "Playing audio $url"
+urxvt -name mpsyt -e mpsyt playurl $url #name tag is for i3 scratchpad
+
+#Press q to find next similar song. (set auto play to true)

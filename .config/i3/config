@@ -14,6 +14,7 @@
 
 # wal :-genarate colorsheme based on wallpager
 # blurwal :-blurbackgroundimage
+#sxiv :- image viewer
 # cmatrix :-animation 
 # neofetch, screenfetch :- show description
 # cava, vis :- Visualizer
@@ -26,12 +27,12 @@
 # xclip :-copying current command in MID Mouse btn
 # screenkey --> Display type keys
 # gotop,htop-vim --> Activity Monitor
-# bmon,nethogs-->:-network tool
 # bleachbit,qdirstat,fdupes--> disk tools
 # zathura --> pdf reader
 # newsboat --> rss feed
 # subliminal (subliminal download -l en The.Imitation.Game.2014.1080p.BluRay.x264.YIFY.mp4)--> subtitle downloader
 # urxvt, alacritty :- urxvt for dynamic theme and alacritty for static theme
+# mycli --> mysql syntax highlighting
 
 
 # i3 config file (v4)
@@ -104,7 +105,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -font "System San Francisco Display 17"
+bindsym $mod+d exec rofi -show run -font "System San Francisco Display 13"
+
+#musicRofi
+bindsym $mod+control+d exec /home/lanaya/Documents/Script/musicRofi.sh
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -158,6 +162,9 @@ bindsym $mod+space floating toggle
 bindsym $mod+Shift+space floating enable; resize set 515 331; move position 1400 745
 bindsym $mod+control+space floating enable; resize set 515 331; move position 0 745
 
+#Large view size
+bindsym mod1+Shift+space floating enable; resize set 800 600 
+
 #Floating window to center position
 bindsym mod1+control+space floating enable; move position center
 
@@ -202,6 +209,22 @@ for_window [instance="fb-messenger-cli"] move scratchpad
 exec --no-startup-id urxvt -name fb-messenger-cli -e fb-messenger-cli
 bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 
+###-- mpsyt (CLI youtube)--###
+for_window [instance="mpsyt"] floating enable
+for_window [instance="mpsyt"] resize set 515 331 
+for_window [instance="mpsyt"] move position 570 745
+for_window [instance="mpsyt"] move scratchpad
+# exec --no-startup-id urxvt -name mpsyt -e mpsyt
+bindsym mod1+control+bracketleft [title="mpsyt"] scratchpad show
+
+###-- mpsyt (Floating mpv)--###
+for_window [title="floatingMpv"] floating enable
+for_window [title="floatingMpv"] resize set 800 600 
+for_window [title="floatingMpv"] move position 1110 475
+for_window [title="floatingMpv"] move scratchpad
+# bindsym mod1+control+bracketleft [title="floatingMpv"] scratchpad show
+bindsym mod1+control+p [title="floatingMpv"] scratchpad show
+
 #Send to scratchpad (Hidden Workspace)
 bindsym $mod+y move scratchpad
 
@@ -210,7 +233,6 @@ bindsym $mod+control+y scratchpad show
 
 
 #Get only window with title given from scratcpad
-bindsym mod1+control+p [title="mpv"] scratchpad show
 # bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 bindsym mod1+control+b exec /home/lanaya/Documents/Script/scratchpadBrower.sh
 
@@ -220,6 +242,12 @@ bindsym mod1+control+c exec /home/lanaya/Documents/Script/nepalicalCheck.sh
 #Redshift
 bindsym mod1+control+0 exec "/home/lanaya/Documents/Script/redshiftCheck.sh"
 
+#Buffer Script
+bindsym mod1+control+1 exec /home/lanaya/Documents/Script/bufferMpvVideo.sh
+bindsym mod1+control+2 exec /home/lanaya/Documents/Script/bufferMpvAudio.sh
+bindsym mod1+control+3 exec /home/lanaya/Documents/Script/bufferMp3Download.sh
+
+#OfflineIMAP 
 #Programs Shortcut
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 bindsym mod1+control+s exec /home/lanaya/Documents/Script/SteamWal.sh
@@ -230,12 +258,6 @@ bindsym mod1+control+h exec alacritty -e gotop
 bindsym mod1+control+n exec alacritty -e newsboat
 # bindsym $mod+control+f exec urxvt -e fb-messenger-cli
 
-
-bindsym mod1+control+1 exec /home/lanaya/Documents/Script/bufferMpvVideo.sh
-bindsym mod1+control+2 exec /home/lanaya/Documents/Script/bufferMpvAudio.sh
-bindsym mod1+control+3 exec /home/lanaya/Documents/Script/bufferMp3Download.sh
-
-#OfflineIMAP 
 # exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 bindsym $mod+control+o exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 bindsym mod1+control+o exec alacritty -e neomutt
@@ -370,8 +392,8 @@ client.background       $bg
 #bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 
 
-bindsym mod1+control+l exec xscreensaver-command -lock 
-bindsym $mod+control+l exec i3lock -i /DriveE/Pictures/music.png && xset dpms force off
+bindsym mod1+control+backslash exec xscreensaver-command -lock 
+bindsym $mod+control+backslash exec i3lock -i /DriveE/Pictures/music.png && xset dpms force off
 # #--Music Player--#
 
 # #banshee
@@ -470,7 +492,7 @@ bindsym $mod+x exec dmenu_run
 
 #startup
 assign [class="banshee"] $workspace10
-assign [title="mpsyt"] $workspace10
+# assign [title="mpsyt"] $workspace10
 assign [class="Chromium"] $workspace2
 assign [class="Uget-gtk"] $workspace9
 assign [class="Kget"] $workspace9

@@ -32,7 +32,7 @@ set foldlevelstart=10
 set clipboard=unnamedplus
 
 let mapleader=" "
-:imap ii <Esc>
+" :imap ii <Esc>
 
 
 
@@ -55,11 +55,20 @@ map <leader>- :set completeopt-=preview<CR>
 
 nnoremap j gj
 nnoremap k gk
-inoremap { {<CR>}<up><end><CR>
+" inoremap { {<CR>}<up><end><CR>
 
 
+" Join
+map <C-n> :j<CR>
 " Tabs
+"This override help page with keyword
 map <C-t> :tabnew<CR>
+
+"This override command execution
+map <S-k> :tabnext<CR> 
+
+map <S-j> :tabprevious<CR> 
+map <S-u> :tabmove<CR>
 
 " Problem  Meta (Alt) that keypress to set the 8th bit
 execute "set <A-1>=\e1"
@@ -108,13 +117,11 @@ map <C-e> <C-w>q
 map <leader>i :new<CR>
 map <leader>s :vnew<CR>
 nnoremap <Leader>f :NERDTreeToggle<CR>
-
+" filetype plugin on                  
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 set rtp+=~/.vim/bundle/fzf
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -139,6 +146,7 @@ Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'jwalton512/vim-blade'
 Plugin 'sophacles/vim-processing'
 " Plugin 'ternjs/tern_for_vim'
+Plugin 'tmhedberg/matchit'
 
 " colorscheme vim-material
 "colorscheme turtles

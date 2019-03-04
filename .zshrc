@@ -127,6 +127,7 @@ alias conx="vim ~/.Xresources"
 alias conblock="vim ~/.config/i3/i3blocks.conf"
 alias conman="vim ~/Desktop/ManjFoo"
 alias concom="vim ~/.config/compton.conf"
+alias conrif="sudo vim /usr/lib/python3.7/site-packages/ranger/config/rifle.conf"
 alias r="ranger"
 alias t="vim /home/lanaya/Desktop/ToDo"
 #Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)

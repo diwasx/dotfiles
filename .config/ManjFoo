@@ -16,7 +16,9 @@ vim /etc/hosts --> For dns port to 127.0.0.1
 firewall-cmd --add-port=3306/tcp 
 firewall-cmd --permanent --add-port=3306/tcp
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.%' IDENTIFIED BY '' WITH GRANT OPTION;
+describe <table> --> give table scheme
 mysql -u -h 192.168.* -p
+mycli --> auto syntax and highlighting
 
 #bash #zsh
 ctrl w --> bash bs word
@@ -53,8 +55,8 @@ mkfs.ext4
 xsel -p -->paste primary clipboard (mid mouse button)
 xsel -b -->paste secondary clipboard (keyboard paste button)
 xsel -ip -->copy to primary clipboard 
-xsel -ib -->paste primary clipboard 
-example --> echo pacman -Syu | xsel -ib
+xsel -ib -->copy to secondary clipboard 
+echo pacman -Syu | xsel -ib --> this copies command to clipboard
 
 #git
 git config --global user.email <email addr>
@@ -86,6 +88,11 @@ w-e,b-ge   0,$
 alt+ctrl+m
 nnoremap :-normal mode map
 inoremap :-insert mode map
+:wa save all buffer
+
+@html
+dat ->delete around tags
+dit ->delete inside tags
 
 @add word to beggining
 Use Ctrl+V to enter visual block mode
@@ -135,10 +142,17 @@ npm list --depth <value>  -->show all dependencies and depth
 nodemon -->check for change in node app and reload auto
 live-server  -->host project in brower
 
+#php #laravel
+php artisan make:model <name> --> create model
+php artisan make:model <name> -m  --> create model with migration
+php artisan make:auth --> create auth that require model
+php artisan make:migration create_users_table --> create migrition
+php artisan migrate --> migrate data
+php artisan migrate:reset --> rollback migrate 
 #composer
 composer require <package> -->install package in project dir
 composer global require laravel/installer -->install laravel globally
-composer install
+composer install -->Install all packages from json file
 
 #java
 <projectDescription>
@@ -163,15 +177,29 @@ vim ~/.imwheelrc  #for mouse scroll speed
 rifle.conf -->/usr/lib/python3.7/site-packages/ranger/config/ (Set File associate)
 
 
+#rofi
+Ctrl-space --> autocomplete
+Shift-del --> clear command
+
+
 #scripting  
 >  :- overwrite
 >> :- append
 $? :- exit status of last command. 0 if successfull, 1 if failed
 output=`ls` or  output="$(ls)" :- save output of command to variable
 url=`xsel -b | head -n 1` --> piping command is stored in varaible like this
+grep -e <patter> -->to check if pattern is present
+grep -v <patter> -->to check if pattern is not present (return true when pattern is not found)
 
 #mps-youtube
 x <number> copy to clipboard
+
+#image 
+convert example.png -resize 2560x1440 example.png --> change resolution
+convert example.png example.jpg --> one format to another
+
+@sxiv -->image viewer
+b -> fullscreen
 
 
 xx (reddit,discord)
