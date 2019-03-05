@@ -1,12 +1,15 @@
 #customization
 kwin_x11
-/usr/share/grub/background.png
 /etc/issue
 xprop -->get class
 xev   -->get keyboard class
 screenkey -->show key pressed
 feh --bg-scale <wallpaper>
 archey      //logo
+@grub
+https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Background_image_and_bitmap_fonts
+GRUB_THEME="/usr/share/grub/themes/starfield/theme.txt" -->Read theme.txt file for background
+grub-mkconfig -->generate 
 
 #apache
 vim /etc/httpd/conf/extra/httpd-vhosts.conf --> virtualhost
@@ -60,13 +63,15 @@ echo pacman -Syu | xsel -ib --> this copies command to clipboard
 
 #git
 git config --global user.email <email addr>
-git remote add origin https*
-git push        
+git remote add origin <link> --> (here origin is the name for remote repo)
 git push origin master
-//config gitpage mai lekhcha
+git push origin1 master:testing -->(testing is origin1 branch to push in)
+git push origin --all -->pushes all local branches to origin
+//config gitpage mai lekhcha 
 git show            -->Chages between latest two commit
 git diff --cached   -->Chages between last commit and staged file
 git rm -r --cached . -->clear cached and all new file can be added (usefull when adding folder/file to gitignore)
+git checkout -b <branchname>   -->create new branch and switch to it
 
 #pacman
 pacman -Scc -->clear cache
@@ -191,8 +196,12 @@ url=`xsel -b | head -n 1` --> piping command is stored in varaible like this
 grep -e <patter> -->to check if pattern is present
 grep -v <patter> -->to check if pattern is not present (return true when pattern is not found)
 
-#mps-youtube
-x <number> copy to clipboard
+#mps-youtube(mpsyt)
+x :- <number> copy to clipboard
+q :- finds for similar song 
+< > :-for next and previous
+@playing by upload of channel
+mpsyt channels <name>; set order date; set order to relevence
 
 #image 
 convert example.png -resize 2560x1440 example.png --> change resolution

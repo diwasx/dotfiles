@@ -34,6 +34,8 @@ cp -r ~/.mplayer/ /DriveE/Projects/Git/i3wm/
 cp ~/.imwheelrc /DriveE/Projects/Git/i3wm/
 mkdir /DriveE/Projects/Git/i3wm/etc/
 cp /etc/issue /DriveE/Projects/Git/i3wm/etc/
+mkdir /DriveE/Projects/Git/i3wm/themes/grub-theme -p
+cp -r /boot/grub/themes/* /DriveE/Projects/Git/i3wm/themes/grub-theme/
 cp ~/.xscreensaver /DriveE/Projects/Git/i3wm/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/i3wm/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/i3wm/

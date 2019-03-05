@@ -1,0 +1,5 @@
+/* copy these to /boot/grub/themes */
+/* Set theme like below */
+GRUB_THEME="/boot/grub/themes/StylishDark/theme.txt" 
+/* Run this */
+grub-mkconfig
