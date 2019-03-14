@@ -1,5 +1,6 @@
-/* copy these to /boot/grub/themes */
-/* Set theme like below */
+/* copy these to /boot/grub/themes
+/* Set theme like below 
+/* Edit ( /etc/default/grub )
 GRUB_THEME="/boot/grub/themes/StylishDark/theme.txt" 
-/* Run this */
+/* Run this 
 grub-mkconfig

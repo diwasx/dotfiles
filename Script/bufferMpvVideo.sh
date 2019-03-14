@@ -6,3 +6,8 @@
 url=`xsel -b | head -n 1`
 notify-send -u critical "Starting in mpv $url"
 mpv --title=floatingMpv $url #title tag is for i3 scratchpad
+
+if [ $? != 0 ]
+then
+    notify-send "Url not valid"
+fi

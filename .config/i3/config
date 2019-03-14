@@ -32,7 +32,7 @@
 # zathura --> pdf reader
 # newsboat --> rss feed
 # subliminal (subliminal download -l en The.Imitation.Game.2014.1080p.BluRay.x264.YIFY.mp4)--> subtitle downloader
-# urxvt, alacritty :- urxvt for dynamic theme and alacritty for static theme
+# urxvt, alacritty :- urxvt for dynamic theme and alacritty for static theme(wal doesnt work wll with alacritty)
 # mycli --> mysql syntax highlighting
 
 
@@ -40,8 +40,11 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-gaps inner 15
-gaps outer 15
+# gaps inner 15
+# gaps outer 15
+gaps inner 0
+gaps outer 0
+
 set $mod Mod4
 exec /home/lanaya/Documents/Script/Wall_wal.sh
 
@@ -239,42 +242,52 @@ bindsym $mod+control+y scratchpad show
 # bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 bindsym mod1+control+b exec /home/lanaya/Documents/Script/scratchpadBrower.sh
 
-#Nepali Calender
-bindsym mod1+control+c exec /home/lanaya/Documents/Script/nepalicalCheck.sh
-
-#Redshift
-bindsym mod1+control+0 exec "/home/lanaya/Documents/Script/redshiftCheck.sh"
 
 #Buffer Script
-bindsym mod1+control+1 exec /home/lanaya/Documents/Script/bufferMpvVideo.sh
-bindsym mod1+control+2 exec /home/lanaya/Documents/Script/bufferMpvAudio.sh
-bindsym mod1+control+3 exec /home/lanaya/Documents/Script/bufferMp3Download.sh
+bindsym mod1+control+1 exec /home/lanaya/Documents/Script/bufferSearchEngine.sh
+bindsym mod1+control+2 exec /home/lanaya/Documents/Script/bufferMpvVideo.sh
+bindsym mod1+control+3 exec /home/lanaya/Documents/Script/bufferMpvAudio.sh
+bindsym mod1+control+4 exec /home/lanaya/Documents/Script/bufferMp3Download.sh
 
-#OfflineIMAP 
 #Programs Shortcut
+bindsym mod1+control+0 exec chromium
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 bindsym mod1+control+s exec /home/lanaya/Documents/Script/SteamWal.sh
-bindsym mod1+control+9 exec discord
-# bindsym mod1+control+d exec uget-gtk
+
+
 bindsym mod1+control+r workspace $workspace8; exec alacritty -e rtorrent
 bindsym mod1+control+h exec alacritty -e gotop
 bindsym mod1+control+n exec alacritty -e newsboat
 # bindsym $mod+control+f exec urxvt -e fb-messenger-cli
 
+#Nepali Calender
+bindsym mod1+control+Shift+c exec /home/lanaya/Documents/Script/nepalicalCheck.sh
+
+#Redshift
+bindsym mod1+control+Shift+r exec "/home/lanaya/Documents/Script/redshiftCheck.sh"
+
+bindsym mod1+control+Shift+d exec discord
+
+#OfflineIMAP 
 # exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 bindsym $mod+control+o exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 bindsym mod1+control+o exec alacritty -e neomutt
 
-workspace $workspace2 gaps inner 0
-workspace $workspace2 gaps outer 0
-workspace 3 gaps inner 0
-workspace 3 gaps outer 0
-workspace $workspace9 gaps inner 0
-workspace $workspace9 gaps outer 0
-workspace $workspace8 gaps inner 0
-workspace $workspace8 gaps outer 0
-workspace $workspace10 gaps inner 0
-workspace $workspace10 gaps outer 0
+workspace $workspace1 gaps inner 15
+workspace $workspace1 gaps inner 15
+# workspace $workspace2 gaps outer 0
+# workspace $workspace3 gaps inner 0
+# workspace $workspace3 gaps inner 0
+# workspace $workspace4 gaps outer 0
+# workspace $workspace4 gaps outer 0
+# workspace 3 gaps inner 0
+# workspace 3 gaps outer 0
+# workspace $workspace8 gaps inner 0
+# workspace $workspace8 gaps outer 0
+# workspace $workspace9 gaps inner 0
+# workspace $workspace9 gaps outer 0
+# workspace $workspace10 gaps inner 0
+# workspace $workspace10 gaps outer 0
 bindsym $mod+Shift+u resize shrink width 10 px or 10ppt
 bindsym $mod+Shift+o resize shrink height 10 px or 10ppt
 bindsym $mod+Shift+i resize grow height 10 px or 10ppt
@@ -505,7 +518,7 @@ assign [class="Kget"] $workspace9
 #exec_always feh --bg-scale /DriveE/Pictures/Wallpapers/4K-Wallpaper-5F.jpg
 #exec /home/lanaya/Documents/Script/Wallpaper_xwinwrap.sh
 # exec /home/lanaya/Documents/Script/Wall_wal.sh
-bindsym $mod+control+b exec wal -i /DriveE/Pictures/Wallpapers 
+bindsym $mod+control+b exec /home/lanaya/Documents/Script/Wall_walBtn.sh
 bindsym $mod+control+n exec blurwal -b 4  #Blurr wallpaper
 
 exec /home/lanaya/Documents/Script/Touchpad.sh
@@ -529,4 +542,4 @@ exec ~/Documents/Script/mpdUpdate.sh
 exec --no-startup-id i3-msg 'workspace $workspace1' && alacritty -e /home/lanaya/Documents/Script/startupLogo.sh
 # exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
 
-exec chromium
+# exec chromium
