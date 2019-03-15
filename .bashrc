@@ -109,7 +109,7 @@ alias conblock="vim ~/.config/i3/i3blocks.conf"
 
 
 alias r="ranger"
-alias t="vim /home/lanaya/Desktop/notes/ToDo"
+alias t="vim /DriveE/Projects/Git/notes/ToDo"
 alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
 alias logo="neofetch" #screenfetch
