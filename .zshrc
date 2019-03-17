@@ -113,6 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias p="ping sgp-1.valve.net"
+alias sall="subliminal download -l en *"
 alias f="fzf"
 alias op="vblank_mode=0 optirun /home/lanaya/Documents/Script/winefps"
 alias nvd="optirun -b none nvidia-settings -c :8"

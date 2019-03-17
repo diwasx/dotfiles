@@ -173,8 +173,10 @@ Plugin 'tmhedberg/matchit'
 
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
-hi MatchParen cterm=none ctermbg=grey ctermfg=blue
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 hi Normal guibg=NONE ctermbg=NONE
+" hi Search guibg=peru guifg=wheat
+hi Search cterm=NONE ctermfg=grey ctermbg=lightyellow
 
 highlight LineNr ctermfg=grey 
 let g:EclimCompletionMethod = 'omnifunc'

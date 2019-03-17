@@ -14,7 +14,8 @@
 
 # wal :-genarate colorsheme based on wallpager
 # blurwal :-blurbackgroundimage
-#sxiv :- image viewer
+# sxiv :- image viewer
+# gthumb :- image editor
 # cmatrix :-animation 
 # neofetch, screenfetch :- show description
 # cava, vis :- Visualizer
