@@ -31,6 +31,7 @@
 # bmom,nethogs --> Network tools
 # bleachbit,qdirstat,fdupes--> disk tools
 # zathura --> pdf reader
+# zth --> modified version of zathura using wal color scheme(https://github.com/GideonWolfe/Zathura-Pywal)
 # newsboat --> rss feed
 # subliminal (subliminal download -l en The.Imitation.Game.2014.1080p.BluRay.x264.YIFY.mp4)--> subtitle downloader
 # urxvt, alacritty :- urxvt for dynamic theme and alacritty for static theme(wal doesnt work well with alacritty)

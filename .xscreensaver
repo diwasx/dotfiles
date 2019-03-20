@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.38 for lanaya on Wed Feb 27 23:23:59 2019.
+# Written by xscreensaver-demo 5.38 for lanaya on Mon Mar 18 09:28:31 2019.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	1:00:00
@@ -24,7 +24,7 @@ fadeTicks:	20
 captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
-dpmsEnabled:	True
+dpmsEnabled:	False
 dpmsQuickOff:	False
 dpmsStandby:	0:30:00
 dpmsSuspend:	12:00:00
