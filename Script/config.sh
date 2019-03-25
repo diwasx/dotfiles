@@ -15,6 +15,8 @@ cp -r ~/.config/BetterDiscord/themes /DriveE/Projects/Git/i3wm/.config/BetterDis
 cp -r ~/.config/newsboat/ /DriveE/Projects/Git/i3wm/.config/
 cp -r ~/.config/alacritty/ /DriveE/Projects/Git/i3wm/.config/
 cp -r ~/.config/zathura /DriveE/Projects/Git/i3wm/.config/
+rm /DriveE/Projects/Git/i3wm/.config/zathura/zathurarc
+
 cp -r ~/.config/ranger/ /DriveE/Projects/Git/i3wm/.config
 rm /DriveE/Projects/Git/i3wm/.config/ranger/bookmarks
 cp -r ~/.config/terminator/ /DriveE/Projects/Git/i3wm/.config

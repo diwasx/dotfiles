@@ -41,10 +41,5 @@ fi
 if (echo $cmd | grep -e Torrent);then
     url=$(xsel -b)
     i3-msg workspace 8 && alacritty -e rtorrent $url
-    # if [ $? -eq 0 ];then
-        # notify-send -u critical "Successfull downloaded video"
-    # else
-        # notify-send -u critical "Error downloadinig video. Check for copied url"
-    # fi
 fi
 
