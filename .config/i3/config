@@ -14,6 +14,7 @@
 
 # wal :-genarate colorsheme based on wallpager
 # blurwal :-blurbackgroundimage
+# corrupter :- glitches image for lockscreen
 # sxiv :- image viewer
 # gthumb :- image editor
 # cmatrix :-animation 
@@ -418,7 +419,8 @@ client.background       $bg
 
 bindsym mod1+control+backslash exec xscreensaver-command -lock 
 # bindsym $mod+control+backslash exec i3lock -i /DriveE/Pictures/music.png && xset dpms force off
-bindsym $mod+control+backslash exec /home/lanaya/Documents/Script/i3lockRandom.sh
+bindsym $mod+backslash exec /home/lanaya/Documents/Script/i3lockRandom.sh
+bindsym $mod+control+backslash exec /home/lanaya/Documents/Script/i3lockRandomBlur.sh
 
 # #--Music Player--#
 
