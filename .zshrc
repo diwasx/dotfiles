@@ -138,25 +138,29 @@ alias ym="youtube-dl-mp3"
 alias nx="nvidia-xrun"
 alias logo="neofetch" #screenfetch
 
+
 #Ranger alias
-alias gM='cd /DriveE/Movies'
-alias gr='cd /run/media/lanaya'
-alias gm='cd /DriveE/Music'
-alias gd='cd /home/lanaya/Documents'
-alias gw='cd /DriveE/Pictures/Wallpapers'
-alias gP='cd /DriveE/Projects'
-alias g\[='cd /DriveE/Xampp/htdocs/bakeryNew/bakery'
-alias gH='cd /DriveE/Xampp/htdocs/'
-alias gh='cd'
-alias gi3='cd /DriveE/Projects/Git/i3wm'
-alias gp='cd /DriveE/Pictures'
-alias gD='cd /DriveE/Backup/Downloads'
-alias gE='cd /DriveE/Backup/Program Files'
-alias ge='cd /DriveE'
-alias gk='cd /DriveKhelkud'
-alias gs='cd ~/Documents/Script'
-alias gN='cd /DriveE/Projects/Notes/Sem\ VII'
-alias gn='cd /DriveE/Projects/Notes/'
+alias ggi='/DriveE/Projects/Git/i3wm'
+alias ggn='/DriveE/Projects/Git/notes'
+alias gP='/DriveE/Projects'
+alias gE='/DriveE/Backup/Program Files'
+alias gD='/DriveE/Backup/Downloads'
+alias gO='/DriveE/Xampp/htdocs/bakeryNew/bakery'
+alias gN='/DriveE/Projects/Notes/SemVII'
+alias gM='/DriveE/Movies'
+alias gH='/DriveE/Xampp/htdocs/'
+alias gw='/DriveE/Pictures/Wallpapers'
+alias gs='~/Documents/Script'
+alias gr='/run/media/lanaya'
+alias gp='/DriveE/Pictures'
+alias ge='/DriveE'
+alias gd='/home/lanaya/Documents'
+alias gn='/DriveE/Projects/Notes/'
+alias gm='/DriveE/Music'
+alias gk='/DriveKhelkud'
+alias gh='~'
+#end
+
 
 export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh
