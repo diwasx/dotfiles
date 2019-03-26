@@ -250,6 +250,7 @@ bindsym mod1+control+b exec /home/lanaya/Documents/Script/scratchpadBrower.sh
 
 
 #Buffer Script
+bindsym mod1+control+grave exec /home/lanaya/Documents/Script/bufferUrl.sh
 bindsym mod1+control+1 exec /home/lanaya/Documents/Script/bufferSearchEngine.sh
 bindsym mod1+control+2 exec /home/lanaya/Documents/Script/bufferSearchEngineSecondary.sh
 bindsym mod1+control+3 exec /home/lanaya/Documents/Script/bufferMpvVideo.sh
@@ -534,7 +535,7 @@ bindsym $mod+control+b exec /home/lanaya/Documents/Script/Wall_walBtn.sh
 bindsym $mod+control+n exec blurwal -b 4  #Blurr wallpaper
 
 exec /home/lanaya/Documents/Script/Touchpad.sh
-# exec ~/Documents/Script/PulseModule.sh
+exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
 exec ~/Documents/Script/Volume.sh
 exec ~/.config/i3/hud-menu-service.py

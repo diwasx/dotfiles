@@ -13,6 +13,7 @@ cp -r ~/.config/mpv/ /DriveE/Projects/Git/i3wm/.config/
 mkdir /DriveE/Projects/Git/i3wm/.config/BetterDiscord/
 cp -r ~/.config/BetterDiscord/themes /DriveE/Projects/Git/i3wm/.config/BetterDiscord/
 cp -r ~/.config/newsboat/ /DriveE/Projects/Git/i3wm/.config/
+rm /DriveE/Projects/Git/i3wm/.config/newsboat/urls
 cp -r ~/.config/alacritty/ /DriveE/Projects/Git/i3wm/.config/
 cp -r ~/.config/zathura /DriveE/Projects/Git/i3wm/.config/
 rm /DriveE/Projects/Git/i3wm/.config/zathura/zathurarc
