@@ -1,10 +1,10 @@
 #Generates navigation alias for bash, zsh and ranger
-#Some problem with 
 
 declare -A array
 array[gr]='/run/media/lanaya'
 array[gd]='/home/lanaya/Documents'
 array[gh]='~'
+array[gc]='~/.config'
 array[gs]='~/Documents/Script'
 array[gM]='/DriveE/Movies'
 array[gm]='/DriveE/Music'
