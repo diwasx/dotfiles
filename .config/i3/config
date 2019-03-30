@@ -29,6 +29,7 @@
 # xclip :-copying current command in MID Mouse btn
 # screenkey --> Display type keys
 # gotop,htop-vim --> Activity Monitor
+# iotop --> Disk bandwidth Monitor
 # bmom,nethogs --> Network tools
 # bleachbit,qdirstat,fdupes--> disk tools
 # zathura --> pdf reader
@@ -218,7 +219,7 @@ for_window [instance="fb-messenger-cli"] floating enable
 for_window [instance="fb-messenger-cli"] resize set 515 331 
 for_window [instance="fb-messenger-cli"] move position 0 745
 for_window [instance="fb-messenger-cli"] move scratchpad
-exec --no-startup-id urxvt -name fb-messenger-cli -e fb-messenger-cli
+# exec --no-startup-id urxvt -name fb-messenger-cli -e fb-messenger-cli
 bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 
 ###-- mpsyt (CLI youtube)--###
@@ -421,7 +422,7 @@ client.background       $bg
 bindsym mod1+control+backslash exec xscreensaver-command -lock 
 # bindsym $mod+control+backslash exec i3lock -i /DriveE/Pictures/music.png && xset dpms force off
 bindsym $mod+backslash exec /home/lanaya/Documents/Script/i3lockRandom.sh
-bindsym $mod+control+backslash exec /home/lanaya/Documents/Script/i3lockRandomBlur.sh
+bindsym $mod+control+backslash exec /home/lanaya/Documents/Script/i3lockBlur.sh
 
 # #--Music Player--#
 

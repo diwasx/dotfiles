@@ -140,8 +140,9 @@ alias logo="neofetch" #screenfetch
 
 
 #Ranger alias
-alias ggi='/DriveE/Projects/Git/i3wm'
-alias ggn='/DriveE/Projects/Git/notes'
+alias gib='/usr/lib/i3blocks/'
+alias gbi='/DriveE/Projects/Git/i3wm'
+alias gbn='/DriveE/Projects/Git/notes'
 alias gP='/DriveE/Projects'
 alias gE='/DriveE/Backup/Program Files'
 alias gD='/DriveE/Backup/Downloads'

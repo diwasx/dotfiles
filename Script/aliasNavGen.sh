@@ -12,8 +12,8 @@ array[gw]='/DriveE/Pictures/Wallpapers'
 array[gP]='/DriveE/Projects'
 array[gO]='/DriveE/Xampp/htdocs/bakeryNew/bakery'
 array[gH]='/DriveE/Xampp/htdocs/'
-array[ggi]='/DriveE/Projects/Git/i3wm'
-array[ggn]='/DriveE/Projects/Git/notes'
+array[gbi]='/DriveE/Projects/Git/i3wm'
+array[gbn]='/DriveE/Projects/Git/notes'
 array[gp]='/DriveE/Pictures'
 array[gD]='/DriveE/Backup/Downloads'
 array[gE]='/DriveE/Backup/Program\ Files'
@@ -21,6 +21,7 @@ array[ge]='/DriveE'
 array[gk]='/DriveKhelkud'
 array[gN]='/DriveE/Projects/Notes/SemVII'
 array[gn]='/DriveE/Projects/Notes/'
+array[gib]='/usr/lib/i3blocks/'
 
 #For zshrc
 line="142a"
