@@ -38,7 +38,12 @@ done
 
 #For ranger
 line="206a"
-sed -i '/^#Ranger/,/^#end/{/^#Ranger/!{/^#end/!d}}' ~/.config/ranger/rc.conf 
+# sed -i '/^#Ranger/,/^#end/{/^#Ranger/!{/^#end/!d}}' ~/.config/ranger/rc.conf 
+sed -i '/^#Ranger/,/^#end/{
+    /^#Ranger/!{
+        /^#end/!d
+    }
+}' ~/.config/ranger/rc.conf 
 for i in "${!array[@]}"
 do
     key=$i

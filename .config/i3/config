@@ -536,7 +536,7 @@ bindsym $mod+control+b exec /home/lanaya/Documents/Script/Wall_walBtn.sh
 bindsym $mod+control+n exec blurwal -b 4  #Blurr wallpaper
 
 exec /home/lanaya/Documents/Script/Touchpad.sh
-exec ~/Documents/Script/PulseModule.sh
+# exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
 exec ~/Documents/Script/Volume.sh
 exec ~/.config/i3/hud-menu-service.py
