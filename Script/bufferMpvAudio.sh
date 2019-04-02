@@ -5,7 +5,7 @@
 
 # Best practice and clear
 url=`xsel -b | head -n 1`
-notify-send -u critical "Playing audio $url"
+notify-send -u normal "Playing audio $url"
 
 urxvt -name mpsyt -e mpsyt playurl $url #name tag is for i3 scratchpad
 

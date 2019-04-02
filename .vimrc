@@ -48,7 +48,7 @@ let g:NERDTreeMouseMode=3
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
-"For preview box show function property
+"For preview box show function property (display function detail)
 set completeopt-=preview
 map <leader>= :set completeopt+=preview<CR>
 map <leader>- :set completeopt-=preview<CR>

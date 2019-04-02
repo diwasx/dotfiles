@@ -115,8 +115,11 @@ bindsym $mod+q kill
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -font "System San Francisco Display 13"
 
-# start rofi (a program launcher)
+# start rofi search in web
 bindsym $mod+s exec /home/lanaya/Documents/Script/rofiSearchBrower.sh
+
+#search documention of clipboard from rofi
+bindsym mod1+control+s exec /home/lanaya/Documents/Script/rofiDocumentation.sh
 
 #rofiMusic
 bindsym $mod+control+d exec /home/lanaya/Documents/Script/rofiMusic.sh
@@ -261,7 +264,6 @@ bindsym mod1+control+4 exec /home/lanaya/Documents/Script/bufferMpvAudio.sh
 #Programs Shortcut
 bindsym mod1+control+0 exec chromium
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
-bindsym mod1+control+s exec /home/lanaya/Documents/Script/SteamWal.sh
 
 
 bindsym mod1+control+r workspace $workspace8; exec alacritty -e rtorrent
@@ -276,6 +278,8 @@ bindsym mod1+control+Shift+c exec /home/lanaya/Documents/Script/nepalicalCheck.s
 bindsym mod1+control+Shift+r exec "/home/lanaya/Documents/Script/redshiftCheck.sh"
 
 bindsym mod1+control+Shift+d exec discord
+
+bindsym mod1+control+Shift+s exec /home/lanaya/Documents/Script/SteamWal.sh
 
 #OfflineIMAP 
 # exec urxvt -e /home/lanaya/Documents/Script/offlineimap-notify.sh
@@ -524,6 +528,7 @@ bindsym $mod+x exec dmenu_run
 assign [class="banshee"] $workspace10
 # assign [title="mpsyt"] $workspace10
 assign [class="Chromium"] $workspace2
+assign [class="Google-chrome"] 3
 assign [class="Uget-gtk"] $workspace9
 assign [class="Kget"] $workspace9
 #assign [class="VirtualBox"] $workspace8

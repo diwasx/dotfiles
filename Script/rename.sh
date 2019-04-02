@@ -1,3 +1,4 @@
+#Rename script that subsitude all matching pattern to desire name
 for i in *
 do
     # echo $i | sed 's/^.*\(?token\).*$/.jpg/' #(^ begining of line, $ end of line)

@@ -28,17 +28,17 @@ ignore_newline = no
 stack_duplicates = false
 hide_duplicate_count = yes
 show_indicators = no
-icon_position = off
+icon_position = left
 always_run_script = true
 title = Dunst
 class = Dunst
 
 
 [urgency_low]
-timeout = 2
+timeout = 4
 
 [urgency_normal]
-timeout = 2
+timeout = 4
 
 [urgency_critical]
 timeout = 5

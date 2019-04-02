@@ -8,9 +8,9 @@ if (echo $cmd | grep -e Picture);then
     url=$(xsel -b)
     wget $url -P /DriveE/Pictures
     if [ $? -eq 0 ];then
-        notify-send -u critical "Successfull downloaded picture"
+        notify-send -u normal "Successfull downloaded picture"
     else
-        notify-send -u critical "Error downloadinig picture. Check for copied url"
+        notify-send -u normal "Error downloadinig picture. Check for copied url"
     fi
 fi
 
@@ -18,11 +18,11 @@ fi
 if (echo $cmd | grep -e Music);then
     url=$(xsel -b)
     # wget $url -P /DriveE/Music 
-    youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --ignore-errors -o "/DriveE/Music/%(title)s.%(ext)s" $url && notify-send -u critical "Downloaded and convert to mp3 successfully"
+    youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --ignore-errors -o "/DriveE/Music/%(title)s.%(ext)s" $url && notify-send -u normal "Downloaded and convert to mp3 successfully"
     if [ $? -eq 0 ];then
-        notify-send -u critical "Successfull downloaded music"
+        notify-send -u normal "Successfull downloaded music"
     else
-        notify-send -u critical "Error downloadinig music. Check for copied url"
+        notify-send -u normal "Error downloadinig music. Check for copied url"
     fi
 fi
 
@@ -31,9 +31,9 @@ if (echo $cmd | grep -e Video);then
     url=$(xsel -b)
     wget $url -P /DriveE/Backup/Downloads 
     if [ $? -eq 0 ];then
-        notify-send -u critical "Successfull downloaded video"
+        notify-send -u normal "Successfull downloaded video"
     else
-        notify-send -u critical "Error downloadinig video. Check for copied url"
+        notify-send -u normal "Error downloadinig video. Check for copied url"
     fi
 fi
 

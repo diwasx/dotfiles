@@ -6,5 +6,5 @@ then
     notify-send "Redshift Stopped"
 else
     redshift&
-    notify-send -u critical "$(cat ~/.config/redshift.conf | head -n 5)"
+    notify-send -u normal "$(cat ~/.config/redshift.conf | head -n 5)"
 fi
