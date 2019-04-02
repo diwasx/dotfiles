@@ -50,7 +50,7 @@ gaps inner 0
 gaps outer 0
 
 set $mod Mod4
-exec /$HOME/Documents/Script/Wall_wal.sh
+exec $HOME/Documents/Script/Wall_wal.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -116,16 +116,16 @@ bindsym $mod+q kill
 bindsym $mod+d exec rofi -show run -font "System San Francisco Display 13"
 
 # start rofi search in web
-bindsym $mod+s exec /$HOME/Documents/Script/rofiSearchBrower.sh
+bindsym $mod+s exec $HOME/Documents/Script/rofiSearchBrower.sh
 
 #search documention of clipboard from rofi
-bindsym mod1+control+s exec /$HOME/Documents/Script/rofiDocumentation.sh
+bindsym mod1+control+s exec $HOME/Documents/Script/rofiDocumentation.sh
 
 #rofiMusic
-bindsym $mod+control+d exec /$HOME/Documents/Script/rofiMusic.sh
+bindsym $mod+control+d exec $HOME/Documents/Script/rofiMusic.sh
 
 #downloadRofi(rofi)
-bindsym mod1+control+d exec /$HOME/Documents/Script/rofiDownloader.sh
+bindsym mod1+control+d exec $HOME/Documents/Script/rofiDownloader.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -252,16 +252,16 @@ bindsym $mod+y scratchpad show
 
 #Get only window with title given from scratcpad
 # bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
-bindsym mod1+control+b exec /$HOME/Documents/Script/scratchpadBrower.sh
+bindsym mod1+control+b exec $HOME/Documents/Script/scratchpadBrower.sh
 
 
 #Buffer Script
-bindsym mod1+control+grave exec /$HOME/Documents/Script/bufferUrl.sh
-bindsym mod1+control+1 exec /$HOME/Documents/Script/bufferSearchEngine.sh
-bindsym mod1+control+2 exec /$HOME/Documents/Script/bufferSearchEngineSecondary.sh
-bindsym mod1+control+3 exec /$HOME/Documents/Script/bufferMpvVideo.sh
-bindsym mod1+control+4 exec /$HOME/Documents/Script/bufferMpvAudio.sh
-# bindsym mod1+control+5 exec /$HOME/Documents/Script/bufferMp3Download.sh
+bindsym mod1+control+grave exec $HOME/Documents/Script/bufferUrl.sh
+bindsym mod1+control+1 exec $HOME/Documents/Script/bufferSearchEngine.sh
+bindsym mod1+control+2 exec $HOME/Documents/Script/bufferSearchEngineSecondary.sh
+bindsym mod1+control+3 exec $HOME/Documents/Script/bufferMpvVideo.sh
+bindsym mod1+control+4 exec $HOME/Documents/Script/bufferMpvAudio.sh
+# bindsym mod1+control+5 exec $HOME/Documents/Script/bufferMp3Download.sh
 
 #Programs Shortcut
 bindsym mod1+control+0 exec chromium
@@ -274,22 +274,22 @@ bindsym mod1+control+n exec alacritty -e newsboat
 # bindsym $mod+control+f exec urxvt -e fb-messenger-cli
 
 #Nepali Calender
-bindsym mod1+control+Shift+c exec /$HOME/Documents/Script/nepalicalCheck.sh
+bindsym mod1+control+Shift+c exec $HOME/Documents/Script/nepalicalCheck.sh
 
 #Redshift
-bindsym mod1+control+Shift+r exec "/$HOME/Documents/Script/redshiftCheck.sh"
+bindsym mod1+control+Shift+r exec "$HOME/Documents/Script/redshiftCheck.sh"
 
 bindsym mod1+control+Shift+d exec discord
 
-bindsym mod1+control+Shift+s exec /$HOME/Documents/Script/SteamWal.sh
+bindsym mod1+control+Shift+s exec $HOME/Documents/Script/SteamWal.sh
 
 #OfflineIMAP 
-# exec urxvt -e /$HOME/Documents/Script/offlineimap-notify.sh
-bindsym $mod+control+o exec urxvt -e /$HOME/Documents/Script/offlineimap-notify.sh
+# exec urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
+bindsym $mod+control+o exec urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 bindsym mod1+control+o exec alacritty -e neomutt
 
-workspace $workspace1 gaps inner 15
-workspace $workspace1 gaps inner 15
+workspace $workspace1 gaps inner 10
+workspace $workspace1 gaps inner 10
 # workspace $workspace2 gaps outer 0
 # workspace $workspace3 gaps inner 0
 # workspace $workspace3 gaps inner 0
@@ -309,7 +309,7 @@ bindsym $mod+Shift+i resize grow height 10 px or 10ppt
 bindsym $mod+Shift+y resize grow width 10 px or 10ppt
 
 bindsym $mod+t split toggle
-bindsym $mod+Shift+t gaps inner current set 7; gaps outer current set 7
+bindsym $mod+Shift+t gaps inner current set 10; gaps outer current set 10
 bindsym $mod+Shift+d gaps inner current set 0; gaps outer current set 0
 
 ## Resize gap at small value
@@ -428,8 +428,8 @@ client.background       $bg
 
 bindsym mod1+control+backslash exec xscreensaver-command -lock 
 # bindsym $mod+control+backslash exec i3lock -i /DriveE/Pictures/music.png && xset dpms force off
-bindsym $mod+backslash exec /$HOME/Documents/Script/i3lockRandom.sh
-bindsym $mod+control+backslash exec /$HOME/Documents/Script/i3lockBlur.sh
+bindsym $mod+backslash exec $HOME/Documents/Script/i3lockRandom.sh
+bindsym $mod+control+backslash exec $HOME/Documents/Script/i3lockBlur.sh
 
 # #--Music Player--#
 
@@ -506,7 +506,7 @@ bindsym XF86MonBrightnessDown exec light -U 5 && exec $HOME/Documents/Script/i3b
 
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /$HOME/Documents/Script/toggletouchpad.sh
+bindsym XF86TouchpadToggle exec $HOME/Documents/Script/toggletouchpad.sh
 bindsym $mod+Print exec ~/Documents/Script/ScreenShot.sh
 
 # Media player controls
@@ -521,7 +521,7 @@ for_window [class="dolphin"] floating enable
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
-bindsym $mod+BackSpace		exec /$HOME/Documents/Script/flash_win.sh
+bindsym $mod+BackSpace		exec $HOME/Documents/Script/flash_win.sh
 
 
 bindsym Print exec $HOME/Documents/Script/ScreenShot.sh
@@ -539,12 +539,12 @@ assign [class="Kget"] $workspace9
 
 #Wallpaper
 #exec_always feh --bg-scale /DriveE/Pictures/Wallpapers/4K-Wallpaper-5F.jpg
-#exec /$HOME/Documents/Script/Wallpaper_xwinwrap.sh
-# exec /$HOME/Documents/Script/Wall_wal.sh
-bindsym $mod+control+b exec /$HOME/Documents/Script/Wall_walBtn.sh
+#exec $HOME/Documents/Script/Wallpaper_xwinwrap.sh
+# exec $HOME/Documents/Script/Wall_wal.sh
+bindsym $mod+control+b exec $HOME/Documents/Script/Wall_walBtn.sh
 bindsym $mod+control+n exec blurwal -b 4  #Blurr wallpaper
 
-exec /$HOME/Documents/Script/Touchpad.sh
+exec $HOME/Documents/Script/Touchpad.sh
 # exec ~/Documents/Script/PulseModule.sh
 exec ~/Documents/Script/nm-applet.sh
 exec ~/Documents/Script/Volume.sh
@@ -562,7 +562,7 @@ exec ~/Documents/Script/getForecast.sh
 exec ~/Documents/Script/i3block/mpdUpdate.sh
 
 #arch logo startup
-exec --no-startup-id i3-msg 'workspace $workspace1' && alacritty -e /$HOME/Documents/Script/startupLogo.sh
-# exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e /$HOME/Documents/Script/offlineimap-notify.sh
+exec --no-startup-id i3-msg 'workspace $workspace1' && alacritty -e $HOME/Documents/Script/startupLogo.sh
+# exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 
 # exec chromium
