@@ -165,6 +165,7 @@ alias gh='~'
 
 export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh
+~/Documents/Script/i3block_refresh.sh
  
 #For CTRL+S disable that freeze termial 
 stty -ixon
