@@ -139,7 +139,32 @@ alias logo="neofetch" #screenfetch
 
 
 #Ranger alias
+#end
 alias gib='/usr/lib/i3blocks/'
+alias gbb='/DriveE/Projects/Git/'
+alias gbi='/DriveE/Projects/Git/i3wm'
+alias gbn='/DriveE/Projects/Git/notes'
+alias gP='/DriveE/Projects'
+alias gE='/DriveE/Backup/Program Files'
+alias gD='/DriveE/Backup/Downloads'
+alias gO='/DriveE/Xampp/htdocs/bakeryNew/bakery'
+alias gN='/DriveE/Projects/Notes/SemVII'
+alias gM='/DriveE/Movies'
+alias gH='/DriveE/Xampp/htdocs/'
+alias gw='/DriveE/Pictures/Wallpapers'
+alias gv='/DriveE/Videos'
+alias gs='~/Documents/Script'
+alias gr='/run/media/lanaya'
+alias gp='/DriveE/Pictures'
+alias ge='/DriveE'
+alias gd='/home/lanaya/Documents'
+alias gc='~/.config'
+alias gn='/DriveE/Projects/Notes/'
+alias gm='/DriveE/Music'
+alias gk='/DriveKhelkud'
+alias gh='~'
+alias gib='/usr/lib/i3blocks/'
+alias gbb='/DriveE/Projects/Git/'
 alias gbi='/DriveE/Projects/Git/i3wm'
 alias gbn='/DriveE/Projects/Git/notes'
 alias gP='/DriveE/Projects'
@@ -160,7 +185,6 @@ alias gn='/DriveE/Projects/Notes/'
 alias gm='/DriveE/Music'
 alias gk='/DriveKhelkud'
 alias gh='~'
-#end
 
 
 export WINEDEBUG=fps

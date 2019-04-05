@@ -38,6 +38,7 @@
 # subliminal (subliminal download -l en The.Imitation.Game.2014.1080p.BluRay.x264.YIFY.mp4)--> subtitle downloader
 # urxvt, alacritty :- urxvt for dynamic theme and alacritty for static theme(wal doesnt work well with alacritty)
 # mycli --> mysql syntax highlighting
+# termtosvg --> record terminal session as svg animation for github
 
 
 # i3 config file (v4)
@@ -225,13 +226,13 @@ for_window [instance="fb-messenger-cli"] move scratchpad
 # exec --no-startup-id urxvt -name fb-messenger-cli -e fb-messenger-cli
 bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 
-###--lyric_finder--###
-for_window [instance="lyric_scratchpad"] floating enable
-for_window [instance="lyric_scratchpad"] resize set 565 931 
-for_window [instance="lyric_scratchpad"] move position 1350 20
-for_window [instance="lyric_scratchpad"] move scratchpad
-bindsym mod1+control+bracketright [instance="lyric_scratchpad"] scratchpad show
-bindsym mod1+Shift+bracketright exec $HOME/Documents/Script/lyric_scratchpadRun.sh
+###--lyrics_finder--###
+for_window [instance="lyrics_scratchpad"] floating enable
+for_window [instance="lyrics_scratchpad"] resize set 565 931
+for_window [instance="lyrics_scratchpad"] move position 1350 20
+for_window [instance="lyrics_scratchpad"] move scratchpad
+bindsym mod1+control+bracketright [instance="lyrics_scratchpad"] scratchpad show
+bindsym mod1+Shift+bracketright exec $HOME/Documents/Script/lyrics_scratchpadRun.sh
 
 ###-- mpsyt (CLI youtube)--###
 for_window [instance="mpsyt"] floating enable

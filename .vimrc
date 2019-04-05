@@ -147,6 +147,10 @@ Plugin 'jwalton512/vim-blade'
 Plugin 'sophacles/vim-processing'
 " Plugin 'ternjs/tern_for_vim'
 Plugin 'tmhedberg/matchit'
+Plugin 'shime/vim-livedown'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " colorscheme vim-material
 "colorscheme turtles
@@ -183,5 +187,14 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 " let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+"vim-livedown(Markdown perview)
+" should markdown preview get shown automatically upon opening markdown buffer
+let g:livedown_autorun = 1
+" should the browser window pop-up upon previewing
+let g:livedown_open = 0
+" the port on which Livedown server will run
+let g:livedown_port = 1337
+" the browser to use, can also be firefox, chrome or other, depending on your executable
+let g:livedown_browser = "chromium"
+" nmap gm :LivedownToggle<CR>
+nmap gm :LivedownPreview<CR>
