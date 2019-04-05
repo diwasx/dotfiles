@@ -13,4 +13,4 @@ pkill -RTMIN+14 i3blocks
 pkill -RTMIN+15 i3blocks
 
 #brightness 
-pkill -RTMIN+16 i3blocks
+# pkill -RTMIN+16 i3blocks

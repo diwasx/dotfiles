@@ -225,6 +225,14 @@ for_window [instance="fb-messenger-cli"] move scratchpad
 # exec --no-startup-id urxvt -name fb-messenger-cli -e fb-messenger-cli
 bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 
+###--lyric_finder--###
+for_window [instance="lyric_scratchpad"] floating enable
+for_window [instance="lyric_scratchpad"] resize set 565 931 
+for_window [instance="lyric_scratchpad"] move position 1350 20
+for_window [instance="lyric_scratchpad"] move scratchpad
+bindsym mod1+control+bracketright [instance="lyric_scratchpad"] scratchpad show
+bindsym mod1+Shift+bracketright exec $HOME/Documents/Script/lyric_scratchpadRun.sh
+
 ###-- mpsyt (CLI youtube)--###
 for_window [instance="mpsyt"] floating enable
 for_window [instance="mpsyt"] resize set 515 331 
@@ -501,8 +509,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # Sreen brightness controls
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-bindsym XF86MonBrightnessUp exec light -A 5 && exec $HOME/Documents/Script/i3block_refresh.sh # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 && exec $HOME/Documents/Script/i3block_refresh.sh # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5 && exec pkill -RTMIN+16 i3blocks 
+bindsym XF86MonBrightnessDown exec light -U 5 && exec pkill -RTMIN+16 i3blocks
 
 
 # Touchpad controls

@@ -29,7 +29,7 @@ URxvt.font: xft:DejaVu Sans Mono:size=11:antialias=true
 !urxvt*font: xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=12
 !urxvt.font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true,xft:Inconsolata\ for\ Powerline:pixelsize=14:antialias=true
 
-URxvt.background: [80]#06060a
+!URxvt.background: [80]#06060a
 URxvt*scrollBar:                      false
 URxvt*mouseWheelScrollPage:           false
 URxvt*cursorBlink:                    true
@@ -37,33 +37,34 @@ URxvt*background:                     black
 URxvt*saveLines:                      5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
-URxvt*inheritPixmap:                  true
-URxvt*transparent:                    true
-URxvt*shading:                        20 
-!URxvt*buffered: false
+!URxvt*inheritPixmap:                  true
+!URxvt*transparent:                    true
+!URxvt*shading:                        20 
+
+URxvt*buffered: false
 URxvt.perl-ext-common:  ...,font-size
 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
-*background:  #1a1e24
-*foreground:  #cdd3df
-*color0:  #1a1e24
-*color1:  #252b33
-*color2:  #252a34
-*color3:  #3b4453
-*color4:  #505964
-*color5:  #cdd3df
-*color6:  #dae0ed
-*color7:  #cfcfcf
-*color8:  #ee6165
-*color9:  #fb924c
-*color10:  #fac751
-*color11:  #91b859
-*color12:  #5bb3b4
-*color13:  #6398cf
-*color14:  #c28aa3
-*color15:  #926b3e
+!*background:  #1a1e24
+!*foreground:  #cdd3df
+!*color0:  #1a1e24
+!*color1:  #252b33
+!*color2:  #252a34
+!*color3:  #3b4453
+!*color4:  #505964
+!*color5:  #cdd3df
+!*color6:  #dae0ed
+!*color7:  #cfcfcf
+!*color8:  #ee6165
+!*color9:  #fb924c
+!*color10:  #fac751
+!*color11:  #91b859
+!*color12:  #5bb3b4
+!*color13:  #6398cf
+!*color14:  #c28aa3
+!*color15:  #926b3e
 
 !DPI of X server
 Xft.dpi:87
