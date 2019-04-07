@@ -195,6 +195,6 @@ let g:livedown_open = 0
 " the port on which Livedown server will run
 let g:livedown_port = 1337
 " the browser to use, can also be firefox, chrome or other, depending on your executable
-let g:livedown_browser = "chromium"
+let g:livedown_browser = "firefox"
 " nmap gm :LivedownToggle<CR>
 nmap gm :LivedownPreview<CR>

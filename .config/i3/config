@@ -329,7 +329,7 @@ bindsym $mod+Shift+d gaps inner current set 0; gaps outer current set 0
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
+bindsym $mod+2 exec pkill -RTMIN+13 i3blocks && i3-msg 'workspace $workspace2' #Signal to reload mpsyt
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5

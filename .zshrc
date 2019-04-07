@@ -123,7 +123,8 @@ alias con="vim ~/.config/i3/config"
 alias conran="vim ~/.config/ranger/rc.conf"
 alias conter="vim ~/.config/terminator/config"
 alias conncm="vim ~/.ncmpcpp/bindings"
-alias conx="vim ~/.Xresources"
+alias conxres="vim ~/.Xresources"
+alias conzsh="vim ~/.zshrc"
 alias conblock="vim ~/.config/i3/i3blocks.conf"
 alias conman="vim /DriveE/Projects/Git/notes/ManjFoo"
 alias concom="vim ~/.config/compton.conf"
@@ -137,9 +138,7 @@ alias ym="youtube-dl-mp3"
 alias nx="nvidia-xrun"
 alias logo="neofetch" #screenfetch
 
-
 #Ranger alias
-#end
 alias gib='/usr/lib/i3blocks/'
 alias gbb='/DriveE/Projects/Git/'
 alias gbi='/DriveE/Projects/Git/i3wm'
@@ -163,29 +162,7 @@ alias gn='/DriveE/Projects/Notes/'
 alias gm='/DriveE/Music'
 alias gk='/DriveKhelkud'
 alias gh='~'
-alias gib='/usr/lib/i3blocks/'
-alias gbb='/DriveE/Projects/Git/'
-alias gbi='/DriveE/Projects/Git/i3wm'
-alias gbn='/DriveE/Projects/Git/notes'
-alias gP='/DriveE/Projects'
-alias gE='/DriveE/Backup/Program Files'
-alias gD='/DriveE/Backup/Downloads'
-alias gO='/DriveE/Xampp/htdocs/bakeryNew/bakery'
-alias gN='/DriveE/Projects/Notes/SemVII'
-alias gM='/DriveE/Movies'
-alias gH='/DriveE/Xampp/htdocs/'
-alias gw='/DriveE/Pictures/Wallpapers'
-alias gs='~/Documents/Script'
-alias gr='/run/media/lanaya'
-alias gp='/DriveE/Pictures'
-alias ge='/DriveE'
-alias gd='/home/lanaya/Documents'
-alias gc='~/.config'
-alias gn='/DriveE/Projects/Notes/'
-alias gm='/DriveE/Music'
-alias gk='/DriveKhelkud'
-alias gh='~'
-
+#end
 
 export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh
@@ -205,3 +182,7 @@ export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)
 # export NID=0
 
 EDITOR=vim
+
+# Vi mode
+# bindkey -v
+

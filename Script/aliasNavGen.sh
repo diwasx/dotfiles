@@ -26,7 +26,7 @@ array[gn]='/DriveE/Projects/Notes/'
 array[gib]='/usr/lib/i3blocks/'
 
 #For zshrc
-line="142a"
+# line="142a"
 sed -i '/^#Ranger/,/^#end/{/^#Ranger/!{/^#end/!d}}' ~/.zshrc #delete between #Ranger to #end
 # The keys are accessed using an exclamation point: ${!array[@]}, the values are accessed using ${array[@]}.
 for i in "${!array[@]}"
@@ -35,11 +35,14 @@ do
     key=$i
     echo "value: ${array[$i]}"
     value="'${array[$i]}'"
-    sed -i "$line alias $key=$value" ~/.zshrc
+    # sed -i "$line alias $key=$value" ~/.zshrc  #Not a good practise because line number is not static
+    # command="alias $key=$value"
+    sed -i "/#Ranger alias/a alias $key=$value" ~/.zshrc  #Alway use double quote when using variable
+
 done
 
 #For ranger
-line="206a"
+# line="206a"
 # sed -i '/^#Ranger/,/^#end/{/^#Ranger/!{/^#end/!d}}' ~/.config/ranger/rc.conf 
 sed -i '/^#Ranger/,/^#end/{
     /^#Ranger/!{
@@ -50,5 +53,6 @@ for i in "${!array[@]}"
 do
     key=$i
     value="${array[$i]}"
-    sed -i "$line map $key cd $value" ~/.config/ranger/rc.conf 
+    # sed -i "$line map $key cd $value" ~/.config/ranger/rc.conf 
+    sed -i "/#Ranger alias/a map $key cd $value" ~/.config/ranger/rc.conf
 done
