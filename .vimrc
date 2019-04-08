@@ -145,9 +145,10 @@ Plugin 'dylanaraps/wal'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'jwalton512/vim-blade'
 Plugin 'sophacles/vim-processing'
-" Plugin 'ternjs/tern_for_vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'shime/vim-livedown'
+" Plugin 'ternjs/tern_for_vim'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -183,6 +184,7 @@ hi Normal guibg=NONE ctermbg=NONE
 hi Search cterm=NONE ctermfg=grey ctermbg=lightyellow
 
 highlight LineNr ctermfg=grey 
+" set omnifunc=syntaxcomplete#Complete
 let g:EclimCompletionMethod = 'omnifunc'
 
 " let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
@@ -198,3 +200,6 @@ let g:livedown_port = 1337
 let g:livedown_browser = "firefox"
 " nmap gm :LivedownToggle<CR>
 nmap gm :LivedownPreview<CR>
+
+"javascript
+let g:javascript_plugin_jsdoc = 1

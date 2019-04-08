@@ -37,6 +37,7 @@
 # newsboat --> rss feed
 # subliminal (subliminal download -l en The.Imitation.Game.2014.1080p.BluRay.x264.YIFY.mp4)--> subtitle downloader
 # urxvt, alacritty :- urxvt for dynamic theme and alacritty for static theme(wal doesnt work well with alacritty)
+# edex-ui :- hacker terminal
 # mycli --> mysql syntax highlighting
 # termtosvg --> record terminal session as svg animation for github
 
@@ -280,6 +281,7 @@ bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 bindsym mod1+control+r workspace $workspace8; exec alacritty -e rtorrent
 bindsym mod1+control+h exec alacritty -e gotop
 bindsym mod1+control+n exec alacritty -e newsboat
+bindsym mod1+control+u exec edex-ui
 # bindsym $mod+control+f exec urxvt -e fb-messenger-cli
 
 #Nepali Calender
