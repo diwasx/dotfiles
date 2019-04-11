@@ -10,7 +10,6 @@ array[gM]='/DriveE/Movies'
 array[gm]='/DriveE/Music'
 array[gw]='/DriveE/Pictures/Wallpapers'
 array[gP]='/DriveE/Projects'
-array[gO]='/DriveE/Xampp/htdocs/bakeryNew/bakery'
 array[gH]='/DriveE/Xampp/htdocs/'
 array[gbb]='/DriveE/Projects/Git/'
 array[gbi]='/DriveE/Projects/Git/i3wm'
@@ -24,6 +23,7 @@ array[gk]='/DriveKhelkud'
 array[gN]='/DriveE/Projects/Notes/SemVII'
 array[gn]='/DriveE/Projects/Notes/'
 array[gib]='/usr/lib/i3blocks/'
+array[gO]='/DriveE/Xampp/htdocs/p5js/genetic_algorithm/genetic_algorithm_wordprocessor'
 
 #For zshrc
 # line="142a"

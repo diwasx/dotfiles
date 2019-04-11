@@ -102,6 +102,9 @@ vnoremap // y/<C-R>"<CR>
 " no highlighting
 map <leader>n :noh<CR>
 
+"find and replace all
+map <leader>r :.,$s/
+
 " fuzzy search
 nnoremap <C-F> :FZF<CR>
 
@@ -178,11 +181,13 @@ filetype plugin indent on    " required
 
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
+"hightlighting
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 hi Normal guibg=NONE ctermbg=NONE
 " hi Search guibg=peru guifg=wheat
 hi Search cterm=NONE ctermfg=grey ctermbg=lightyellow
-
+hi Error NONE
+hi ErrorMsg NONE
 highlight LineNr ctermfg=grey 
 " set omnifunc=syntaxcomplete#Complete
 let g:EclimCompletionMethod = 'omnifunc'
