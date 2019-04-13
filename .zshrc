@@ -135,6 +135,7 @@ alias t="vim /DriveE/Projects/Git/notes/ToDo"
 alias pj="processing-java --sketch=`pwd` --run"
 alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
+alias gom="git push origin master"
 alias nx="nvidia-xrun"
 alias logo="neofetch" #screenfetch
 

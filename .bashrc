@@ -112,6 +112,7 @@ alias r="ranger"
 alias t="vim /DriveE/Projects/Git/notes/ToDo"
 alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
+alias gom="git push origin master"
 alias logo="neofetch" #screenfetch
 
 export WINEDEBUG=fps
