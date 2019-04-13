@@ -189,10 +189,14 @@ hi Search cterm=NONE ctermfg=grey ctermbg=lightyellow
 hi Error NONE
 hi ErrorMsg NONE
 highlight LineNr ctermfg=grey 
+
 " set omnifunc=syntaxcomplete#Complete
 let g:EclimCompletionMethod = 'omnifunc'
 
 " let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+
+"Escape(esc) button timeoutb
+set timeout timeoutlen=5000 ttimeoutlen=100
 
 "vim-livedown(Markdown perview)
 " should markdown preview get shown automatically upon opening markdown buffer

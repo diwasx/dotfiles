@@ -23,7 +23,7 @@ array[gk]='/DriveKhelkud'
 array[gN]='/DriveE/Projects/Notes/SemVII'
 array[gn]='/DriveE/Projects/Notes/'
 array[gib]='/usr/lib/i3blocks/'
-array[gO]='/DriveE/Xampp/htdocs/p5js/genetic_algorithm/genetic_algorithm_wordprocessor'
+array[gO]='/DriveE/Xampp/htdocs/p5js/genetic_algorithm/evolving_rocket'
 
 #For zshrc
 # line="142a"
