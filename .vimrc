@@ -41,9 +41,13 @@ let mapleader=" "
 let g:NERDTreeMouseMode=3 
 
 " Disables automatic commenting on newline:
+" :set formatoptions-=cro
+" :set formatoptions-=r formatoptions-=c formatoptions-=o
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-" set formatoptions-=cro
 " set paste
+
+"Disable auto comment
+map <leader>c :set formatoptions-=cro<CR>
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
@@ -64,11 +68,12 @@ map <C-n> :j<CR>
 "This override help page with keyword
 map <C-t> :tabnew<CR>
 
-"This override command execution
 map <S-k> :tabnext<CR> 
-
 map <S-j> :tabprevious<CR> 
 map <S-u> :tabmove<CR>
+
+"Show to terminal output
+map <leader>d :sh<CR> 
 
 " Problem  Meta (Alt) that keypress to set the 8th bit
 execute "set <A-1>=\e1"
@@ -104,6 +109,9 @@ map <leader>n :noh<CR>
 
 "find and replace all
 map <leader>r :.,$s/
+
+"copy whole function
+map <leader>yf va{Vy
 
 " fuzzy search
 nnoremap <C-F> :FZF<CR>
@@ -147,7 +155,7 @@ Plugin 'dylanaraps/wal'
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'jwalton512/vim-blade'
-Plugin 'sophacles/vim-processing'
+" Plugin 'sophacles/vim-processing'
 Plugin 'tmhedberg/matchit'
 Plugin 'shime/vim-livedown'
 " Plugin 'ternjs/tern_for_vim'

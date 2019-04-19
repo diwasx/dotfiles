@@ -474,9 +474,9 @@ bindsym $mod+control+period exec --no-startup-id mpc prev
 
 #spotify && mpv (mpsyt) (Only pause working in mpsyt)
 # bindsym mod1+control+apostrophe exec playerctl play-pause && exec $HOME/Documents/Script/i3block_refresh.sh
-bindsym mod1+control+apostrophe exec playerctl play-pause 
-bindsym mod1+control+slash exec playerctl next 
-bindsym mod1+control+period exec playerctl previous 
+bindsym mod1+control+apostrophe exec playerctl play-pause && exec pkill -RTMIN+14 i3blocks
+bindsym mod1+control+slash exec playerctl next && exec pkill -RTMIN+14 i3blocks
+bindsym mod1+control+period exec playerctl previous && exec pkill -RTMIN+14 i3blocks
 
 # bindsym $mod+m exec urxvt -e ncmpcpp 
 bindsym $mod+m workspace $workspace10; exec urxvt -e ncmpcpp 
@@ -580,3 +580,4 @@ exec --no-startup-id i3-msg 'workspace $workspace1' && alacritty -e $HOME/Docume
 
 # exec chromium
 exec $HOME/Documents/Script/mpsytWatch.sh
+# exec i3-msg restart
