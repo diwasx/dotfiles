@@ -133,12 +133,14 @@ alias conpac="sudo vim /etc/pacman.conf"
 alias r="ranger"
 alias t="vim /DriveE/Projects/Git/notes/ToDo"
 #Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)
-alias pj="processing-java --sketch=`pwd` --run"
+#Created a executable in script folder
+# alias pj="processing-java --sketch=`pwd` --run"
 alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
 alias gom="git push origin master"
 alias nx="nvidia-xrun"
 alias logo="neofetch" #screenfetch
+alias va="vim -p *"
 
 #Ranger alias
 alias gib='/usr/lib/i3blocks/'

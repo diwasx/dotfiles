@@ -19,7 +19,6 @@ import dbus
 import requests
 old_song_info = None
 
-
 def get_song_info():
     session_bus = dbus.SessionBus()
     spotify_bus = session_bus.get_object("org.mpris.MediaPlayer2.spotify",

@@ -160,6 +160,9 @@ Plugin 'tmhedberg/matchit'
 Plugin 'shime/vim-livedown'
 " Plugin 'ternjs/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
+"Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -218,5 +221,21 @@ let g:livedown_browser = "firefox"
 " nmap gm :LivedownToggle<CR>
 nmap gm :LivedownPreview<CR>
 
+"java
+"processing
+map <leader>p :!pj<CR>
+
 "javascript
 let g:javascript_plugin_jsdoc = 1
+
+""syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+"ALE
+map <leader>a :ALEToggle<CR>

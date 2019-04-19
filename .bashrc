@@ -56,7 +56,8 @@ alias nvd="optirun -b none nvidia-settings -c :8"
 alias ls="ls --color=auto"
 alias grep='grep --color=auto'
 #Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)
-alias pj="processing-java --sketch=`pwd` --run"
+
+# alias pj="processing-java --sketch=`pwd` --run"
 
 
 #Color man pages
