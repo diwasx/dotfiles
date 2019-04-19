@@ -133,6 +133,9 @@ bindsym mod1+control+d exec $HOME/Documents/Script/rofiDownloader.sh
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+#rofiMusic
+bindsym $mod+control+s exec $HOME/Documents/Script/layout/layout.sh
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down

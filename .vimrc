@@ -161,7 +161,7 @@ Plugin 'shime/vim-livedown'
 " Plugin 'ternjs/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 "Plugin 'vim-syntastic/syntastic'
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale'
 
 
 call vundle#end()            " required
