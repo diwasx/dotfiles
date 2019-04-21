@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+# Activated fron udev rule at /etc/udev/rules.d/
 export XAUTHORITY=/home/lanaya/.Xauthority
 export DISPLAY=:0
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"

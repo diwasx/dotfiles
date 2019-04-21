@@ -114,6 +114,7 @@ alias conblock="vim ~/.config/i3/i3blocks.conf"
 
 alias r="ranger"
 alias t="vim /DriveE/Projects/Git/notes/ToDo"
+alias m="vim /DriveE/Projects/Git/notes/Music"
 alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
 alias gom="git push origin master"

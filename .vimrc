@@ -167,7 +167,6 @@ Plugin 'pangloss/vim-javascript'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" colorscheme vim-material
 "colorscheme turtles
 " colorscheme wal
 "automatically use wal scheme if not selected
@@ -182,9 +181,9 @@ filetype plugin indent on    " required
 " colorscheme vim-material
 
 " Oceanic
- " let g:material_style='oceanic'
- " set background=dark
- " colorscheme vim-material
+" let g:material_style='oceanic'
+" set background=dark
+" colorscheme vim-material
 
 " Light
 " set background=light

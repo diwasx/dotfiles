@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cmd=$(echo -e "Google \nYoutube \nPiratebay \nPython \nFacebook \nGithub " | rofi -dmenu -p Search)
+cmd=$(echo -e "Google \nYoutube \nPiratebay \nPython \nWikipedia \nFacebook \nGithub " | rofi -dmenu -p Search)
 
 # If 'Google' is selected
 if (echo $cmd | grep -e Google);then
@@ -37,3 +37,10 @@ if (echo $cmd | grep -e Github);then
     query=`echo $cmd | cut -d' ' -f2- ` 
     chromium "https://github.com/search?q=$query"
 fi
+
+# If 'Wikipedia' is selected
+if (echo $cmd | grep -e Wikipedia);then
+    query=`echo $cmd | cut -d' ' -f2- ` 
+    chromium "https://www.wikiwand.com/en/$query"
+fi
+

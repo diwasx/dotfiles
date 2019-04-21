@@ -132,6 +132,7 @@ alias conrif="sudo vim /usr/lib/python3.7/site-packages/ranger/config/rifle.conf
 alias conpac="sudo vim /etc/pacman.conf"
 alias r="ranger"
 alias t="vim /DriveE/Projects/Git/notes/ToDo"
+alias m="vim /DriveE/Projects/Git/notes/Music"
 #Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)
 #Created a executable in script folder
 # alias pj="processing-java --sketch=`pwd` --run"
@@ -150,7 +151,7 @@ alias gbn='/DriveE/Projects/Git/notes'
 alias gP='/DriveE/Projects'
 alias gE='/DriveE/Backup/Program Files'
 alias gD='/DriveE/Backup/Downloads'
-alias gO='/DriveE/Projects/Processing-Java/ml'
+alias gO='/DriveE/Xampp/htdocs/p5js/neural_network/'
 alias gN='/DriveE/Projects/Notes/SemVII'
 alias gM='/DriveE/Movies'
 alias gH='/DriveE/Xampp/htdocs/'
