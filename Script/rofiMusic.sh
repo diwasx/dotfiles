@@ -12,6 +12,12 @@ fi
 
 # If 'mpsyt playurl' is selected
 if (echo $cmd | grep -e playurl);then
+
+    # If no argument is send use buffer url
+    if [ "$cmd" = "mpsyt playurl " ]; then
+        cmd="mpsyt playurl "`xsel -b | head -n 1`
+    fi
+
     urxvt -name mpsyt -e $cmd 
 fi
 
@@ -22,5 +28,11 @@ fi
 
 # If 'mpv' is selected
 if (echo $cmd | grep -e mpv);then
+
+    # If no argument is send use buffer url
+    if [ "$cmd" = "mpv " ]; then
+        cmd="mpv "`xsel -b | head -n 1`
+    fi
+
     mpv --title floatingMpv $cmd 
 fi

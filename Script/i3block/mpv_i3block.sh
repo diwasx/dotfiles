@@ -4,7 +4,8 @@
 
 title=`ps aux | grep "[m]pv --title" | sed '/floatingMpv/d'` #Delete line that contain "floatingMpv"
 title=`echo $title | sed 's/.*title \(.*\)--no.*/\1/'`  #Extract song title
-echo $title
+
+echo $title | tr -d '"' # tr for deleting "
 
 # [m] for searching regix, because ps display echo process itself
 # \1 is a 'Remember pattern' that remembers everything that is within \(.*\) 
