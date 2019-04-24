@@ -16,6 +16,8 @@ then
 fi
 
 export WINEDEBUG=fps
+export XDG_CURRENT_DESKTOP=i3wm
+export XDG_SESSION_DESKTOP=i3wm
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec startx > /dev/null 2>&1
 fi

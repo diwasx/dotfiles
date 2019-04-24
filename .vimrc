@@ -71,6 +71,8 @@ map <C-t> :tabnew<CR>
 map <S-k> :tabnext<CR> 
 map <S-j> :tabprevious<CR> 
 map <S-u> :tabmove<CR>
+execute "set <A-u>=\eu"
+map <A-u> :tabmove0<CR>
 
 "Show to terminal output
 map <leader>d :sh<CR> 
