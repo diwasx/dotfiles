@@ -170,11 +170,13 @@ filetype plugin indent on    " required
 
 "colorscheme turtles
 " colorscheme abstract
+" colorscheme dracula
+" colorscheme gruvbox
 " colorscheme wal
 "automatically use wal scheme if not selected
 
 "scriptStart
-colorscheme termschool
+colorscheme dracula
 "scriptEnd
 
 let g:ycm_server_python_interpreter = '/usr/bin/python2'

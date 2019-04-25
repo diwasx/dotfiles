@@ -559,7 +559,7 @@ bindsym $mod+control+n exec blurwal -b 4  #Blurr wallpaper
 
 exec $HOME/Documents/Script/Touchpad.sh
 # exec ~/Documents/Script/PulseModule.sh
-exec ~/Documents/Script/nm-applet.sh
+exec nm-applet
 exec ~/Documents/Script/Volume.sh
 exec ~/.config/i3/hud-menu-service.py
 
