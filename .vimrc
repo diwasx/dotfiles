@@ -34,8 +34,6 @@ set clipboard=unnamedplus
 let mapleader=" "
 " :imap ii <Esc>
 
-
-
 " For mouse click in NERDTree
 :set mouse=a
 let g:NERDTreeMouseMode=3 
@@ -60,7 +58,6 @@ map <leader>- :set completeopt-=preview<CR>
 nnoremap j gj
 nnoremap k gk
 " inoremap { {<CR>}<up><end><CR>
-
 
 " Join
 map <C-n> :j<CR>
@@ -164,32 +161,21 @@ Plugin 'shime/vim-livedown'
 Plugin 'pangloss/vim-javascript'
 "Plugin 'vim-syntastic/syntastic'
 " Plugin 'w0rp/ale'
+Plugin 'rafi/awesome-vim-colorschemes'
+
 
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 "colorscheme turtles
+" colorscheme abstract
 " colorscheme wal
 "automatically use wal scheme if not selected
 
-" Dark
-" set background=dark
-" colorscheme vim-material
-
-" Palenight
-" let g:material_style='palenight'
-" set background=dark
-" colorscheme vim-material
-
-" Oceanic
-" let g:material_style='oceanic'
-" set background=dark
-" colorscheme vim-material
-
-" Light
-" set background=light
-" colorscheme vim-material
+"scriptStart
+colorscheme termschool
+"scriptEnd
 
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
@@ -239,4 +225,4 @@ let g:javascript_plugin_jsdoc = 1
 "let g:syntastic_check_on_wq = 0
 
 "ALE
-map <leader>a :ALEToggle<CR>
+" map <leader>a :ALEToggle<CR>

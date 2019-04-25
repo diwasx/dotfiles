@@ -13,5 +13,3 @@ while true; do
     wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
     sleep 3600
 done
-
-
