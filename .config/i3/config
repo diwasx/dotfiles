@@ -481,6 +481,7 @@ bindsym mod1+control+period exec playerctl previous && exec pkill -RTMIN+14 i3bl
 # bindsym $mod+m exec urxvt -e ncmpcpp 
 bindsym $mod+m workspace $workspace10; exec urxvt -e ncmpcpp 
 bindsym $mod+control+m workspace $workspace9; exec spotify
+bindsym mod1+control+m exec musicSelect.sh
 # exec --no-startup-id i3-msg 'workspace $workspace10' && alacritty -e ncmpcpp
 
 ## FOR ALSA/AMIXER ##

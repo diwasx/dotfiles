@@ -12,3 +12,6 @@ rofi.kb-remove-to-eol:               Control+Shift+e
 rofi.kb-mode-next:                   Shift+Right,Control+Tab,Control+l
 rofi.kb-mode-previous:               Shift+Left,Control+Shift+Tab,Control+h
 rofi.kb-remove-char-back:            BackSpace
+
+rofi.kb-page-next:                   Control+9
+rofi.kb-page-prev:                   Control+0
