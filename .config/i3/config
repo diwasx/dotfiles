@@ -174,7 +174,11 @@ bindsym $mod+f fullscreen toggle
 
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout toggle split
-bindsym $mod+e exec urxvt -e vis
+
+# Audio Visualizer
+# bindsym $mod+e exec urxvt -e vis
+bindsym $mod+e exec urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis
+
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -323,7 +327,7 @@ bindsym $mod+Shift+i resize grow height 10 px or 10ppt
 bindsym $mod+Shift+y resize grow width 10 px or 10ppt
 
 bindsym $mod+t split toggle
-bindsym $mod+Shift+t gaps inner current set 10; gaps outer current set 10
+bindsym $mod+Shift+t gaps inner current set 10
 bindsym $mod+Shift+d gaps inner current set 0; gaps outer current set 0
 
 ## Resize gap at small value

@@ -1,0 +1,44 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1060,
+       "width": 1918,
+       "x": 1,
+       "y": 19
+    },
+    "name": "10.2: Neural Networks: Perceptron Part 1 - The Nature of Code - YouTube - Chromium",
+    "percent": 0.658854166666667,
+    "swallows": [
+       {
+       "class": "^Chromium$",
+       "instance": "^chromium$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1152,
+       "width": 1536,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Alacritty",
+    "percent": 0.341145833333333,
+    "swallows": [
+       {
+       "class": "^Alacritty$",
+       "instance": "^Alacritty$"
+       }
+    ],
+    "type": "con"
+}
+
