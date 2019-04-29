@@ -20,5 +20,5 @@ if [ $new -gt 0 ] || [ $new1 -gt 0 ]
 then
     export DISPLAY=:0; export XAUTHORITY=~/.Xauthority;
     # notify-send -a "OfflineIMAP" "New mail!\nNew: $new Old: $old"
-    notify-send  -t 6000 -a "OfflineIMAP" "New mail! Outlook: $new   Gmail: $new1" 
+    notify-send  -t 6000 -a "OfflineIMAP" "New mail! Outlook: $new   Gmail: $new1" -i $HOME/Documents/icons/icons8-post-48.png
 fi

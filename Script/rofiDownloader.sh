@@ -8,9 +8,9 @@ if (echo $cmd | grep -e Picture);then
     url=$(xsel -b)
     wget $url -P /DriveE/Pictures
     if [ $? -eq 0 ];then
-        notify-send -u normal "Successfull downloaded picture"
+        notify-send -u normal "Successfull downloaded picture" -i $HOME/Documents/icons/icons8-xlarge-icons-48.png
     else
-        notify-send -u normal "Error downloadinig picture. Check for copied url"
+        notify-send -u normal "Error downloadinig picture. Check for copied url" -i $HOME/Documents/icons/icons8-close-window-filled-48.png
     fi
 fi
 
@@ -18,9 +18,9 @@ fi
 if (echo $cmd | grep -e Music);then
     url=$(xsel -b)
     # wget $url -P /DriveE/Music 
-    youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --ignore-errors -o "/DriveE/Music/%(title)s.%(ext)s" $url && notify-send -u normal "Downloaded and convert to mp3 successfully"
+    youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --ignore-errors -o "/DriveE/Music/%(title)s.%(ext)s" $url && notify-send -u normal "Downloaded and convert to mp3 successfully" -i $HOME/Documents/icons/icons8-musical-notes-64.png
     if [ $? -ne 0 ];then
-        notify-send -u normal "Error downloadinig music. Check for copied url"
+        notify-send -u normal "Error downloadinig music. Check for copied url" -i $HOME/Documents/icons/icons8-close-window-filled-48.png
     fi
 fi
 
@@ -29,9 +29,9 @@ if (echo $cmd | grep -e Video);then
     url=$(xsel -b)
     wget $url -P /DriveE/Backup/Downloads 
     if [ $? -eq 0 ];then
-        notify-send -u normal "Successfull downloaded video"
+        notify-send -u normal "Successfull downloaded video" -i $HOME/Documents/icons/icons8-video-48.png
     else
-        notify-send -u normal "Error downloadinig video. Check for copied url"
+        notify-send -u normal "Error downloadinig video. Check for copied url" -i $HOME/Documents/icons/icons8-close-window-filled-48.png
     fi
 fi
 

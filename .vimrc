@@ -197,7 +197,7 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 "Escape(esc) button timeoutb
  " set timeout timeoutlen=5000 ttimeoutlen=100
-set timeout timeoutlen=300 ttimeoutlen=50
+set timeout timeoutlen=400 ttimeoutlen=50
 
 "vim-livedown(Markdown perview)
 " should markdown preview get shown automatically upon opening markdown buffer

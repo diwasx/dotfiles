@@ -280,7 +280,7 @@ mpd_crossfade_time = 5
 ## notifications etc.
 ##
 
-execute_on_song_change=notify-send "$(mpc current)"
+execute_on_song_change=notify-send "$(mpc current)" -i $HOME/Documents/icons/icons8-circled-play-48.png
 
 #
 ##
