@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Launch Rofi to download clipboard url
-cmd=$(echo -e "Picture \nMusic \nVideo \nTorrent " | rofi -dmenu -p WGET)
+cmd=$(echo -e "Picture \nMusic \nVideo \nTorrent " | rofi -dmenu -font "System San Francisco Display 11" -p WGET)
 
 # If 'Picture' is selected
 if (echo $cmd | grep -e Picture);then
@@ -19,9 +19,7 @@ if (echo $cmd | grep -e Music);then
     url=$(xsel -b)
     # wget $url -P /DriveE/Music 
     youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --ignore-errors -o "/DriveE/Music/%(title)s.%(ext)s" $url && notify-send -u normal "Downloaded and convert to mp3 successfully"
-    if [ $? -eq 0 ];then
-        notify-send -u normal "Successfull downloaded music"
-    else
+    if [ $? -ne 0 ];then
         notify-send -u normal "Error downloadinig music. Check for copied url"
     fi
 fi

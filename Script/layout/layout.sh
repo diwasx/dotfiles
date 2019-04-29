@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cmd=$(echo -e "Coding-Browser (workspace 2) \nCoding-Music (workspace 1) \nTerminal A (workspace 1) \nTerminal B (workspace 1)" | rofi -dmenu -p "Layout")
+cmd=$(echo -e "Coding-Browser (workspace 2) \nCoding-Music (workspace 1) \nTerminal A (workspace 1) \nTerminal B (workspace 1)" | rofi -dmenu -font "System San Francisco Display 11" -p "Layout")
 
 if (echo $cmd | grep -e "Coding-Browser");then
     i3-msg "workspace 2. Web; append_layout ~/.config/i3/layout/coding-browser.json"

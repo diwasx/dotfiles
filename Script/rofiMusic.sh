@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Launch Rofi with option 
-cmd=$(echo -e "mpsyt \nmpsyt channels \nmpsyt playurl \nmpv " | rofi -dmenu -p Music)
+cmd=$(echo -e "mpsyt \nmpsyt channels \nmpsyt playurl \nmpv " | rofi -dmenu -font "System San Francisco Display 11" -p Music)
 
 # If mpsyt is selected
 if (echo $cmd | grep -v playurl | grep -v channels | grep -e mpsyt); then #GREP to find if 'mpsyt' is present but not 'playurl' or 'channels'

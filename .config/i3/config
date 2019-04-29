@@ -115,7 +115,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -font "System San Francisco Display 13"
+bindsym $mod+d exec rofi -show run -font "System San Francisco Display 11"
 
 # start rofi search in web
 bindsym $mod+s exec $HOME/Documents/Script/rofiSearchBrower.sh

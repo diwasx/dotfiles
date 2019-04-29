@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cmd=$(echo -e "Python \nBash \nNodejs " | rofi -dmenu -p "Search Documentation")
+cmd=$(echo -e "Python \nBash \nNodejs " | rofi -dmenu -font "System San Francisco Display 11" -p "Search Documentation")
 
 # If 'Python' is selected
 if (echo $cmd | grep -e Python);then

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cmd=$(echo -e "Google \nYoutube \nPiratebay \nPython \nWikipedia \nFacebook \nGithub " | rofi -dmenu -p Search)
+cmd=$(echo -e "Google \nYoutube \nPiratebay \nPython \nWikipedia \nFacebook \nGithub " | rofi -dmenu -font "System San Francisco Display 11" -p Search)
 
 # If 'Google' is selected
 if (echo $cmd | grep -e Google);then

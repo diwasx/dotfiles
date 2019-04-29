@@ -196,7 +196,8 @@ let g:EclimCompletionMethod = 'omnifunc'
 " let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
 "Escape(esc) button timeoutb
-set timeout timeoutlen=5000 ttimeoutlen=100
+ " set timeout timeoutlen=5000 ttimeoutlen=100
+set timeout timeoutlen=300 ttimeoutlen=50
 
 "vim-livedown(Markdown perview)
 " should markdown preview get shown automatically upon opening markdown buffer
