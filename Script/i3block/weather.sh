@@ -1,5 +1,6 @@
-
 #!/bin/sh
+~/Documents/Script/getForecast.sh
+
 [ "$(stat -c %y ~/.config/weatherreport | awk '{print $1}')" != "$(date '+%Y-%m-%d')" ] && getforecast
 
 case $BLOCK_BUTTON in

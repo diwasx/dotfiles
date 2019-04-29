@@ -226,6 +226,15 @@ for_window [title="dropdown"] move scratchpad
 bindsym $mod+u [title="dropdown"] scratchpad show; 
 exec --no-startup-id alacritty -t dropdown 
 
+###---Dropdown---###--Notes---##
+for_window [title="noteDropdown"] floating enable
+for_window [title="noteDropdown"] resize set 900 350 
+for_window [title="noteDropdown"] move position 500 -5
+for_window [title="noteDropdown"] move scratchpad
+# bindsym $mod+F9 [title="noteDropdown"] scratchpad show; 
+bindsym F9 [title="noteDropdown"] scratchpad show; 
+exec --no-startup-id alacritty -t noteDropdown -e notesDropdown.sh
+
 ###--Messenger--###
 for_window [instance="fb-messenger-cli"] floating enable
 for_window [instance="fb-messenger-cli"] resize set 515 331 
@@ -574,7 +583,7 @@ exec compton
 #exec ~/Documents/Script/i3lockAndScreenOff.sh &
 exec imwheel
 exec dunst
-exec ~/Documents/Script/getForecast.sh
+# exec ~/Documents/Script/getForecast.sh
 
 # exec mpd-notify
 exec ~/Documents/Script/i3block/mpdUpdate.sh

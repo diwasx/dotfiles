@@ -176,7 +176,7 @@ filetype plugin indent on    " required
 "automatically use wal scheme if not selected
 
 "scriptStart
-colorscheme challenger_deep
+colorscheme abstract
 "scriptEnd
 
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
