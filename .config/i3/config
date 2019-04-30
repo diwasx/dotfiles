@@ -270,6 +270,8 @@ for_window [title="floatingMpv"] move scratchpad
 # bindsym mod1+control+bracketleft [title="floatingMpv"] scratchpad show
 bindsym mod1+control+p [title="floatingMpv"] scratchpad show
 
+bindsym $mod+control+p exec startupLogo.sh
+
 #Send to scratchpad (Hidden Workspace)
 bindsym $mod+control+y move scratchpad 
 
@@ -296,6 +298,8 @@ bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 
 
 bindsym mod1+control+r workspace $workspace8; exec alacritty -e rtorrent
+bindsym mod1+control+t workspace $workspace8; exec $HOME/Documents/Script/transmissionDaemon_Check.sh; exec alacritty -e transmission-remote-cli
+bindsym $mod+control+t workspace $workspace8; exec $HOME/Documents/Script/transmissionDaemon_Check.sh; exec alacritty -e stig
 bindsym mod1+control+h exec alacritty -e gotop
 bindsym mod1+control+n exec alacritty -e newsboat
 bindsym mod1+control+u exec edex-ui
@@ -593,7 +597,8 @@ exec dunst
 exec ~/Documents/Script/i3block/mpdUpdate.sh
 
 #arch logo startup
-exec --no-startup-id i3-msg 'workspace $workspace1' && alacritty -e $HOME/Documents/Script/startupLogo.sh
+# exec --no-startup-id i3-msg 'workspace $workspace1' && xterm -e $HOME/Documents/Script/startupLogo.sh
+exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
 # exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 
 # exec chromium

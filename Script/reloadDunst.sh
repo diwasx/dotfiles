@@ -10,13 +10,26 @@
     dunst \
 	-frame_width 0 \
         -lb "${color2}" \
-        -nb "${color2}" \
-        -cb "${color2}" \
+        -nb "${color1}" \
+        -cb "${color3}" \
         -lf "${color7}" \
-        -bf "${color7}" \
-        -cf "${color7}" \
-        -nf "${color7}" &
+        -bf "${color6}" \
+        -cf "${color5}" \
+        -nf "${color4}" &
 
 }
+ # reload_dunst() {
+ #    pkill dunst
+ #    dunst \
+	# -frame_width 0 \
+ #        -lb "${color2}" \
+ #        -nb "${color2}" \
+ #        -cb "${color2}" \
+ #        -lf "${color7}" \
+ #        -bf "${color7}" \
+ #        -cf "${color7}" \
+ #        -nf "${color7}" &
+
+# }
 
 reload_dunst

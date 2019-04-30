@@ -42,10 +42,15 @@ cp ~/.xscreensaver /DriveE/Projects/Git/i3wm/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/i3wm/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/i3wm/
 cp ~/.nvidia-xinitrc /DriveE/Projects/Git/i3wm/
-mkdir /DriveE/Projects/Git/i3wm/.config/mutt
-cp ~/.config/mutt/muttrc /DriveE/Projects/Git/i3wm/.config/mutt/
-mkdir /DriveE/Projects/Git/i3wm/.config/mutt/accounts
-cp  ~/.config/mutt/accounts/diwasx.muttrc /DriveE/Projects/Git/i3wm/.config/mutt/accounts
-cp  ~/.config/mutt/accounts/gmail.muttrc /DriveE/Projects/Git/i3wm/.config/mutt/accounts
+
+mkdir /DriveE/Projects/Git/notes/.config/mutt -p
+cp ~/.config/mutt/muttrc /DriveE/Projects/Git/notes/.config/mutt/
+mkdir /DriveE/Projects/Git/notes/.config/mutt/accounts
+cp  ~/.config/mutt/accounts/diwasx.muttrc /DriveE/Projects/Git/notes/.config/mutt/accounts
+cp  ~/.config/mutt/accounts/gmail.muttrc /DriveE/Projects/Git/notes/.config/mutt/accounts
+
+mkdir /DriveE/Projects/Git/notes/.config/transmission-daemon -p
+cp ~/.config/transmission-daemon/settings.json /DriveE/Projects/Git/notes/.config/transmission-daemon/
+cp ~/.config/mimeapps.list /DriveE/Projects/Git/i3wm/.config/
 cp ~/.zshrc /DriveE/Projects/Git/i3wm/
 cp ~/.zprofile /DriveE/Projects/Git/i3wm/

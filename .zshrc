@@ -140,8 +140,9 @@ alias yt="mpsyt"
 alias ym="youtube-dl-mp3"
 alias gom="git push origin master"
 alias nx="nvidia-xrun"
-alias logo="neofetch" #screenfetch
+alias logo="xterm -e startupLogo.sh&" #screenfetch
 alias va="vim -p *"
+alias trc="transmission-remote-cli"
 
 #Ranger alias
 alias gib='/usr/lib/i3blocks/'
