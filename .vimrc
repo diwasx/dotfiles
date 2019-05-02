@@ -68,6 +68,7 @@ map <C-t> :tabnew<CR>
 map <S-k> :tabnext<CR> 
 map <S-j> :tabprevious<CR> 
 map <S-u> :tabmove<CR>
+
 execute "set <A-u>=\eu"
 map <A-u> :tabmove0<CR>
 
@@ -113,7 +114,9 @@ map <leader>r :.,$s/
 map <leader>yf va{Vy
 
 " fuzzy search
-nnoremap <C-F> :FZF<CR>
+" nnoremap <C-F> :FZF<CR>
+execute "set <A-f>=\ef"
+map <A-f> :FZF<CR>
 
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 set splitbelow splitright
@@ -176,7 +179,7 @@ filetype plugin indent on    " required
 "automatically use wal scheme if not selected
 
 "scriptStart
-colorscheme apprentice
+colorscheme meta5
 "scriptEnd
 
 let g:ycm_server_python_interpreter = '/usr/bin/python2'

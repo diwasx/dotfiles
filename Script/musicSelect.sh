@@ -3,7 +3,7 @@
 folder="/DriveE/Music"
 
 # List all songs and show in rofi
-file=`find $folder -type f -printf "%f\n" | rofi -dmenu -i -l 40`
+file=`find $folder -type f -printf "%f\n" | rofi -dmenu -i -l 25`
 
 # Get actual filepath (Stop at first find)
 actualFile=`find $folder -name "$file" -print -quit`

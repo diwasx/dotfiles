@@ -52,7 +52,6 @@ gaps inner 0
 gaps outer 0
 
 set $mod Mod4
-exec $HOME/Documents/Script/Wall_wal.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -577,7 +576,7 @@ assign [title="ncmpcpp"] $workspace10
 #exec $HOME/Documents/Script/Wallpaper_xwinwrap.sh
 # exec $HOME/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec $HOME/Documents/Script/Wall_walBtn.sh
-bindsym $mod+control+n exec blurwal -b 4  #Blurr wallpaper
+bindsym $mod+control+n exec blurwalCheck.sh #Blurr wallpaper
 
 exec $HOME/Documents/Script/Touchpad.sh
 # exec ~/Documents/Script/PulseModule.sh
@@ -602,6 +601,7 @@ exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
 # exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 
 # exec chromium
-exec $HOME/Documents/Script/mpsytWatch.sh
-exec $HOME/Documents/Script/startup_i3block_reload.sh
+# exec $HOME/Documents/Script/mpsytWatch.sh
+# exec $HOME/Documents/Script/startup_i3block_reload.sh
+exec $HOME/Documents/Script/Wall_wal.sh
 # exec i3-msg restart

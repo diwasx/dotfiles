@@ -24,10 +24,7 @@ Xcursor.size: 16
 
 URxvt.font: xft:DejaVu Sans Mono:size=11:antialias=true
 
-
 !URxvt.font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=14,xft:PowerlineSymbols
-
-
 !urxvt*font: xft:Terminus:pixelsize=11,xft:Inconsolata\ for\ Powerline:pixelsize=12
 !urxvt.font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true,xft:Inconsolata\ for\ Powerline:pixelsize=14:antialias=true
 
@@ -74,8 +71,8 @@ Xft.dpi:87
 ! handle Meta (Alt) + keypress to set the 8th bit
 ! causes different key with alt key
 ! URxvt.meta8: true
-!
-!Xterm config
+
+!XTERM CONFIG
 XTerm*faceName: Bitstream Vera Serif Mono
 xterm*faceSize: 11
 xterm*vt100*geometry: 80x60

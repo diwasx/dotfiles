@@ -7,6 +7,7 @@ cmd=$(echo -e "mpsyt \nmpsyt channels \nmpsyt playurl \nmpv " | rofi -dmenu -fon
 if (echo $cmd | grep -v playurl | grep -v channels | grep -e mpsyt); then #GREP to find if 'mpsyt' is present but not 'playurl' or 'channels'
     cmd=`echo $cmd | cut -d' ' -f2- ` #Delete first word
     cmd="mpsyt /$cmd"
+    mpsytWatch.sh&
     urxvt -name mpsyt -e $cmd  #These name and title are for i3 scratchpad
 fi
 
@@ -15,6 +16,7 @@ if (echo $cmd | grep -e playurl);then
 
     # If no argument is send use buffer url
     if [ "$cmd" = "mpsyt playurl " ]; then
+        mpsytWatch.sh&
         cmd="mpsyt playurl "`xsel -b | head -n 1`
     fi
 
@@ -23,6 +25,7 @@ fi
 
 # If 'mpsyt channels' is selected
 if (echo $cmd | grep -e channels);then
+    mpsytWatch.sh&
     urxvt -name mpsyt -e $cmd 
 fi
 
