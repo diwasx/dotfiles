@@ -48,6 +48,7 @@
 
 # gaps inner 15
 # gaps outer 15
+exec $HOME/Documents/Script/Wall_wal.sh
 gaps inner 0
 gaps outer 0
 
@@ -292,7 +293,8 @@ bindsym mod1+control+4 exec $HOME/Documents/Script/bufferMpvAudio.sh
 # bindsym mod1+control+5 exec $HOME/Documents/Script/bufferMp3Download.sh
 
 #Programs Shortcut
-bindsym mod1+control+0 exec chromium
+# bindsym mod1+control+0 exec chromium
+bindsym mod1+control+0 exec chromiumScaleFactor.sh
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 
 
@@ -600,8 +602,7 @@ exec ~/Documents/Script/i3block/mpdUpdate.sh
 exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
 # exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 
-# exec chromium
+# exec chromiumScaleFactor
 # exec $HOME/Documents/Script/mpsytWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
-exec $HOME/Documents/Script/Wall_wal.sh
 # exec i3-msg restart

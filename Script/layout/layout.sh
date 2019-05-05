@@ -12,8 +12,9 @@ fi
 if (echo $cmd | grep -e Coding-Music);then
     i3-msg "workspace 1. Terminal; append_layout ~/.config/i3/layout/coding-music.json"
     urxvt&
-    sleep 0.5
+    sleep 0.2
     urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis&
+    sleep 0.2
     reload_i3.sh
 fi
 

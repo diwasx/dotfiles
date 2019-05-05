@@ -102,7 +102,8 @@ map <A-9> <Esc>:tabn9<CR>
 
 
 "Search highlighted words
-vnoremap // y/<C-R>"<CR>
+" vnoremap // y/<C-R>"<CR>
+" use * and # for same situation
 
 " no highlighting
 map <leader>n :noh<CR>

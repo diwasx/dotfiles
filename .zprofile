@@ -2,6 +2,7 @@
 export PATH=$HOME/bin:/home/lanaya/.config/composer/vendor/bin:/home/lanaya/.vim/bundle/fzf/bin:/home/lanaya/node_modules/.bin/:/home/lanaya/Documents/Script:/usr/local/bin:$HOME/.node_modules/bin:$HOME/.local/bin/:$PATH 
 
 export npm_config_prefix=~/.node_modules
+export FILEMANAGER="ranger"
 
 if [ -n "$GTK_MODULES" ]
 then
