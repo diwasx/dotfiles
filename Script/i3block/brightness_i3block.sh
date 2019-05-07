@@ -10,3 +10,9 @@ actual=`cat $actual`
 percent=`echo "scale=3; $actual/$max*100" | bc` #Number calculation using bc
 percent=${percent%.*}  #Remove decimal value
 echo $percent%
+
+# Mouse interaction in i3blocks
+case $BLOCK_BUTTON in
+  4) light -A 5 ;;# scroll up, increase
+  5) light -U 5 ;;# scroll down, increase
+esac

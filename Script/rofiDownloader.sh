@@ -39,6 +39,7 @@ fi
 if (echo $cmd | grep -e Torrent);then
     url=$(xsel -b)
     # i3-msg workspace 8 && alacritty -e rtorrent $url
+    transmissionDaemon_Check.sh
     transmission-remote -a "$url" && notify-send "Torrent added." -i $HOME/Documents/icons/icons8-magnetic-48.png
     if [ $? -ne 0 ]; then
         notify-send "Error. Make sure you copy correct magnet url" -i $HOME/Documents/icons/icons8-close-window-filled-48.png
