@@ -5,7 +5,7 @@ cmd=$(echo -e "Coding-Browser (workspace 2) \nCoding-Music (workspace 1) \nTermi
 if (echo $cmd | grep -e "Coding-Browser");then
     i3-msg "workspace 2. Web; append_layout ~/.config/i3/layout/coding-browser.json"
     chromium&
-    alacritty -e ranger&
+    urxvt -e ranger&
     reload_i3.sh
 fi
 

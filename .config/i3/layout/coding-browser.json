@@ -9,7 +9,6 @@
        "x": 1,
        "y": 19
     },
-    "name": "10.2: Neural Networks: Perceptron Part 1 - The Nature of Code - YouTube - Chromium",
     "percent": 0.658854166666667,
     "swallows": [
        {
@@ -31,12 +30,10 @@
        "x": 0,
        "y": 0
     },
-    "name": "Alacritty",
     "percent": 0.341145833333333,
     "swallows": [
        {
-       "class": "^Alacritty$",
-       "instance": "^Alacritty$"
+       "class": "^URxvt$"
        }
     ],
     "type": "con"
