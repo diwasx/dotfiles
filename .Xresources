@@ -43,10 +43,16 @@ URxvt*saveLines:                      5000
 URxvt*buffered: false
 URxvt.perl-ext-common:  ...,font-size
 
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+/* Key binding */
+/* New shell from current directory */
+URxvt.keysym.Shift-Control-N: /home/lanaya/Documents/Script/shellFromHere.sh urxvt\n
+URxvt.keysym.Shift-Control-M: /home/lanaya/Documents/Script/shellFromHere.sh alacritty\n
 
-!*background:  #1a1e24
+/* Disable control + shift */
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!*background:  #1a1e2e
 !*foreground:  #cdd3df
 !*color0:  #1a1e24
 !*color1:  #252b33
@@ -63,7 +69,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 !*color12:  #5bb3b4
 !*color13:  #6398cf
 !*color14:  #c28aa3
-!*color15:  #926b3e
+!*coler15:  #926b3e
 
 !DPI of X server
 Xft.dpi:87

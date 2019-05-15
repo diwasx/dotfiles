@@ -43,7 +43,7 @@ colors() {
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 
 #c-[ to copy current command and press again to paste in new
-bind '"\C-[": "\C-e\C-u xsel <<"EOF"\n\C-y\nEOF\n\C-y"'
+# bind '"\C-[": "\C-e\C-u xsel <<"EOF"\n\C-y\nEOF\n\C-y"'
 
 # For pywal
 (cat ~/.cache/wal/sequences &)

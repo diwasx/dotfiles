@@ -27,7 +27,9 @@ fi
 # If 'Video' is selected
 if (echo $cmd | grep -e Video);then
     url=$(xsel -b)
-    wget $url -P /DriveE/Backup/Downloads 
+    # wget $url -P /DriveE/Backup/Downloads 
+    youtube-dl -o '/DriveE/Backup/Downloads/%(title)s.%(ext)s' $url
+
     if [ $? -eq 0 ];then
         notify-send -u normal "Successfull downloaded video" -i $HOME/Documents/icons/icons8-video-48.png
     else

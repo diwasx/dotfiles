@@ -27,3 +27,6 @@ application/x-extension-shtml=userapp-Nightly-JT1CVZ.desktop;
 application/xhtml+xml=userapp-Nightly-JT1CVZ.desktop;
 application/x-extension-xhtml=userapp-Nightly-JT1CVZ.desktop;
 application/x-extension-xht=userapp-Nightly-JT1CVZ.desktop;
+image/jpeg=sxiv.desktop;wine-extension-jfif.desktop;
+text/x-csrc=vim.desktop;
+video/x-matroska=mplayer.desktop;
