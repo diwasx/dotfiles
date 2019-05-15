@@ -565,5 +565,7 @@ key_bindings:
   - { key: F11,      mods: Super,   chars: "\x1b[23;3~"                      }
   - { key: F12,      mods: Super,   chars: "\x1b[24;3~"                      }
   - { key: NumpadEnter,             chars: "\n"                              }
-  - { key: N, mods: Control|Shift, command: { program: "/home/lanaya/Documents/Script/shellFromHere.sh", args: ["urxvt"] } }
-  - { key: M, mods: Control|Shift, command: { program: "/home/lanaya/Documents/Script/shellFromHere.sh", args: ["alacritty"] } }
+  # - { key: N, mods: Control|Shift, command: { program: "/home/lanaya/Documents/Script/shellFromHere.sh", args: ["urxvt"] } }
+  # - { key: M, mods: Control|Shift, command: { program: "/home/lanaya/Documents/Script/shellFromHere.sh", args: ["alacritty"] } }
+  - { key: N, mods: Control|Shift, chars: "/home/lanaya/Documents/Script/shellFromHere.sh urxvt\n" }
+  - { key: M, mods: Control|Shift, chars: "/home/lanaya/Documents/Script/shellFromHere.sh alacritty\n" }

@@ -8,7 +8,9 @@ synclient MaxTapTime=125
 #synclient HorizTwoFingerScroll=1
 synclient VertScrollDelta=-111
 synclient HorizScrollDelta=-111
-synclient PalmDetect=1
-synclient PalmMinWidth=8
-synclient PalmMinZ=100
+
+# does not works (using syndaemon)
+# synclient PalmDetect=1
+# synclient PalmMinWidth=2
+# synclient PalmMinZ=10
 

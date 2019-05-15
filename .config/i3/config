@@ -583,6 +583,7 @@ bindsym $mod+control+b exec $HOME/Documents/Script/Wall_walBtn.sh
 bindsym $mod+control+n exec blurwalCheck.sh #Blurr wallpaper
 
 exec $HOME/Documents/Script/Touchpad.sh
+exec syndaemon -i 0.5 -d
 # exec ~/Documents/Script/PulseModule.sh
 exec nm-applet
 # exec ~/Documents/Script/Volume.sh
