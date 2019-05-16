@@ -63,7 +63,9 @@ nnoremap k gk
 map <C-n> :j<CR>
 " Tabs
 "This override help page with keyword
-map <C-t> :tabnew<CR>
+" map <C-t> :tabnew<CR>
+execute "set <A-t>=\et"
+map <A-t> :tabnew<CR>
 
 map <S-k> :tabnext<CR> 
 map <S-j> :tabprevious<CR> 
@@ -115,9 +117,9 @@ map <leader>r :.,$s/
 map <leader>yf va{Vy
 
 " fuzzy search
-" nnoremap <C-F> :FZF<CR>
-execute "set <A-f>=\ef"
-map <A-f> :FZF<CR>
+nnoremap <C-T> :FZF<CR>
+" execute "set <A-f>=\ef"
+" map <A-f> :FZF<CR>
 
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 set splitbelow splitright

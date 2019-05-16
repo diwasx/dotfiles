@@ -182,7 +182,8 @@ stty -ixon
 #For Fuzzy Finder
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
 # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source /home/lanaya/.vim/bundle/fzf/shell/completion.zsh
+source /home/lanaya/.vim/bundle/fzf/shell/key-bindings.zsh
 
 #for steam
 export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)"
