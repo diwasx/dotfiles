@@ -61,21 +61,22 @@ nnoremap k gk
 
 " Join
 map <C-n> :j<CR>
-" Tabs
+
+"Show to terminal output
+map <leader>d :sh<CR> 
+
+"" Tabs Bindings
 "This override help page with keyword
 " map <C-t> :tabnew<CR>
 execute "set <A-t>=\et"
 map <A-t> :tabnew<CR>
 
+" tab switch
 map <S-k> :tabnext<CR> 
 map <S-j> :tabprevious<CR> 
-map <S-u> :tabmove<CR>
-
-execute "set <A-u>=\eu"
-map <A-u> :tabmove0<CR>
-
-"Show to terminal output
-map <leader>d :sh<CR> 
+" map <S-u> :tabmove<CR>
+" execute "set <A-u>=\eu"
+" map <A-u> :tabmove0<CR>
 
 " Problem  Meta (Alt) that keypress to set the 8th bit
 execute "set <A-1>=\e1"
@@ -97,11 +98,18 @@ map <A-8> <Esc>:tabn8<CR>
 execute "set <A-9>=\e9"
 map <A-9> <Esc>:tabn9<CR>
 
-" execute "set <A-k>=\ek"
-" map <A-k><Esc>:tabnext<CR>
-" execute "set <A-j>=\ej"
-" map <A-j><Esc>:tabprevious<CR>
-
+" tab move
+map <leader>1 :tabmove0<CR>
+map <leader>2 :tabmove1<CR>
+map <leader>3 :tabmove2<CR>
+map <leader>4 :tabmove3<CR>
+map <leader>5 :tabmove4<CR>
+map <leader>6 :tabmove5<CR>
+map <leader>7 :tabmove6<CR>
+map <leader>8 :tabmove7<CR>
+map <leader>9 :tabmove8<CR>
+map <leader>k :tabmove +1<CR>
+map <leader>j :tabmove -1<CR>
 
 "Search highlighted words
 " vnoremap // y/<C-R>"<CR>
