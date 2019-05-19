@@ -14,6 +14,7 @@ application/x-extension-xhtml=userapp-Nightly-JT1CVZ.desktop
 application/x-extension-xht=userapp-Nightly-JT1CVZ.desktop
 x-scheme-handler/magnet=torrent.desktop
 application/x-bittorrent=torrent.desktop
+inode/directory=ranger.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Nightly-JT1CVZ.desktop;

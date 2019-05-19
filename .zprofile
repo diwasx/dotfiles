@@ -3,6 +3,8 @@ export PATH=$HOME/bin:/home/lanaya/.config/composer/vendor/bin:/home/lanaya/.vim
 
 export npm_config_prefix=~/.node_modules
 export FILEMANAGER="ranger"
+export BROWSER="chromium"
+export PLAYER="mpv"
 
 if [ -n "$GTK_MODULES" ]
 then

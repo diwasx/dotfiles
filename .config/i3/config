@@ -22,8 +22,8 @@
 # cava, vis :- Visualizer
 # rofi :- menu tool
 # font-awesome -->Terminal-font
-# compton
-# expect
+# compton --> compositing layer for transparency
+# expect --> pass expected value to script
 # loginTheme -->/etc/issue
 # xscreensaver-arch-logo*
 # xclip :-copying current command in MID Mouse btn
@@ -41,6 +41,7 @@
 # mycli --> mysql syntax highlighting
 # termtosvg --> record terminal session as svg animation for github
 # thunar --> file manager for drag and drop
+# linopen --> xdg-mime replacement for default applications
 
 
 # i3 config file (v4)

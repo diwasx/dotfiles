@@ -32,6 +32,7 @@ set foldlevelstart=10
 set clipboard=unnamedplus
 
 let mapleader=" "
+let maplocalleader=","
 " :imap ii <Esc>
 
 " For mouse click in NERDTree
@@ -66,8 +67,6 @@ map <C-n> :j<CR>
 map <leader>d :sh<CR> 
 
 "" Tabs Bindings
-"This override help page with keyword
-" map <C-t> :tabnew<CR>
 execute "set <A-t>=\et"
 map <A-t> :tabnew<CR>
 
@@ -99,17 +98,17 @@ execute "set <A-9>=\e9"
 map <A-9> <Esc>:tabn9<CR>
 
 " tab move
-map <leader>1 :tabmove0<CR>
-map <leader>2 :tabmove1<CR>
-map <leader>3 :tabmove2<CR>
-map <leader>4 :tabmove3<CR>
-map <leader>5 :tabmove4<CR>
-map <leader>6 :tabmove5<CR>
-map <leader>7 :tabmove6<CR>
-map <leader>8 :tabmove7<CR>
-map <leader>9 :tabmove8<CR>
-map <leader>k :tabmove +1<CR>
-map <leader>j :tabmove -1<CR>
+map <localleader>1 :tabmove0<CR>
+map <localleader>2 :tabmove1<CR>
+map <localleader>3 :tabmove2<CR>
+map <localleader>4 :tabmove3<CR>
+map <localleader>5 :tabmove4<CR>
+map <localleader>6 :tabmove5<CR>
+map <localleader>7 :tabmove6<CR>
+map <localleader>8 :tabmove7<CR>
+map <localleader>9 :tabmove8<CR>
+map <localleader>k :tabmove +1<CR>
+map <localleader>j :tabmove -1<CR>
 
 "Search highlighted words
 " vnoremap // y/<C-R>"<CR>
