@@ -52,6 +52,6 @@ cp  ~/.config/mutt/accounts/gmail.muttrc /DriveE/Projects/Git/notes/.config/mutt
 
 mkdir /DriveE/Projects/Git/notes/.config/transmission-daemon -p
 cp ~/.config/transmission-daemon/settings.json /DriveE/Projects/Git/notes/.config/transmission-daemon/
-cp ~/.config/mimeapps.list /DriveE/Projects/Git/i3wm/.config/
+# cp ~/.config/mimeapps.list /DriveE/Projects/Git/i3wm/.config/
 cp ~/.zshrc /DriveE/Projects/Git/i3wm/
 cp ~/.zprofile /DriveE/Projects/Git/i3wm/

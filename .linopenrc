@@ -2,6 +2,7 @@
 # linopen configuration
 # enviroiment variables can be used
 #
+#not working env variables
 
 # Specify your terminal emulator here
 # for terminal support.
