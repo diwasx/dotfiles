@@ -179,10 +179,14 @@ bindsym $mod+f fullscreen toggle
 
 # Audio Visualizer
 bindsym $mod+e exec urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis
-bindsym mod1+Shift+1 move down; resize set 1920 70 
+#vis position
+bindsym mod1+Shift+1 move down; Resize set 1920 70 
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
+
+# toggle sticking (work for floating window only)
+bindsym $mod+Shift+s sticky toggle
 
 #Floating bottom left and bottom right corner
 # bindsym $mod+Shift+space floating enable; resize set 515 331; move position 1400 745
@@ -610,3 +614,5 @@ exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
 # exec $HOME/Documents/Script/mpsytWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
 # exec i3-msg restart
+
+# bindsym --whole-window button3 exec rofi -show run -font "System San Francisco Display 11"

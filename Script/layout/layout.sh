@@ -4,8 +4,10 @@ cmd=$(echo -e "Coding-Browser (workspace 2) \nCoding-Music (workspace 1) \nTermi
 
 if (echo $cmd | grep -e "Coding-Browser");then
     i3-msg "workspace 2. Web; append_layout ~/.config/i3/layout/coding-browser.json"
-    chromium&
+    # chromium&
+    chromiumScaleFactor.sh&
     urxvt -e ranger&
+    sleep 0.2
     reload_i3.sh
 fi
 
@@ -24,6 +26,7 @@ if (echo $cmd | grep -e "Terminal A");then
     urxvt&
     urxvt&
     urxvt&
+    sleep 0.2
     reload_i3.sh
 fi
 
@@ -33,5 +36,6 @@ if (echo $cmd | grep -e "Terminal B");then
     urxvt&
     urxvt&
     urxvt&
+    sleep 0.2
     reload_i3.sh
 fi
