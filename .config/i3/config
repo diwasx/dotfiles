@@ -12,6 +12,7 @@
 
 ##DEPENDENCIES##
 
+# i3-gaps-next-git --> with more gap features
 # wal :-genarate colorsheme based on wallpager
 # blurwal :-blurbackgroundimage
 # corrupter :- glitches image for lockscreen
@@ -180,7 +181,9 @@ bindsym $mod+f fullscreen toggle
 # Audio Visualizer
 bindsym $mod+e exec urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis
 #vis position
-bindsym mod1+Shift+1 move down; Resize set 1920 70 
+bindsym mod1+Shift+1 move down; Resize set 1919 70; move position 0 1010
+#gap for vis
+bindsym mod1+Shift+grave gaps bottom all set 70
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -349,8 +352,12 @@ bindsym $mod+Shift+i resize grow height 10 px or 10ppt
 bindsym $mod+Shift+y resize grow width 10 px or 10ppt
 
 bindsym $mod+t split toggle
+
+#gap binding
 bindsym $mod+Shift+t gaps inner current set 10
-bindsym $mod+Shift+d gaps inner current set 0; gaps outer current set 0
+# bindsym $mod+Shift+d gaps inner current set 0; gaps outer current set 0
+# bindsym $mod+Shift+t gaps inner all set 10
+bindsym $mod+Shift+d gaps inner all set 0; gaps outer all set 0
 
 ## Resize gap at small value
 #bindsym $mod+z gaps outer current plus 5
