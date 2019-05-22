@@ -137,17 +137,26 @@ bindsym $mod+f fullscreen toggle
 #bindsym $mod+e layout toggle split
 
 # Audio Visualizer
-bindsym $mod+e exec urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis
-#vis position
-bindsym mod1+Shift+1 move down; Resize set 1919 70; move position 0 1010
-#gap for vis
-bindsym mod1+Shift+grave gaps bottom all set 70
+# bindsym $mod+e exec urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis
+# vis position
+# bindsym mod1+Shift+1 move down; Resize set 1919 70; move position 0 1010; sticky enable
+for_window [instance="vis floating"] floating enable; 
+for_window [instance="vis floating"] Resize set 1919 70; 
+for_window [instance="vis floating"] move position 0 1010; 
+for_window [instance="vis floating"] sticky enable
+bindsym $mod+e exec vis_i3.sh
+
+# vis gaps
+# bindsym mod1+Shift+grave gaps bottom all set 70
+# bindsym mod1+Shift+grave gaps bottom current set 70
+# bindsym mod1+Shift+grave exec i3-gaps-all-workspace.sh
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
 
 # toggle sticking (work for floating window only)
 bindsym $mod+Shift+s sticky toggle
+
 
 #Floating bottom left and bottom right corner
 # bindsym $mod+Shift+space floating enable; resize set 515 331; move position 1400 745
@@ -173,6 +182,11 @@ bindsym $mod+c focus child
 
 set $workspace1 "1. Terminal" 
 set $workspace2 "2. Web"
+set $workspace3 "3" 
+set $workspace4 "4" 
+set $workspace5 "5" 
+set $workspace6 "6"
+set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9."
 set $workspace10 "10. Music"
@@ -209,7 +223,6 @@ for_window [instance="fb-messenger-cli"] floating enable
 for_window [instance="fb-messenger-cli"] resize set 515 331 
 for_window [instance="fb-messenger-cli"] move position 0 745
 for_window [instance="fb-messenger-cli"] move scratchpad
-# exec --no-startup-id urxvt -name fb-messenger-cli -e fb-messenger-cli
 bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 
 ###--lyrics_finder--###
@@ -550,7 +563,8 @@ assign [title="ncmpcpp"] $workspace10
 #exec $HOME/Documents/Script/Wallpaper_xwinwrap.sh
 # exec $HOME/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec $HOME/Documents/Script/Wall_walBtn.sh
-bindsym $mod+control+n exec blurwalCheck.sh #Blurr wallpaper
+#blur wallpaper
+bindsym $mod+control+n exec blurwalCheck.sh 
 
 exec $HOME/Documents/Script/Touchpad.sh
 exec syndaemon -i 0.5 -d
