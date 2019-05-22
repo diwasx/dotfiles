@@ -9,4 +9,5 @@ convert /tmp/wal1.jpg -fill black -colorize 50% /tmp/wal2.jpg
 feh --bg-fill /tmp/wal2.jpg
 feh --bg-fill /tmp/wal1.jpg
 
-wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
+# wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
+wal -i $file; 

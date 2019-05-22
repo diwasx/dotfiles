@@ -52,8 +52,8 @@
 # gaps inner 15
 # gaps outer 15
 exec $HOME/Documents/Script/Wall_wal.sh
-gaps inner 0
-gaps outer 0
+# gaps inner 0
+# gaps outer 0
 
 set $mod Mod4
 
@@ -331,8 +331,8 @@ bindsym mod1+control+Shift+s exec $HOME/Documents/Script/SteamWal.sh
 bindsym $mod+control+o exec urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 bindsym mod1+control+o exec alacritty -e neomutt
 
-workspace $workspace1 gaps inner 10
-workspace $workspace1 gaps inner 10
+# workspace $workspace1 gaps inner 10
+# workspace $workspace1 gaps inner 10
 # workspace $workspace2 gaps outer 0
 # workspace $workspace3 gaps inner 0
 # workspace $workspace3 gaps inner 0
