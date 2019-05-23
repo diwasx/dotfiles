@@ -54,6 +54,20 @@ set_from_resource $color13    i3wm.color13    #979695
 set_from_resource $color14    i3wm.color14    #D5BE97
 set_from_resource $color15    i3wm.color15    #95B6DD
 
+set $workspace1 "1. Terminal" 
+set $workspace2 "2. Web"
+set $workspace3 "3" 
+set $workspace4 "4" 
+set $workspace5 "5" 
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9."
+set $workspace10 "10. Music"
+
+# workspace $workspace1 gaps <px>
+workspace $workspace1 gaps inner 10
+
 #mode "moveit" {
 #    bindsym Up move up 20px
 #    bindsym Left move left 20px
@@ -136,11 +150,11 @@ bindsym $mod+f fullscreen toggle
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout toggle split
 
-# Audio Visualizer
+###---Audio Visualizer---###
 # bindsym $mod+e exec urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis
 # vis position
 # bindsym mod1+Shift+1 move down; Resize set 1919 70; move position 0 1010; sticky enable
-for_window [instance="vis floating"] floating enable; 
+for_window [instance="vis floating"] floating enaBLe; 
 for_window [instance="vis floating"] Resize set 1919 70; 
 for_window [instance="vis floating"] move position 0 1010; 
 for_window [instance="vis floating"] sticky enable
@@ -156,7 +170,6 @@ bindsym $mod+space floating toggle
 
 # toggle sticking (work for floating window only)
 bindsym $mod+Shift+s sticky toggle
-
 
 #Floating bottom left and bottom right corner
 # bindsym $mod+Shift+space floating enable; resize set 515 331; move position 1400 745
@@ -179,17 +192,6 @@ bindsym $mod+a focus parent
 
 # focus the child container
 bindsym $mod+c focus child
-
-set $workspace1 "1. Terminal" 
-set $workspace2 "2. Web"
-set $workspace3 "3" 
-set $workspace4 "4" 
-set $workspace5 "5" 
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9."
-set $workspace10 "10. Music"
 
 ###---Dropdown---###--Urxvt--###
 #for_window [instance="dropdown"] floating enable
@@ -265,7 +267,7 @@ bindsym $mod+y scratchpad show
 bindsym mod1+control+b exec $HOME/Documents/Script/scratchpadBrower.sh
 
 
-#Buffer Script
+# --> Buffer Script
 bindsym mod1+control+grave exec $HOME/Documents/Script/bufferUrl.sh
 bindsym mod1+control+1 exec $HOME/Documents/Script/bufferSearchEngine.sh
 bindsym mod1+control+2 exec $HOME/Documents/Script/bufferSearchEngineSecondary.sh
@@ -273,7 +275,7 @@ bindsym mod1+control+3 exec $HOME/Documents/Script/bufferMpvVideo.sh
 bindsym mod1+control+4 exec $HOME/Documents/Script/bufferMpvAudio.sh
 # bindsym mod1+control+5 exec $HOME/Documents/Script/bufferMp3Download.sh
 
-#Programs Shortcut
+# --> Programs Shortcut
 # bindsym mod1+control+0 exec chromium
 bindsym mod1+control+0 exec chromiumScaleFactor.sh
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
@@ -287,36 +289,21 @@ bindsym mod1+control+n exec alacritty -e newsboat
 bindsym mod1+control+u exec edex-ui
 # bindsym $mod+control+f exec urxvt -e fb-messenger-cli
 
-#Nepali Calender
+# Nepali Calender
 bindsym mod1+control+Shift+c exec $HOME/Documents/Script/nepalicalCheck.sh
 
-#Redshift
+# Redshift
 bindsym mod1+control+Shift+r exec "$HOME/Documents/Script/redshiftCheck.sh"
 
 bindsym mod1+control+Shift+d exec discord
 
 bindsym mod1+control+Shift+s exec $HOME/Documents/Script/SteamWal.sh
 
-#OfflineIMAP 
+# OfflineIMAP 
 # exec urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 bindsym $mod+control+o exec urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 bindsym mod1+control+o exec alacritty -e neomutt
 
-# workspace $workspace1 gaps inner 10
-# workspace $workspace1 gaps inner 10
-# workspace $workspace2 gaps outer 0
-# workspace $workspace3 gaps inner 0
-# workspace $workspace3 gaps inner 0
-# workspace $workspace4 gaps outer 0
-# workspace $workspace4 gaps outer 0
-# workspace 3 gaps inner 0
-# workspace 3 gaps outer 0
-# workspace $workspace8 gaps inner 0
-# workspace $workspace8 gaps outer 0
-# workspace $workspace9 gaps inner 0
-# workspace $workspace9 gaps outer 0
-# workspace $workspace10 gaps inner 0
-# workspace $workspace10 gaps outer 0
 bindsym $mod+Shift+u resize shrink width 10 px or 10ppt
 bindsym $mod+Shift+o resize shrink height 10 px or 10ppt
 bindsym $mod+Shift+i resize grow height 10 px or 10ppt
@@ -340,15 +327,14 @@ bindsym $mod+Shift+d gaps inner all set 0; gaps outer all set 0
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 # bindsym $mod+2 exec pkill -RTMIN+13 i3blocks && i3-msg 'workspace $workspace2' #Signal to reload mpsyt
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
-
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1

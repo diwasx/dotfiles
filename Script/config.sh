@@ -55,3 +55,5 @@ cp ~/.config/transmission-daemon/settings.json /DriveE/Projects/Git/notes/.confi
 # cp ~/.config/mimeapps.list /DriveE/Projects/Git/i3wm/.config/
 cp ~/.zshrc /DriveE/Projects/Git/i3wm/
 cp ~/.zprofile /DriveE/Projects/Git/i3wm/
+
+cp -r ~/.config/sxiv /DriveE/Projects/Git/i3wm/.config
