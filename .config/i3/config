@@ -65,7 +65,7 @@ set $workspace8 "8"
 set $workspace9 "9."
 set $workspace10 "10. Music"
 
-# workspace $workspace1 gaps <px>
+# Workspace starting gap
 workspace $workspace1 gaps inner 10
 
 #mode "moveit" {
@@ -159,6 +159,8 @@ for_window [instance="vis floating"] Resize set 1919 70;
 for_window [instance="vis floating"] move position 0 1010; 
 for_window [instance="vis floating"] sticky enable
 bindsym $mod+e exec vis_i3.sh
+# bindsym $mod+c exec conky_i3.sh
+bindsym $mod+c exec $HOME/Documents/conky/run_i3.sh
 
 # vis gaps
 # bindsym mod1+Shift+grave gaps bottom all set 70
@@ -171,7 +173,7 @@ bindsym $mod+space floating toggle
 # toggle sticking (work for floating window only)
 bindsym $mod+Shift+s sticky toggle
 
-#Floating bottom left and bottom right corner
+# Floating bottom left and bottom right corner
 # bindsym $mod+Shift+space floating enable; resize set 515 331; move position 1400 745
 bindsym $mod+Shift+space floating enable; resize set 610 435; move position 1310 645
 bindsym $mod+control+space floating enable; resize set 610 435; move position 0 645
@@ -191,7 +193,7 @@ bindsym mod1+Tab focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+c focus child
+# bindsym $mod+c focus child
 
 ###---Dropdown---###--Urxvt--###
 #for_window [instance="dropdown"] floating enable
@@ -247,8 +249,9 @@ bindsym mod1+control+bracketleft  exec $HOME/Documents/Script/i3block/mpsytScrat
 
 ###-- mpsyt (Floating mpv)--###
 for_window [title="floatingMpv"] floating enable
-for_window [title="floatingMpv"] resize set 800 600 
-for_window [title="floatingMpv"] move position 1110 475
+# for_window [title="floatingMpv"] resize set 800 600 
+for_window [title="floatingMpv"] resize set 610 435
+for_window [title="floatingMpv"] move position 1310 645
 for_window [title="floatingMpv"] move scratchpad
 # bindsym mod1+control+bracketleft [title="floatingMpv"] scratchpad show
 bindsym mod1+control+p [title="floatingMpv"] scratchpad show
@@ -312,10 +315,10 @@ bindsym $mod+Shift+y resize grow width 10 px or 10ppt
 bindsym $mod+t split toggle
 
 #gap binding
-bindsym $mod+Shift+t gaps inner current set 10
-# bindsym $mod+Shift+d gaps inner current set 0; gaps outer current set 0
-# bindsym $mod+Shift+t gaps inner all set 10
-bindsym $mod+Shift+d gaps inner all set 0; gaps outer all set 0
+# bindsym $mod+Shift+t gaps inner current set 10
+# bindsym $mod+Shift+d gaps inner all set 0; gaps outer all set 0
+bindsym $mod+Shift+d exec i3-gaps-all-workspace.sh terminal-gap
+bindsym $mod+Shift+t exec i3-gaps-all-workspace.sh reset
 
 ## Resize gap at small value
 #bindsym $mod+z gaps outer current plus 5
