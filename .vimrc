@@ -222,6 +222,7 @@ let g:livedown_port = 1337
 " the browser to use, can also be firefox, chrome or other, depending on your executable
 let g:livedown_browser = "firefox"
 " nmap gm :LivedownToggle<CR>
+" port 1337
 nmap gm :LivedownPreview<CR>
 
 "java

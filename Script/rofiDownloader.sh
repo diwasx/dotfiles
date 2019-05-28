@@ -18,7 +18,7 @@ fi
 if (echo $cmd | grep -e Music);then
     url=$(xsel -b)
     # wget $url -P /DriveE/Music 
-    youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --ignore-errors -o "/DriveE/Music/%(title)s.%(ext)s" $url && notify-send -u normal "Downloaded and convert to mp3 successfully" -i $HOME/Documents/icons/icons8-musical-notes-64.png
+    youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 --ignore-errors -o "/DriveE/Music/%(title)s.%(ext)s" $url && notify-send -u normal "Downloaded and converted to mp3 successfully" -i $HOME/Documents/icons/icons8-musical-notes-64.png
     if [ $? -ne 0 ];then
         notify-send -u normal "Error downloadinig music. Check for copied url" -i $HOME/Documents/icons/icons8-close-window-filled-48.png
     fi

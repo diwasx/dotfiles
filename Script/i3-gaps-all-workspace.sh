@@ -42,17 +42,35 @@ set_gap_all_workspace(){
 }
 
 if [[ $1 == "vis" ]]; then
-    set_gap_all_workspace "gaps bottom current set 70"
+    # set_gap_all_workspace "gaps bottom current set 70"
+    i3-msg "gaps bottom all set 70"
+
 elif [[ $1 == "vis-reset" ]]; then
-    set_gap_all_workspace "gaps bottom current set 0"
-elif [[ $1 == "conky" ]]; then
-    set_gap_all_workspace "gaps left current set 234; gaps right current set 320"
-elif [[ $1 == "conky-reset" ]]; then
+    # set_gap_all_workspace "gaps bottom current set 0"
+    i3-msg "gaps bottom all set 0"
+
+elif [[ $1 == "conky-mikasa" ]]; then
+    # set_gap_all_workspace "gaps left current set 234; gaps right current set 305"
+    i3-msg "gaps left all set 234"; i3-msg "gaps right all set 305"
+
+elif [[ $1 == "conky-mikasa-reset" ]]; then
     set_gap_all_workspace "gaps left current set 0; gaps right current set 0"
+
 elif [[ $1 == "terminal-gap" ]]; then
     i3-msg "gaps inner current set 10"
+
+elif [[ $1 == "video-play-1" ]]; then
+    i3-msg "gaps right all set 600"
+
+elif [[ $1 == "video-play-2" ]]; then
+    i3-msg "gaps left all set 234"
+
+elif [[ $1 == "video-play-reset" ]]; then
+    i3-msg "gaps right all set 0"; i3-msg "gaps left all set 0"
+
 elif [[ $1 == "reset" ]]; then
     i3-msg "gaps inner all set 0; gaps outer all set 0"
+
 else
-    echo "Use argument vis, conky, terminal-gap or reset"
+    echo "Use argument vis, conky-mikasa, terminal-gap or reset"
 fi

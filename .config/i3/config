@@ -80,7 +80,9 @@ workspace $workspace1 gaps inner 10
 #<super>+m will focus the last active floating wind
 # start a terminal
 bindsym $mod+Shift+Return exec alacritty #i3-sensible-terminal
-bindsym $mod+Return exec urxvt
+# bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvt_workingDir.sh start
+# Setting workingDir is done from urxvt binding
 
 #hide titlebar
 new_window 1pixel
@@ -158,9 +160,14 @@ for_window [instance="vis floating"] floating enaBLe;
 for_window [instance="vis floating"] Resize set 1919 70; 
 for_window [instance="vis floating"] move position 0 1010; 
 for_window [instance="vis floating"] sticky enable
-bindsym $mod+e exec vis_i3.sh
+bindsym $mod+Shift+e exec vis_i3.sh
+
+# conky
 # bindsym $mod+c exec conky_i3.sh
-bindsym $mod+c exec $HOME/Documents/conky/run_i3.sh
+bindsym $mod+Shift+c exec $HOME/Documents/conky-mikasa/run_i3.sh
+
+# gaps for video
+bindsym $mod+Shift+v exec video_player_i3.sh
 
 # vis gaps
 # bindsym mod1+Shift+grave gaps bottom all set 70
@@ -174,9 +181,10 @@ bindsym $mod+space floating toggle
 bindsym $mod+Shift+s sticky toggle
 
 # Floating bottom left and bottom right corner
-# bindsym $mod+Shift+space floating enable; resize set 515 331; move position 1400 745
-bindsym $mod+Shift+space floating enable; resize set 610 435; move position 1310 645
-bindsym $mod+control+space floating enable; resize set 610 435; move position 0 645
+bindsym $mod+Shift+space floating enable; resize set 655 511; move position 1263 570
+bindsym $mod+control+space floating enable; resize set 655 511; move position 0 570
+# bindsym $mod+Shift+space floating enable; resize set 610 435; move position 1310 645
+# bindsym $mod+control+space floating enable; resize set 610 435; move position 0 645
 
 #Large view size
 bindsym mod1+Shift+space floating enable; resize set 800 600 
@@ -352,7 +360,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 # bindsym $mod+Shift+r restart
 bindsym $mod+Shift+r exec reload_i3.sh
@@ -524,7 +532,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+Shift+e exec XDG_CURRENT_DESKTOP=kde dolphin 
+# bindsym $mod+Shift+e exec XDG_CURRENT_DESKTOP=kde dolphin 
 for_window [class="dolphin"] floating enable
 #for_window [class="vlc"] floating enable
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
@@ -579,7 +587,7 @@ exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
 # exec --no-startup-id i3-msg 'workspace $workspace1' && urxvt -e $HOME/Documents/Script/offlineimap-notify.sh
 
 # exec chromiumScaleFactor
-# exec $HOME/Documents/Script/mpsytWatch.sh
+exec $HOME/Documents/Script/mpvWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
 # exec i3-msg restart
 
