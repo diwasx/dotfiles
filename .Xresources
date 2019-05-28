@@ -3,6 +3,7 @@
 ! /  \| | |  __/\__ \ (_) | |_| | | | (_|  __/\__ \
 !/_/\_\_|  \___||___/\___/ \__,_|_|  \___\___||___/
 !                                                  
+
 ! do not scroll with output
 URxvt*scrollTtyOutput: false
 
@@ -48,7 +49,7 @@ URxvt.perl-ext-common:  ...,font-size
 URxvt.keysym.Shift-Control-N: /home/lanaya/Documents/Script/shellFromHere.sh urxvt\n
 URxvt.keysym.Shift-Control-M: /home/lanaya/Documents/Script/shellFromHere.sh alacritty\n
 
-/* URxvt.keysym.Shift-Control-Return: /home/lanaya/Documents/Script/shellFromHere.sh alacritty\n */
+/* Setting working directory */
 URxvt.keysym.Shift-Control-Return: urxvt_workingDir.sh set\n
 
 /* Disable control + shift */

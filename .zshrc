@@ -174,7 +174,7 @@ alias gk='/DriveKhelkud'
 alias gh='~'
 #end
 
-export WINEDEBUG=fps
+# export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh
 ~/Documents/Script/i3block_refresh.sh
  
@@ -196,4 +196,3 @@ EDITOR=vim
 
 # Vi mode
 # bindkey -v
-

@@ -63,7 +63,7 @@ nnoremap k gk
 " Join
 map <C-n> :j<CR>
 
-"Show to terminal output
+" Start shell from vim
 map <leader>d :sh<CR> 
 
 "" Tabs Bindings
@@ -112,7 +112,7 @@ map <localleader>j :tabmove -1<CR>
 
 "Search highlighted words
 " vnoremap // y/<C-R>"<CR>
-" use * and # for same situation
+" use * and # for same purpose
 
 " no highlighting
 map <leader>n :noh<CR>
