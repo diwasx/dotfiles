@@ -132,7 +132,7 @@ alias conrif="sudo vim /usr/lib/python3.7/site-packages/ranger/config/rifle.conf
 alias conpac="sudo vim /etc/pacman.conf"
 alias r="ranger"
 alias t="vim /DriveE/Projects/Git/notes/ToDo"
-alias m="vim /DriveE/Projects/Git/notes/Music"
+alias e="vim /DriveE/Projects/Git/notes/entertainment"
 #Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)
 #Created a executable in script folder
 # alias pj="processing-java --sketch=`pwd` --run"
@@ -148,7 +148,7 @@ alias trc="transmission-remote-cli"
 #Ranger alias
 alias gib='/usr/lib/i3blocks/'
 alias gbb='/DriveE/Projects/Git/'
-alias gbi='/DriveE/Projects/Git/i3wm'
+alias gbi='/DriveE/Projects/Git/dotfiles'
 alias gbn='/DriveE/Projects/Git/notes'
 alias gW='~/.wine/drive_c/'
 alias gV='/VirtualDrive'
@@ -174,21 +174,14 @@ alias gk='/DriveKhelkud'
 alias gh='~'
 #end
 
-# export WINEDEBUG=fps
 ~/Documents/Script/checkMouse.sh
 ~/Documents/Script/i3block_refresh.sh
  
 #For CTRL+S disable that freeze termial 
 stty -ixon
 
-#For Fuzzy Finder
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
-# export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 source /home/lanaya/.vim/bundle/fzf/shell/completion.zsh
 source /home/lanaya/.vim/bundle/fzf/shell/key-bindings.zsh
-
-#for steam
-export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)"
 
 # export NID=0
 

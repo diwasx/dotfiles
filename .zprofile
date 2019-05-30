@@ -6,6 +6,13 @@ export FILEMANAGER="ranger"
 export BROWSER="chromium"
 export PLAYER="mpv"
 
+#for steam
+export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)"
+
+#For Fuzzy Finder
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
+# export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
 if [ -n "$GTK_MODULES" ]
 then
     GTK_MODULES="$GTK_MODULES:unity-gtk-module"

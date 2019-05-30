@@ -1,5 +1,6 @@
 #!/bin/sh
 
+pkill -f "xwinwrap"
 folder="/DriveE/Pictures/Wallpapers/Collection"
 file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 

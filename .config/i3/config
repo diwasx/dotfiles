@@ -80,8 +80,8 @@ workspace $workspace1 gaps inner 10
 #<super>+m will focus the last active floating wind
 # start a terminal
 bindsym $mod+Shift+Return exec alacritty #i3-sensible-terminal
-# bindsym $mod+Return exec urxvt
-bindsym $mod+Return exec urxvt_workingDir.sh start
+bindsym $mod+Return exec urxvt
+bindsym mod1+Return exec urxvt_workingDir.sh start
 # Setting workingDir is done from urxvt binding
 
 #hide titlebar
@@ -560,6 +560,7 @@ assign [title="ncmpcpp"] $workspace10
 #exec $HOME/Documents/Script/Wallpaper_xwinwrap.sh
 # exec $HOME/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec $HOME/Documents/Script/Wall_walBtn.sh
+bindsym $mod+Shift+b exec $HOME/Documents/Script/Wall_liveWal.sh
 #blur wallpaper
 bindsym $mod+control+n exec blurwalCheck.sh 
 
