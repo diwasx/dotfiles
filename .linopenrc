@@ -6,7 +6,7 @@
 
 # Specify your terminal emulator here
 # for terminal support.
-terminal=urxvt
+terminal=st
 
 # Specify all programs you want to
 # open in terminal like this:

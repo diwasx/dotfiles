@@ -567,5 +567,5 @@ key_bindings:
   - { key: NumpadEnter,             chars: "\n"                              }
   # - { key: N, mods: Control|Shift, command: { program: "/home/lanaya/Documents/Script/shellFromHere.sh", args: ["urxvt"] } }
   # - { key: M, mods: Control|Shift, command: { program: "/home/lanaya/Documents/Script/shellFromHere.sh", args: ["alacritty"] } }
-  - { key: N, mods: Control|Shift, chars: "/home/lanaya/Documents/Script/shellFromHere.sh urxvt\n" }
+  - { key: N, mods: Control|Shift, chars: "/home/lanaya/Documents/Script/shellFromHere.sh st\n" }
   - { key: M, mods: Control|Shift, chars: "/home/lanaya/Documents/Script/shellFromHere.sh alacritty\n" }

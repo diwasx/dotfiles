@@ -123,6 +123,9 @@ map <leader>r :.,$s/
 "copy whole function
 map <leader>yf va{Vy
 
+"binary to hex
+map <leader>b :%!xxd<CR>
+
 " fuzzy search
 nnoremap <C-T> :FZF<CR>
 " execute "set <A-f>=\ef"
@@ -176,7 +179,6 @@ Plugin 'pangloss/vim-javascript'
 " Plugin 'w0rp/ale'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'dbeniamine/cheat.sh-vim'
-
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -252,3 +254,12 @@ let g:javascript_plugin_jsdoc = 1
 " let g:syntastic_ocaml_checkers = ['merlin']
 " let g:syntastic_python_checkers = ['pylint']
 " let g:syntastic_shell_checkers = ['shellcheck']
+
+" Make file
+map <leader>m :!sudo make install<cr>
+
+" solve st problem while scrolling
+set ttymouse=sgr
+
+" setting for particular file
+autocmd BufRead /DriveE/Projects/Git/notes/notes_dropdown set noswapfile

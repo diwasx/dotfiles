@@ -133,6 +133,7 @@ alias conpac="sudo vim /etc/pacman.conf"
 alias r="ranger"
 alias t="vim /DriveE/Projects/Git/notes/ToDo"
 alias e="vim /DriveE/Projects/Git/notes/entertainment"
+# alias s="terminal_workingDir.sh set"
 #Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)
 #Created a executable in script folder
 # alias pj="processing-java --sketch=`pwd` --run"
@@ -150,6 +151,7 @@ alias gib='/usr/lib/i3blocks/'
 alias gbb='/DriveE/Projects/Git/'
 alias gbi='/DriveE/Projects/Git/dotfiles'
 alias gbn='/DriveE/Projects/Git/notes'
+alias gbs='/DriveE/Projects/Git/suckless'
 alias gW='~/.wine/drive_c/'
 alias gV='/VirtualDrive'
 alias gP='/DriveE/Projects'
@@ -184,8 +186,12 @@ source /home/lanaya/.vim/bundle/fzf/shell/completion.zsh
 source /home/lanaya/.vim/bundle/fzf/shell/key-bindings.zsh
 
 # export NID=0
-
 EDITOR=vim
 
 # Vi mode
 # bindkey -v
+
+# For pywal
+(cat ~/.cache/wal/sequences &)
+# cat ~/.cache/wal/sequences
+# source ~/.cache/wal/colors-tty.sh

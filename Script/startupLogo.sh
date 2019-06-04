@@ -10,6 +10,4 @@ file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 # xterm -e "neofetch --w3m $file --size 300px 305px --loop"
 xterm -e "neofetch --w3m $file --size 400px 305px --loop"
 # xterm -e "neofetch --w3m /DriveE/Pictures/Pic/PP/the-last-of-us-part-ii-hd-wallpapers-33777-5594609.jpg --size 400px 305px --loop"
-
-
 # $SHELL
