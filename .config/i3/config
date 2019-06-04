@@ -196,7 +196,6 @@ bindsym mod1+Shift+space floating enable; resize set 800 600
 #Floating window to center position
 bindsym mod1+control+space floating enable; move position center
 
-
 # change focus between tiling / floating windows
 bindsym mod1+Tab focus mode_toggle
 
@@ -215,22 +214,23 @@ bindsym mod1+Tab focus mode_toggle
 ##move position center
 #exec --no-startup-id urxvt -name dropdown -e tmux
 
-####---Dropdown---###---Alacritty--##
-#for_window [title="dropdown"] floating enable
-#for_window [title="dropdown"] resize set 700 500 
-## for_window [title="dropdown"] move position center
-#for_window [title="dropdown"] move position 610 310
-#for_window [title="dropdown"] move scratchpad
-#bindsym $mod+u [title="dropdown"] scratchpad show; 
-#exec --no-startup-id alacritty -t dropdown 
+###---Dropdown---###---Alacritty--##
+for_window [title="dropdown"] floating enable
+for_window [title="dropdown"] resize set 700 500 
+# for_window [title="dropdown"] move position center
+for_window [title="dropdown"] move position 610 310
+for_window [title="dropdown"] move scratchpad
+bindsym $mod+u [title="dropdown"] scratchpad show; 
+exec --no-startup-id alacritty -t dropdown 
 
-###---Dropdown---###--st--###
-for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 700 500 
-for_window [instance="dropdown"] move position 610 310
-for_window [instance="dropdown"] move scratchpad
-bindsym $mod+u [instance="dropdown"] scratchpad show; 
-exec --no-startup-id st -n dropdown
+# instance cause window to disappear sometime, and st does support title 
+####---Dropdown---###--st--###
+#for_window [instance="dropdown"] floating enable
+#for_window [instance="dropdown"] resize set 700 500 
+#for_window [instance="dropdown"] move position 610 310
+#for_window [instance="dropdown"] move scratchpad
+#exec --no-startup-id st -n dropdown -t dropdown
+#bindsym $mod+u [instance="dropdown"] scratchpad show; 
 
 ####---Dropdown---###--Notes---###
 #for_window [title="noteDropdown"] floating enable
@@ -291,11 +291,9 @@ bindsym $mod+control+y move scratchpad
 #Recieve window one by from scratchpad (Hidden Workspace)
 bindsym $mod+y scratchpad show
 
-
 #Get only window with title given from scratcpad
 # bindsym mod1+control+f [title="fb-messenger-cli"] scratchpad show
 bindsym mod1+control+b exec $HOME/Documents/Script/scratchpadBrower.sh
-
 
 # --> Buffer Script
 bindsym mod1+control+grave exec $HOME/Documents/Script/bufferUrl.sh
@@ -309,7 +307,6 @@ bindsym mod1+control+4 exec $HOME/Documents/Script/bufferMpvAudio.sh
 # bindsym mod1+control+0 exec chromium
 bindsym mod1+control+0 exec chromiumScaleFactor.sh
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
-
 
 bindsym mod1+control+r workspace $workspace8; exec alacritty -e rtorrent
 bindsym mod1+control+t workspace $workspace8; exec $HOME/Documents/Script/transmissionDaemon_Check.sh; exec alacritty -e transmission-remote-cli
@@ -541,7 +538,6 @@ bindsym XF86AudioMute exec pactl_control.sh mute
 bindsym XF86MonBrightnessUp exec light -A 5 && exec pkill -RTMIN+16 i3blocks 
 bindsym XF86MonBrightnessDown exec light -U 5 && exec pkill -RTMIN+16 i3blocks
 
-
 # Touchpad controls
 bindsym XF86TouchpadToggle exec $HOME/Documents/Script/toggletouchpad.sh
 bindsym $mod+Print exec ~/Documents/Script/ScreenShot.sh
@@ -559,7 +555,6 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 bindsym $mod+BackSpace		exec $HOME/Documents/Script/flash_win.sh
-
 
 bindsym Print exec $HOME/Documents/Script/ScreenShot.sh
 # bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
