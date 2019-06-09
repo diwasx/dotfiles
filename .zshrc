@@ -157,7 +157,7 @@ alias gV='/VirtualDrive'
 alias gP='/DriveE/Projects'
 alias gE='/DriveE/Backup/Program Files'
 alias gD='/DriveE/Backup/Downloads'
-alias gO='/DriveE/Projects/RSA_algorithm'
+alias gO='/DriveE/Xampp/htdocs/bakery'
 alias gN='/DriveE/Projects/Notes/SemVII'
 alias gM='/DriveE/Movies'
 alias gH='/DriveE/Xampp/htdocs/'
@@ -176,7 +176,8 @@ alias gk='/DriveKhelkud'
 alias gh='~'
 #end
 
-~/Documents/Script/checkMouse.sh
+# Replaced by mouseWatch.sh
+# ~/Documents/Script/checkMouse.sh
 ~/Documents/Script/i3block_refresh.sh
  
 #For CTRL+S disable that freeze termial 

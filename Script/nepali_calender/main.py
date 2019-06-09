@@ -22,7 +22,7 @@ if len(sys.argv)==2:
         bs_year = current_date_bs["en"]["year"]
         bs_month = current_date_bs["en"]["str_month"]
         bs_day = current_date_bs["en"]["day"]
-        print (bs_year,"-",bs_month,"-",bs_day)
+        # print (bs_year,".",bs_month,".",bs_day)
+        print (bs_year,bs_month,bs_day)
 else:
     print('Use argument "en" or "ne"')
-

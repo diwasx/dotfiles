@@ -121,7 +121,9 @@ alias gom="git push origin master"
 alias logo="neofetch" #screenfetch
 
 export WINEDEBUG=fps
-~/Documents/Script/checkMouse.sh
+
+# Replaced by mouseWatch.sh
+# ~/Documents/Script/checkMouse.sh
  
 #For CTRL+S disable that freeze termial 
 stty -ixon

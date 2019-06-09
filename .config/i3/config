@@ -330,7 +330,7 @@ bindsym mod1+control+Shift+s exec $HOME/Documents/Script/SteamWal.sh
 # OfflineIMAP 
 # exec $term1 -e $HOME/Documents/Script/offlineimap-notify.sh
 bindsym $mod+control+o exec $term1 -e $HOME/Documents/Script/offlineimap-notify.sh
-bindsym mod1+control+o exec alacritty -e neomutt
+bindsym mod1+control+o exec st -e pywal_neomutt.sh
 
 bindsym $mod+Shift+u resize shrink width 10 px or 10ppt
 bindsym $mod+Shift+o resize shrink height 10 px or 10ppt
@@ -580,7 +580,6 @@ bindsym $mod+Shift+b exec $HOME/Documents/Script/Wall_liveWal.sh
 bindsym $mod+control+n exec blurwalCheck.sh 
 
 exec $HOME/Documents/Script/Touchpad.sh
-exec syndaemon -i 0.5 -d
 # exec ~/Documents/Script/PulseModule.sh
 exec nm-applet
 # exec ~/Documents/Script/Volume.sh
@@ -593,6 +592,7 @@ exec compton
 exec imwheel
 exec dunst
 # exec ~/Documents/Script/getForecast.sh
+# exec syndaemon -i 0.3 -d
 
 # exec mpd-notify
 exec ~/Documents/Script/i3block/mpdUpdate.sh
@@ -604,6 +604,8 @@ exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
 
 # exec chromiumScaleFactor
 exec $HOME/Documents/Script/mpvWatch.sh
+exec $HOME/Documents/Script/checkMouse.sh
+exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
 # exec i3-msg restart
 
