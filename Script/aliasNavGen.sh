@@ -28,7 +28,7 @@ array[gN]='/DriveE/Projects/Notes/SemVII'
 array[gn]='/DriveE/Projects/Notes/'
 array[gib]='/usr/lib/i3blocks/'
 # array[gO]='/DriveE/Xampp/htdocs/p5js/neuro_evolution/'
-array[gO]='/DriveE/Xampp/htdocs/bakery'
+array[gO]='/DriveE/Projects/neural_network_scratch/'
 
 #For zshrc
 # line="142a"

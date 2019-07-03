@@ -165,6 +165,8 @@ for_window [instance="vis floating"] move position 0 1010;
 for_window [instance="vis floating"] sticky enable
 bindsym $mod+Shift+e exec vis_i3.sh
 
+for_window [instance="vis floating"] sticky enable
+
 # conky
 # bindsym $mod+c exec conky_i3.sh
 bindsym $mod+Shift+c exec $HOME/Documents/conky-mikasa/run_i3.sh
@@ -246,8 +248,11 @@ for_window [instance="noteDropdown"] floating enable
 for_window [instance="noteDropdown"] resize set 900 350 
 for_window [instance="noteDropdown"] move position 610 -5
 for_window [instance="noteDropdown"] move scratchpad
-bindsym F9 [instance="noteDropdown"] scratchpad show; 
+bindsym F12 [instance="noteDropdown"] scratchpad show; 
 exec --no-startup-id st -n noteDropdown -e notesDropdown.sh
+
+###--Floating window for drawing or graph--###
+for_window [title="Drawing_float"] floating enable
 
 ###--Messenger--###
 for_window [instance="fb-messenger-cli"] floating enable
@@ -539,7 +544,9 @@ bindsym XF86MonBrightnessUp exec light -A 5 && exec pkill -RTMIN+16 i3blocks
 bindsym XF86MonBrightnessDown exec light -U 5 && exec pkill -RTMIN+16 i3blocks
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec $HOME/Documents/Script/toggletouchpad.sh
+# bindsym XF86TouchpadToggle exec $HOME/Documents/Script/toggletouchpad.sh
+bindsym XF86TouchpadOn exec $HOME/Documents/Script/toggletouchpad.sh
+bindsym XF86TouchpadOff exec $HOME/Documents/Script/toggletouchpad.sh
 bindsym $mod+Print exec ~/Documents/Script/ScreenShot.sh
 
 # Media player controls

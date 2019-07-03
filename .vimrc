@@ -194,7 +194,8 @@ filetype plugin indent on    " required
 colorscheme meta5
 "scriptEnd
 
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+" let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 "hightlighting
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
