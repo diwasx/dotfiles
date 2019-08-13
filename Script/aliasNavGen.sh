@@ -24,11 +24,11 @@ array[gD]='/DriveE/Backup/Downloads'
 array[gE]='/DriveE/Backup/Program\ Files'
 array[ge]='/DriveE'
 array[gk]='/DriveKhelkud'
-array[gN]='/DriveE/Projects/Notes/SemVII'
+array[gN]='/DriveE/Projects/Notes/SemVIII'
 array[gn]='/DriveE/Projects/Notes/'
 array[gib]='/usr/lib/i3blocks/'
 # array[gO]='/DriveE/Xampp/htdocs/p5js/neuro_evolution/'
-array[gO]='/DriveE/Projects/neural_network_scratch/'
+array[gO]="`cat ~/.working_dir`"
 
 #For zshrc
 # line="142a"

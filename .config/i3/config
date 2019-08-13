@@ -330,7 +330,8 @@ bindsym mod1+control+Shift+r exec "$HOME/Documents/Script/redshiftCheck.sh"
 
 bindsym mod1+control+Shift+d exec discord
 
-bindsym mod1+control+Shift+s exec $HOME/Documents/Script/SteamWal.sh
+# bindsym mod1+control+Shift+s exec $HOME/Documents/Script/SteamWal.sh
+bindsym mod1+control+Shift+s exec steam
 
 # OfflineIMAP 
 # exec $term1 -e $HOME/Documents/Script/offlineimap-notify.sh
@@ -547,6 +548,8 @@ bindsym XF86MonBrightnessDown exec light -U 5 && exec pkill -RTMIN+16 i3blocks
 # bindsym XF86TouchpadToggle exec $HOME/Documents/Script/toggletouchpad.sh
 bindsym XF86TouchpadOn exec $HOME/Documents/Script/toggletouchpad.sh
 bindsym XF86TouchpadOff exec $HOME/Documents/Script/toggletouchpad.sh
+# bindsym XF86TouchpadOn exec $HOME/Documents/Script/checkMouse.sh
+# bindsym XF86TouchpadOff exec $HOME/Documents/Script/checkMouse.sh
 bindsym $mod+Print exec ~/Documents/Script/ScreenShot.sh
 
 # Media player controls
@@ -612,7 +615,7 @@ exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
 # exec chromiumScaleFactor
 exec $HOME/Documents/Script/mpvWatch.sh
 exec $HOME/Documents/Script/checkMouse.sh
-exec $HOME/Documents/Script/mouseWatch.sh
+# exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
 # exec i3-msg restart
 

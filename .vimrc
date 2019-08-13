@@ -256,7 +256,7 @@ let g:javascript_plugin_jsdoc = 1
 " let g:syntastic_python_checkers = ['pylint']
 " let g:syntastic_shell_checkers = ['shellcheck']
 
-" Make file
+" Make file (compile)
 map <leader>m :!sudo make install<cr>
 
 " solve st problem while scrolling

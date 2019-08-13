@@ -5,6 +5,7 @@ export npm_config_prefix=~/.node_modules
 export FILEMANAGER="ranger"
 export BROWSER="chromium"
 export PLAYER="mpv"
+# export TZ="Asia/Kathmandu"
 
 #for steam
 export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)"

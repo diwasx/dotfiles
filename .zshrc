@@ -145,6 +145,7 @@ alias nx="nvidia-xrun"
 alias logo="startupLogo.sh" #screenfetch
 alias va="vim -p *"
 alias trc="transmission-remote-cli"
+alias rsync="rsync --progress"
 
 #Ranger alias
 alias gib='/usr/lib/i3blocks/'
@@ -157,8 +158,8 @@ alias gV='/VirtualDrive'
 alias gP='/DriveE/Projects'
 alias gE='/DriveE/Backup/Program Files'
 alias gD='/DriveE/Backup/Downloads'
-alias gO='/DriveE/Projects/neural_network_scratch/'
-alias gN='/DriveE/Projects/Notes/SemVII'
+alias gO='/DriveE/Xampp/htdocs/bakery'
+alias gN='/DriveE/Projects/Notes/SemVIII'
 alias gM='/DriveE/Movies'
 alias gH='/DriveE/Xampp/htdocs/'
 alias gw='/DriveE/Pictures/Wallpapers'
