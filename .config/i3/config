@@ -545,11 +545,14 @@ bindsym XF86MonBrightnessUp exec light -A 5 && exec pkill -RTMIN+16 i3blocks
 bindsym XF86MonBrightnessDown exec light -U 5 && exec pkill -RTMIN+16 i3blocks
 
 # Touchpad controls
-# bindsym XF86TouchpadToggle exec $HOME/Documents/Script/toggletouchpad.sh
-bindsym XF86TouchpadOn exec $HOME/Documents/Script/toggletouchpad.sh
-bindsym XF86TouchpadOff exec $HOME/Documents/Script/toggletouchpad.sh
-# bindsym XF86TouchpadOn exec $HOME/Documents/Script/checkMouse.sh
-# bindsym XF86TouchpadOff exec $HOME/Documents/Script/checkMouse.sh
+# Software Enable or Disable
+bindsym $mod+F6 exec $HOME/Documents/Script/toggleTouchpad.sh
+# Use fn+F6 for hardware enable or disable
+
+# bindsym XF86TouchpadToggle exec $HOME/Documents/Script/toggleTouchpad.sh
+# bindsym XF86TouchpadOn exec $HOME/Documents/Script/toggleTouchpad.sh
+# bindsym XF86TouchpadOff exec $HOME/Documents/Script/toggleTouchpad.sh
+
 bindsym $mod+Print exec ~/Documents/Script/ScreenShot.sh
 
 # Media player controls
@@ -614,7 +617,7 @@ exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
 
 # exec chromiumScaleFactor
 exec $HOME/Documents/Script/mpvWatch.sh
-exec $HOME/Documents/Script/checkMouse.sh
+exec /usr/bin/bash $HOME/Documents/Script/checkMouse.sh
 # exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
 # exec i3-msg restart
