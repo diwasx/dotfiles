@@ -1,7 +1,8 @@
 #!/bin/sh
 
 #Selecting random file
-folder="/DriveE/Pictures/Wallpapers/Collection"
+# folder="/DriveE/Pictures/Wallpapers/Collection"
+folder=`cat /tmp/wall-path`
 file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 ##i3lock only support .png file
 # convert $file -resize 1920x1080 /tmp/temp.png

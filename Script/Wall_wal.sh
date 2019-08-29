@@ -1,7 +1,9 @@
 #!/bin/bash
 
+pkill -f "Wall_wal_work_hour.sh"
+echo "/DriveE/Pictures/Wallpapers/Collection" > /tmp/wall-path
 if pidof -o %PPID -x "Wall_wal.sh">/dev/null; then
-    folder="/DriveE/Pictures/Wallpapers/Collection"
+    folder=`cat /tmp/wall-path`
     file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 
     #Transition Effect
@@ -14,7 +16,7 @@ if pidof -o %PPID -x "Wall_wal.sh">/dev/null; then
     # echo "Process already running"
 else
     while true; do
-        folder="/DriveE/Pictures/Wallpapers/Collection"
+        folder=`cat /tmp/wall-path`
         file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 
         #Transition Effect
