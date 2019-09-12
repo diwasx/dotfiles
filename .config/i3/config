@@ -9,9 +9,13 @@
 
 # gaps inner 15
 # gaps outer 15
-exec $HOME/Documents/Script/Wall_wal.sh
 # gaps inner 0
 # gaps outer 0
+
+# Replace grey color by black
+exec --no-startup-id hsetroot -solid "#000000"
+# exec feh --bg-scale /DriveE/Pictures/Wallpapers/Collection/0MOuE7F.jpg
+exec --no-startup-id $HOME/Documents/Script/Wall_wal.sh
 
 set $mod Mod4
 set $term st

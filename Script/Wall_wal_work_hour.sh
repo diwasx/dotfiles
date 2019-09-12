@@ -29,7 +29,7 @@ else
         feh --bg-fill /tmp/wal1.jpg
 
         wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
-        # sleep 3600
-        sleep 1800
+        sleep 3600
+        # sleep 1800
     done
 fi
