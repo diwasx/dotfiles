@@ -30,8 +30,8 @@ cp -r ~/.config/compton.conf /DriveE/Projects/Git/dotfiles/.config
 rm -r /DriveE/Projects/Git/dotfiles/Script
 cp -r ~/Documents/Script /DriveE/Projects/Git/dotfiles
 cp -r ~/.ncmpcpp /DriveE/Projects/Git/dotfiles/
-# cp -r ~/.config/pulse/presets /DriveE/Projects/Git/dotfiles/.config/pulse/
-# cp -r ~/.config/pulse/default.pa /DriveE/Projects/Git/dotfiles/.config/pulse/default.pa
+cp -r ~/.config/pulse/presets /DriveE/Projects/Git/dotfiles/.config/pulse/
+cp -r ~/.config/pulse/default.pa /DriveE/Projects/Git/dotfiles/.config/pulse/default.pa
 cp ~/.profile /DriveE/Projects/Git/dotfiles/
 cp -r ~/.mplayer/ /DriveE/Projects/Git/dotfiles/
 cp ~/.imwheelrc /DriveE/Projects/Git/dotfiles/
