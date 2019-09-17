@@ -12,5 +12,6 @@ pkill -RTMIN+9 i3blocks;   #Signal to i3block to update song
 case $BLOCK_BUTTON in
   1) mpc toggle;;  # right click, mute/unmute
   2) mpc next;;  # right click, mute/unmute
+  3) mpc prev;;  # right click, mute/unmute
 esac
 

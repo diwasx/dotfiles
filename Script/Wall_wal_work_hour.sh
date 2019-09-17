@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pkill -f "Wall_wal.sh"
-echo "/DriveE/Pictures/Wallpapers/Collection/work_hour/" > /tmp/wall-path
+echo "/DriveE/Pictures/Wallpapers/work_hour/" > /tmp/wall-path
 
 # If process already running
 if pidof -o %PPID -x "Wall_wal_work_hour.sh">/dev/null; then
