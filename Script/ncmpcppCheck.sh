@@ -1,4 +1,4 @@
 ps cax | grep ncmpcpp > /dev/null
 if [ $? -ne 0 ]; then
-    urxvt -e ncmpcpp&
+    st -e ncmpcpp&
 fi

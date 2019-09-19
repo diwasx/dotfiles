@@ -497,7 +497,8 @@ bindsym $mod+bracketleft 	exec $lilbak
 bindsym $mod+control+bracketleft 	exec $bigbak
 bindsym $mod+bracketright 	exec $lilfor
 bindsym $mod+control+bracketright exec $bigfor
-bindsym $mod+control+apostrophe exec $HOME/Documents/Script/ncmpcppCheck.sh; exec --no-startup-id mpc toggle
+# bindsym $mod+control+apostrophe exec $HOME/Documents/Script/ncmpcppCheck.sh; exec --no-startup-id mpc toggle
+bindsym $mod+control+apostrophe exec --no-startup-id mpc toggle
 bindsym $mod+control+slash exec --no-startup-id mpc next
 bindsym $mod+control+period exec --no-startup-id mpc prev
 #bindsym mod1+control+comma exec banshee --stop --set-volume=80
@@ -508,12 +509,10 @@ bindsym mod1+control+apostrophe exec playerctl play-pause && exec pkill -RTMIN+1
 bindsym mod1+control+slash exec playerctl next && exec pkill -RTMIN+14 i3blocks
 bindsym mod1+control+period exec playerctl previous && exec pkill -RTMIN+14 i3blocks
 
-# bindsym $mod+m exec $term1 -e ncmpcpp 
+bindsym $mod+m exec $term -e ncmpcppCheck.sh
 # bindsym $mod+m workspace $workspace10; exec $term1 -e ncmpcpp 
-bindsym $mod+m exec $term1 -e ncmpcpp 
 bindsym $mod+control+m workspace $workspace9; exec spotify
 bindsym mod1+control+m exec musicSelect.sh
-# exec --no-startup-id i3-msg 'workspace $workspace10' && alacritty -e ncmpcpp
 
 ## FOR ALSA/AMIXER ##
 set $inc --no-startup-id amixer sset Master 2%+
@@ -582,48 +581,39 @@ assign [class="banshee"] $workspace10
 # assign [title="mpsyt"] $workspace10
 assign [class="Chromium"] $workspace2
 assign [class="Google-chrome"] 3
-assign [class="Uget-gtk"] $workspace9
-assign [class="Kget"] $workspace9
-#assign [class="VirtualBox"] $workspace8
-assign [title="ncmpcpp"] $workspace10
+assign [class="Uget-gtk"] $workspace8
+assign [class="Kget"] $workspace8
+# assign [title="ncmpcpp"] $workspace10
+for_window [class="Spotify"] move to workspace $workspace9
+for_window [title="ncmpcpp"] move to workspace $workspace10
 
 #Wallpaper
-#exec_always feh --bg-scale /DriveE/Pictures/Wallpapers/4K-Wallpaper-5F.jpg
-#exec $HOME/Documents/Script/Wallpaper_xwinwrap.sh
-# exec $HOME/Documents/Script/Wall_wal.sh
 bindsym $mod+control+b exec $HOME/Documents/Script/Wall_walBtn.sh
 bindsym $mod+Shift+b exec $HOME/Documents/Script/Wall_liveWal.sh
 #blur wallpaper
 bindsym $mod+control+n exec blurwalCheck.sh 
 
-exec $HOME/Documents/Script/Touchpad.sh
+## STARTUP ITEMS
+exec --no-startup-id $HOME/Documents/Script/Touchpad.sh
+exec --no-startup-id /usr/bin/bash $HOME/Documents/Script/checkMouse.sh
 # exec ~/Documents/Script/PulseModule.sh
-exec nm-applet
+exec --no-startup-id nm-applet
+exec --no-startup-id compton 
 # exec ~/Documents/Script/Volume.sh
 # exec ~/.config/i3/hud-menu-service.py
 
-#Screensaver
-# exec xscreensaver 
-exec compton 
-#exec ~/Documents/Script/i3lockAndScreenOff.sh &
-exec imwheel
-exec dunst
+exec --no-startup-id imwheel
+exec --no-startup-id dunst
 # exec ~/Documents/Script/getForecast.sh
-# exec syndaemon -i 0.3 -d
+# exec --no-startup-id i3-msg 'workspace $workspace9; exec spotify'
+exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; startupLogo.sh'"
+# exec --no-startup-id startupLogo.sh
 
-# exec mpd-notify
-exec ~/Documents/Script/i3block/mpdUpdate.sh
-
-#arch logo startup
-# exec --no-startup-id i3-msg 'workspace $workspace1' && xterm -e $HOME/Documents/Script/startupLogo.sh
-exec --no-startup-id i3-msg 'workspace $workspace1' && startupLogo.sh
-# exec --no-startup-id i3-msg 'workspace $workspace1' && $term1 -e $HOME/Documents/Script/offlineimap-notify.sh
-
+exec --no-startup-id ncmpcppCheck.sh
+exec --no-startup-id "sh -c 'sleep 4; spotify'"
+exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh
 # exec chromiumScaleFactor
-exec $HOME/Documents/Script/mpvWatch.sh
-exec /usr/bin/bash $HOME/Documents/Script/checkMouse.sh
+exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 # exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
-# exec i3-msg restart
-
-# bindsym --whole-window button3 exec rofi -show run -font "System San Francisco Display 11"
+exec --no-startup-id $HOME/Documents/Script/conky-spotify.sh

@@ -230,7 +230,11 @@ nmap gm :LivedownPreview<CR>
 
 "java
 "processing
-map <leader>p :!pj<CR>
+" map <leader>p :!pj<CR>
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
 
 "javascript
 let g:javascript_plugin_jsdoc = 1
