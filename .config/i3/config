@@ -617,5 +617,5 @@ exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh
 exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 # exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
-exec --no-startup-id "sh -c 'sleep 30; conky-spotify.sh'"
+exec --no-startup-id "sh -c 'sleep 34; conky-spotify.sh'"
 # exec --no-startup-id $HOME/Documents/Script/conky-spotify.sh
