@@ -557,8 +557,6 @@ bindsym $mod+F6 exec $HOME/Documents/Script/toggleTouchpad.sh
 # bindsym XF86TouchpadOn exec $HOME/Documents/Script/toggleTouchpad.sh
 # bindsym XF86TouchpadOff exec $HOME/Documents/Script/toggleTouchpad.sh
 
-bindsym $mod+Print exec ~/Documents/Script/ScreenShot.sh
-
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
@@ -573,7 +571,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 bindsym $mod+BackSpace		exec $HOME/Documents/Script/flash_win.sh
 
-bindsym Print exec $HOME/Documents/Script/ScreenShot.sh
+bindsym $mod+Print exec $HOME/Documents/Script/ScreenShot.sh
 # bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
 bindsym $mod+x exec dmenu_run
 

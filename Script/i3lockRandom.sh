@@ -4,9 +4,17 @@
 # folder="/DriveE/Pictures/Wallpapers/Collection"
 folder=`cat /tmp/wall-path`
 file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
+
 # i3lock only support .png file
-#^! define exact resolution ignoring aspect ratio
-convert $file -resize 1920x1080^! /tmp/temp.png
+convert $file -resize 1920x1080^ -gravity center /tmp/temp.png
+
+# Add blur-extend effect on images with un-equal ratio
+# convert $file \
+#        \( -clone 0 -blur 0x5 -resize 1920x1080\! -fill white -colorize 20% \) \
+#        \( -clone 0 -resize 1920x1080 \) \
+#        -delete 0 -gravity center -composite \
+#        /tmp/temp.png
+
 
 # "-n" is important, as it  doesnt allow i3lock to create child processes, so we can run script after it's been unlock
 i3lock_cmd=(i3lock -i /tmp/temp.png -e -k --timepos="0+155:h-110" --datepos="0+150:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 --indpos="w-100:h-90" --wrongsize=20 --radius=40 -n )
