@@ -17,7 +17,7 @@ convert $file -resize 1920x1080^ -gravity center /tmp/temp.png
 
 
 # "-n" is important, as it  doesnt allow i3lock to create child processes, so we can run script after it's been unlock
-i3lock_cmd=(i3lock -i /tmp/temp.png -e -k --timepos="0+155:h-110" --datepos="0+150:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 --indpos="w-100:h-90" --wrongsize=20 --radius=40 -n )
+i3lock_cmd=(i3lock -i /tmp/temp.png -e -k --timepos="0+30:h-110" --datepos="0+30:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 --indpos="w-100:h-90" --time-align=1 --date-align=1 --wrongsize=20 --radius=40 -n )
 
 value="60"
 color=$(convert "$file" -gravity SouthEast -crop 100x100+0+0 +repage -colorspace hsb \
@@ -43,10 +43,10 @@ else
 fi
 
 # Turn off screen after inactivity of given seconds
-xset dpms 3 0 0
+xset dpms 5 0 0
 
 # Lock command in execution
 "${i3lock_cmd[@]}" "${param[@]}"
 
 # Turn off blanking after unlock
-xset dpms 0 0 0
+xset dpms 480 0 0

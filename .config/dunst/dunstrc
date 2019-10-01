@@ -7,7 +7,7 @@ foreground = "#FFFFFF"
 [global]
 monitor = 0
 follow = mouse
-geometry = "300x50-0+20"
+geometry = "360x50-0+20"
 indicate_hidden = true
 shrink = false
 transparency = 20
@@ -29,9 +29,15 @@ stack_duplicates = false
 hide_duplicate_count = yes
 show_indicators = no
 icon_position = left
+max_icon_size = 120
 always_run_script = true
 title = Dunst
 class = Dunst
+
+[Spotify]
+appname = Spotify
+/* format = "Now Playing\n%s\n%b" */
+timeout = 4
 
 
 [urgency_low]

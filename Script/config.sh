@@ -39,7 +39,7 @@ mkdir /DriveE/Projects/Git/dotfiles/etc/
 cp /etc/issue /DriveE/Projects/Git/dotfiles/etc/
 mkdir /DriveE/Projects/Git/dotfiles/themes/grub-theme -p
 cp -r /boot/grub/themes/* /DriveE/Projects/Git/dotfiles/themes/grub-theme/
-cp ~/.xscreensaver /DriveE/Projects/Git/dotfiles/
+# cp ~/.xscreensaver /DriveE/Projects/Git/dotfiles/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/dotfiles/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/dotfiles/
 cp ~/.nvidia-xinitrc /DriveE/Projects/Git/dotfiles/

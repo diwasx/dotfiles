@@ -16,7 +16,7 @@ desktop=""
 # i3lock_cmd=(i3lock -i "$image" -e -k --timepos="0+155:h-110" --datepos="0+150:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30)
 
 # Indicator in bottom right
-i3lock_cmd=(i3lock -i "$image" -e -k --timepos="0+155:h-110" --datepos="0+150:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 --indpos="w-100:h-90" --wrongsize=20 --radius=40)
+i3lock_cmd=(i3lock -i "$image" -e -k --timepos="0+30:h-110" --datepos="0+30:h-50" --time-align=1 --date-align=1 time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 --indpos="w-100:h-90" --wrongsize=20 --radius=40)
 
 shot_custom=false
 

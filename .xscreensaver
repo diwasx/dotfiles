@@ -1,9 +1,9 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.42 for lanaya on Thu May  9 16:02:51 2019.
+# Written by xscreensaver-demo 5.42 for lanaya on Tue Sep 24 18:27:22 2019.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	1:00:00
-cycle:		0:10:00
+cycle:		0:00:00
 lock:		True
 lockTimeout:	0:00:00
 passwdTimeout:	0:00:30

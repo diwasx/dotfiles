@@ -16,7 +16,7 @@ desktop=""
 # i3lock_cmd=(i3lock -i "$image" -e -k --timepos="0+155:h-110" --datepos="0+150:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 -n)
 
 # Indicator in bottom right
-i3lock_cmd=(i3lock -i "$image" -e -k --timepos="0+155:h-110" --datepos="0+150:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 --indpos="w-100:h-90" --wrongsize=20 --radius=40 -n)
+i3lock_cmd=(i3lock -i "$image" -e -k --timepos="0+30:h-110" --datepos="0+30:h-50" --time-align=1 --date-align=1 time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 --indpos="w-100:h-90" --wrongsize=20 --radius=40 -n)
 
 shot_custom=false
 
@@ -135,7 +135,7 @@ convert "$image" "${hue[@]}" "${effect[@]}" -font "$font" -pointsize 26 -fill "$
 ${desktop} ${desktop:+-k on}
 
 # Turn off screen after inactivity of given seconds
-xset dpms 3 0 0
+xset dpms 5 0 0
 
 # Lock command in execution
 # try to use i3lock with prepared parameters
@@ -149,4 +149,4 @@ fi
 ${desktop} ${desktop:+-k off}
 
 # Turn off blanking after unlock
-xset dpms 0 0 0
+xset dpms 480 0 0
