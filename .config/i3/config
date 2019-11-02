@@ -576,7 +576,7 @@ bindsym $mod+Print exec $HOME/Documents/Script/ScreenShot.sh
 # bindsym $mod+x exec ~/.config/i3/hud-menu.py dmenu
 bindsym $mod+x exec dmenu_run
 
-#startup
+# startup
 assign [class="banshee"] $workspace10
 # assign [title="mpsyt"] $workspace10
 assign [class="Chromium"] $workspace2
@@ -587,11 +587,13 @@ assign [class="Kget"] $workspace8
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [title="ncmpcpp"] move to workspace $workspace10
 
-#Wallpaper
+## Wallpaper
 bindsym $mod+control+b exec $HOME/Documents/Script/Wall_walBtn.sh
 bindsym mod1+control+b exec $HOME/Documents/Script/Wall_randomFromURL.sh desktop
 bindsym $mod+Shift+b exec $HOME/Documents/Script/Wall_liveWal.sh
-#blur wallpaper
+# Wallpaper select folder
+bindsym mod1+control+w exec wallpaperSelect.sh
+# blur wallpaper
 bindsym $mod+control+n exec blurwalCheck.sh 
 
 ## STARTUP ITEMS
@@ -618,4 +620,3 @@ exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 # exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
 exec --no-startup-id "sh -c 'sleep 34; conky-spotify.sh'"
-# exec --no-startup-id $HOME/Documents/Script/conky-spotify.sh

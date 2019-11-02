@@ -191,7 +191,7 @@ colorscheme dracula
 "automatically use wal scheme if not selected
 
 "scriptStart
-colorscheme rdark-terminal2
+colorscheme solarized8_flat
 "scriptEnd
 
 " let g:ycm_server_python_interpreter = '/usr/bin/python2'

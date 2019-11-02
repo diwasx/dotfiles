@@ -6,7 +6,7 @@ export DISPLAY=:0
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
 #Command
-light -S 70
+light -S 71
 exec pkill -RTMIN+16 i3blocks 
 
 #Sound
