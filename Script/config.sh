@@ -56,3 +56,4 @@ cp ~/.config/transmission-daemon/settings.json /DriveE/Projects/Git/notes/.confi
 cp ~/.zshrc /DriveE/Projects/Git/dotfiles/
 cp ~/.zprofile /DriveE/Projects/Git/dotfiles/
 cp -r ~/.config/sxiv /DriveE/Projects/Git/dotfiles/.config
+package_list_gen.sh
