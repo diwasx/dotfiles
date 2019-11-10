@@ -65,6 +65,7 @@ fakeroot
 fdupes
 feh
 figlet
+figlet-fonts
 file
 filesystem
 findutils
@@ -312,6 +313,7 @@ ttf-inconsolata
 ttf-inconsolata-g
 ttf-liberation
 ttf-ms-fonts
+ttf-roboto-fontconfig
 ttf-vista-fonts
 unity-editor
 unity-editor-standardassets

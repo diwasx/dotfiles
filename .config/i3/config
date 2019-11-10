@@ -613,6 +613,7 @@ exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; startupLogo.sh
 # exec --no-startup-id startupLogo.sh
 
 exec --no-startup-id ncmpcppCheck.sh
+exec --no-startup-id sudo $HOME/Documents/Script/issue_file_generator.sh
 exec --no-startup-id "sh -c 'sleep 4; spotify'"
 exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh
 # exec chromiumScaleFactor

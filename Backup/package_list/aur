@@ -10,6 +10,7 @@ conky-nvidia
 dpkg
 eclim
 edex-ui
+figlet-fonts
 genymotion
 glmark2-git
 glyr-git
@@ -75,6 +76,7 @@ transmission-remote-cli-git
 ttf-font-awesome-4
 ttf-inconsolata-g
 ttf-ms-fonts
+ttf-roboto-fontconfig
 ttf-vista-fonts
 unity-editor
 unity-editor-standardassets
