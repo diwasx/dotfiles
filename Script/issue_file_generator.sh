@@ -1,5 +1,5 @@
 #!/bin/bash
-# Add this file to sudoer NOPASSWD
+# Add this file to sudoer :NOPASSWD
 
 currentDir="$(dirname "$(realpath "$0")")"
 quote=`$currentDir/quotes_generator/main.py`
