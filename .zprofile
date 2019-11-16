@@ -29,6 +29,17 @@ fi
 export WINEDEBUG=fps
 export XDG_CURRENT_DESKTOP=i3wm
 export XDG_SESSION_DESKTOP=i3wm
+
+# /home/lanaya/Documents/Script/startupBatteryCheck.sh
+$HOME/Documents/Script/startupBatteryCheck.sh
+
+# -n:string is not null.
+# -z:string is null, that is, has zero length
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-    exec startx > /dev/null 2>&1
+    # exec startx > /dev/null 2>&1
+    startx_select 1
+fi
+
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 2 ]; then
+    startx_select 2
 fi

@@ -1,3 +1,3 @@
+export WALL_PATH="/DriveE/Pictures/Wallpapers/Collection/"
+export LOGO=startupLogo.sh
 i3
-#openbox-session
-

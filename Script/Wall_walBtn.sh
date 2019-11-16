@@ -3,7 +3,8 @@
 if [ -z $1 ]; then
     # echo "no argumentpasssed "
     pkill -f "xwinwrap"
-    folder="/DriveE/Pictures/Wallpapers/Collection"
+    # folder="/DriveE/Pictures/Wallpapers/Collection"
+    folder=$WALL_PATH
     file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 
     #Transition effect

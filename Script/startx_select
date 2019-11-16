@@ -1,0 +1,16 @@
+#!/bin/bash
+# Select different startx environment with tty variable as argument
+
+if [[ $1 -eq 1 ]]; then
+    # echo "/DriveE/Pictures/Wallpapers/Collection/" > /tmp/wall-path 
+    export WALL_PATH="/DriveE/Pictures/Wallpapers/Collection/"
+    # echo "startupLogo.sh" > /tmp/logo 
+    export LOGO=startupLogo.sh
+    exec startx > /dev/null 2>&1
+elif [[ $1 -eq 2 ]]; then
+    # echo "/DriveE/Pictures/Wallpapers/work_hour/" > /tmp/wall-path 
+    export WALL_PATH="/DriveE/Pictures/Wallpapers/work_hour/"
+    # echo "startupAscii.sh" > /tmp/logo 
+    export LOGO=startupAscii.sh
+    exec startx > /dev/null 2>&1
+ fi 

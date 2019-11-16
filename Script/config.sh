@@ -44,6 +44,7 @@ cp -r /boot/grub/themes/* /DriveE/Projects/Git/dotfiles/themes/grub-theme/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/dotfiles/
 cp ~/.rtorrent.rc /DriveE/Projects/Git/dotfiles/
 cp ~/.nvidia-xinitrc /DriveE/Projects/Git/dotfiles/
+cp ~/.xinitrc /DriveE/Projects/Git/dotfiles/
 # cp ~/.config/mimeapps.list /DriveE/Projects/Git/dotfiles/.config/
 cp ~/.zshrc /DriveE/Projects/Git/dotfiles/
 cp ~/.zprofile /DriveE/Projects/Git/dotfiles/

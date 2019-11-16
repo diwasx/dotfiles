@@ -1,8 +1,13 @@
-#(_) |___ /  ___ ___  _ __  / _(_) __ _ 
-#| |   |_ \ / __/ _ \| '_ \| |_| |/ _` |
-#| |  ___) | (_| (_) | | | |  _| | (_| |
-#|_| |____/ \___\___/|_| |_|_| |_|\__, |
-#                                 |___/ 
+#  ██▓ ▄████▄   ▒█████   ███▄    █   █████▒██▓  ▄████
+# ▓██▒▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██▒ ▀█▒
+# ▒██▒▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒████ ░▒██▒▒██░▄▄▄░
+# ░██░▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░▓█▒  ░░██░░▓█  ██▓
+# ░██░▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░▒█░   ░██░░▒▓███▀▒
+# ░▓  ░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒  ▒ ░   ░▓   ░▒   ▒
+#  ▒ ░  ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ░      ▒ ░  ░   ░
+#  ▒ ░░        ░ ░ ░ ▒     ░   ░ ░  ░ ░    ▒ ░░ ░   ░
+#  ░  ░ ░          ░ ░           ░         ░        ░
+#     ░
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -15,7 +20,6 @@
 # Replace grey color by black
 exec --no-startup-id hsetroot -solid "#000000"
 # exec feh --bg-scale /DriveE/Pictures/Wallpapers/Collection/0MOuE7F.jpg
-exec --no-startup-id $HOME/Documents/Script/Wall_wal.sh
 
 set $mod Mod4
 set $term st
@@ -38,7 +42,6 @@ font pango:System San Francisco Display 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-#wal -i /Wallpaper
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use
 # from the generated scheme.
@@ -292,7 +295,9 @@ for_window [title="floatingMpv"] move scratchpad
 # bindsym mod1+control+bracketleft [title="floatingMpv"] scratchpad show
 bindsym mod1+control+p [title="floatingMpv"] scratchpad show
 
-bindsym $mod+control+p exec startupLogo.sh
+# Startup Logo
+# bindsym $mod+control+p exec startupLogo.sh
+bindsym $mod+control+p exec "$LOGO"
 
 #Send to scratchpad (Hidden Workspace)
 bindsym $mod+control+y move scratchpad 
@@ -609,11 +614,13 @@ exec --no-startup-id imwheel
 exec --no-startup-id dunst
 # exec ~/Documents/Script/getForecast.sh
 # exec --no-startup-id i3-msg 'workspace $workspace9; exec spotify'
-exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; startupLogo.sh'"
+# exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; startupLogo.sh'"
+exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; $LOGO'"
 # exec --no-startup-id startupLogo.sh
 
 exec --no-startup-id ncmpcppCheck.sh
 exec --no-startup-id sudo $HOME/Documents/Script/issue_file_generator.sh
+exec --no-startup-id $HOME/Documents/Script/Wall_wal.sh
 exec --no-startup-id "sh -c 'sleep 4; spotify'"
 exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh
 # exec chromiumScaleFactor
