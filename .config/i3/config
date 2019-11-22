@@ -1,13 +1,9 @@
-#  ██▓ ▄████▄   ▒█████   ███▄    █   █████▒██▓  ▄████
-# ▓██▒▒██▀ ▀█  ▒██▒  ██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██▒ ▀█▒
-# ▒██▒▒▓█    ▄ ▒██░  ██▒▓██  ▀█ ██▒▒████ ░▒██▒▒██░▄▄▄░
-# ░██░▒▓▓▄ ▄██▒▒██   ██░▓██▒  ▐▌██▒░▓█▒  ░░██░░▓█  ██▓
-# ░██░▒ ▓███▀ ░░ ████▓▒░▒██░   ▓██░░▒█░   ░██░░▒▓███▀▒
-# ░▓  ░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒  ▒ ░   ░▓   ░▒   ▒
-#  ▒ ░  ░  ▒     ░ ▒ ▒░ ░ ░░   ░ ▒░ ░      ▒ ░  ░   ░
-#  ▒ ░░        ░ ░ ░ ▒     ░   ░ ░  ░ ░    ▒ ░░ ░   ░
-#  ░  ░ ░          ░ ░           ░         ░        ░
-#     ░
+# ██╗██████╗  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗
+# ██║╚════██╗██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝
+# ██║ █████╔╝██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+# ██║ ╚═══██╗██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+# ██║██████╔╝╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+# ╚═╝╚═════╝  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -614,15 +610,14 @@ exec --no-startup-id imwheel
 exec --no-startup-id dunst
 # exec ~/Documents/Script/getForecast.sh
 # exec --no-startup-id i3-msg 'workspace $workspace9; exec spotify'
-# exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; startupLogo.sh'"
-exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; $LOGO'"
-# exec --no-startup-id startupLogo.sh
 
 exec --no-startup-id ncmpcppCheck.sh
 exec --no-startup-id sudo $HOME/Documents/Script/issue_file_generator.sh
 exec --no-startup-id $HOME/Documents/Script/Wall_wal.sh
 exec --no-startup-id "sh -c 'sleep 4; spotify'"
 exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh
+# exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; startupLogo.sh'"
+exec --no-startup-id "sh -c 'sleep 4;i3-msg workspace \"1. Terminal\"; $LOGO'"
 # exec chromiumScaleFactor
 exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 # exec $HOME/Documents/Script/mouseWatch.sh
