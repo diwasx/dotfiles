@@ -67,6 +67,9 @@ load-module module-bluetooth-policy
 load-module module-bluetooth-discover
 .endif
 
+# automatically switch to newly-connected devices
+load-module module-switch-on-connect
+
 ### Load several protocols
 load-module module-dbus-protocol
 .ifexists module-esound-protocol-unix.so
@@ -137,9 +140,6 @@ load-module module-role-cork
 ### loading modules and rerouting streams.
 load-module module-filter-heuristics
 load-module module-filter-apply
-
-# automatically switch to newly-connected devices
-load-module module-switch-on-connect
 
 ### Make some devices default
 #set-default-sink output

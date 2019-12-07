@@ -7,10 +7,10 @@ cava
 cli-visualizer
 clipit
 conky-nvidia
-dpkg
 eclim
 edex-ui
 figlet-fonts
+findimagedupes
 genymotion
 glmark2-git
 google-chrome
@@ -50,6 +50,8 @@ shadowfox-updater
 shantz-xwinwrap-bzr
 shc
 simple-mtpfs
+spicetify-cli
+spicetify-themes-git
 spotify
 steamos-compositor
 stig

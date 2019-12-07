@@ -70,6 +70,9 @@ set $workspace8 "8"
 set $workspace9 "9."
 set $workspace10 "10. Music"
 
+# Start i3 at workspace 1
+exec i3-msg workspace $workspace1
+
 # Workspace starting gap
 workspace $workspace1 gaps inner 10
 
@@ -513,8 +516,8 @@ bindsym mod1+control+slash exec playerctl next && exec pkill -RTMIN+14 i3blocks
 bindsym mod1+control+period exec playerctl previous && exec pkill -RTMIN+14 i3blocks
 
 bindsym $mod+m exec $term -e ncmpcppCheck.sh
-# bindsym $mod+m workspace $workspace10; exec $term1 -e ncmpcpp 
-bindsym $mod+control+m workspace $workspace9; exec spotify
+# bindsym $mod+control+m workspace $workspace9; exec spotify
+bindsym $mod+control+m workspace $workspace9; exec spotify_random_theme.sh
 bindsym mod1+control+m exec musicSelect.sh
 
 ## FOR ALSA/AMIXER ##
@@ -581,7 +584,7 @@ bindsym $mod+x exec dmenu_run
 assign [class="banshee"] $workspace10
 # assign [title="mpsyt"] $workspace10
 assign [class="Chromium"] $workspace2
-assign [class="Google-chrome"] 3
+assign [class="Google-chrome"] $workspace3
 assign [class="Uget-gtk"] $workspace8
 assign [class="Kget"] $workspace8
 # assign [title="ncmpcpp"] $workspace10
@@ -609,17 +612,16 @@ exec --no-startup-id compton
 exec --no-startup-id imwheel
 exec --no-startup-id dunst
 # exec ~/Documents/Script/getForecast.sh
-# exec --no-startup-id i3-msg 'workspace $workspace9; exec spotify'
 
 exec --no-startup-id ncmpcppCheck.sh
 exec --no-startup-id sudo $HOME/Documents/Script/issue_file_generator.sh
 exec --no-startup-id $HOME/Documents/Script/Wall_wal.sh
-exec --no-startup-id "sh -c 'sleep 4; spotify'"
+exec --no-startup-id "sh -c 'sleep 4; spotify_random_theme.sh'"
 exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh
 # exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; startupLogo.sh'"
-exec --no-startup-id "sh -c 'sleep 6;i3-msg workspace \"1. Terminal\"; $LOGO'"
+exec --no-startup-id "sh -c 'sleep 8;i3-msg workspace \"1. Terminal\"; $LOGO'"
 # exec chromiumScaleFactor
 exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 # exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
-exec --no-startup-id "sh -c 'sleep 34; conky-spotify.sh'"
+exec --no-startup-id "sh -c 'sleep 32; conky-spotify.sh'"

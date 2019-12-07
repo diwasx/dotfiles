@@ -133,6 +133,7 @@ alias conpac="sudo vim /etc/pacman.conf"
 alias r="ranger"
 alias t="vim /DriveE/Projects/Git/notes/ToDo"
 alias e="vim /DriveE/Projects/Git/notes/entertainment"
+alias w="vim /DriveE/Projects/Git/notes/work"
 # alias s="terminal_workingDir.sh set"
 #Processing java Cli--->Foldername and filename should be same. Filename extension(.pde)
 #Created a executable in script folder

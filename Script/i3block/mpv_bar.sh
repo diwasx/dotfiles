@@ -1,4 +1,4 @@
-#Script that finds mpsyt (mpv) title running in background
+# Script that finds mpsyt (mpv) title running in background
 
 # ps aux | grep "[m]pv --title"| sed 's/.*title \(.*\)--no.*/\1/'
 
@@ -10,8 +10,7 @@ echo $title
 pkill -RTMIN+9 i3blocks;   #Signal to i3block to update song
 
 case $BLOCK_BUTTON in
-  1) mpc toggle;;  # right click, mute/unmute
-  2) mpc next;;  # right click, mute/unmute
-  3) mpc prev;;  # right click, mute/unmute
+  1) mpc toggle;;
+  4) mpc next;;
+  5) mpc prev;;
 esac
-
