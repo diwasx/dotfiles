@@ -67,9 +67,6 @@ load-module module-bluetooth-policy
 load-module module-bluetooth-discover
 .endif
 
-# automatically switch to newly-connected devices
-load-module module-switch-on-connect
-
 ### Load several protocols
 load-module module-dbus-protocol
 .ifexists module-esound-protocol-unix.so

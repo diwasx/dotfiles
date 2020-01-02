@@ -4,6 +4,7 @@ alacritty
 alsa-firmware
 alsa-utils
 android-file-transfer
+android-tools
 android-udev
 apache
 arandr
@@ -58,6 +59,7 @@ feh
 figlet
 file
 filesystem
+filezilla
 findutils
 firefox
 flashplugin
@@ -186,6 +188,7 @@ pinta
 pkgconf
 playerctl
 playonlinux
+postgresql
 powerline
 prettyping
 primus
@@ -269,9 +272,9 @@ wget
 which
 wicd
 wicd-gtk
+wine-gecko
 wine-mono
 wine-staging
-wine_gecko
 winetricks
 wpa_supplicant
 wqy-zenhei

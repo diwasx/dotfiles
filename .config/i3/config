@@ -515,7 +515,8 @@ bindsym mod1+control+apostrophe exec playerctl play-pause && exec pkill -RTMIN+1
 bindsym mod1+control+slash exec playerctl next && exec pkill -RTMIN+14 i3blocks
 bindsym mod1+control+period exec playerctl previous && exec pkill -RTMIN+14 i3blocks
 
-bindsym $mod+m exec $term -e ncmpcppCheck.sh
+# bindsym $mod+m exec $term -e ncmpcppCheck.sh
+bindsym $mod+m exec ncmpcppCheck.sh
 # bindsym $mod+control+m workspace $workspace9; exec spotify
 bindsym $mod+control+m workspace $workspace9; exec spotify_random_theme.sh
 bindsym mod1+control+m exec musicSelect.sh

@@ -3,7 +3,7 @@
 # Use package from aur: spicetify-cli, spicetify-themes-git
 
 theme_folder="/usr/share/spicetify-cli/Themes"
-declare -a ignore_theme=("" "SpicetifyDefault" "Spicy")
+declare -a ignore_theme=("" "SpicetifyDefault" "Spicy" "WintergatanBlueprint")
 random_theme=""
 
 # Check if random_theme is in ignore_theme
