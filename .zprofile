@@ -1,5 +1,5 @@
 # PATH="$HOME/.node_modules/bin:$PATH"
-export PATH=$HOME/bin:/home/lanaya/.config/composer/vendor/bin:/home/lanaya/.vim/bundle/fzf/bin:/home/lanaya/node_modules/.bin/:/home/lanaya/Documents/Script:/usr/local/bin:$HOME/.node_modules/bin:$HOME/.local/bin/:/home/lanaya/go/bin/:$PATH 
+export PATH=$HOME/bin:$HOME/.config/composer/vendor/bin:$HOME/.vim/bundle/fzf/bin:$HOME/node_modules/.bin/:$HOME/Documents/Script:/usr/local/bin:$HOME/.node_modules/bin:$HOME/.local/bin/:$HOME/go/bin/:$PATH 
 
 export npm_config_prefix=~/.node_modules
 export FILEMANAGER="ranger"
@@ -13,6 +13,9 @@ export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)
 #For Fuzzy Finder
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
 # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+#Google service 
+export GOOGLE_APPLICATION_CREDENTIALS="/DriveE/Projects/Git/notes/back/google-project-209d84b8c845.json"
 
 if [ -n "$GTK_MODULES" ]
 then
@@ -30,7 +33,7 @@ export WINEDEBUG=fps
 export XDG_CURRENT_DESKTOP=i3wm
 export XDG_SESSION_DESKTOP=i3wm
 
-# /home/lanaya/Documents/Script/startupBatteryCheck.sh
+# $HOME/Documents/Script/startupBatteryCheck.sh
 $HOME/Documents/Script/startupBatteryCheck.sh
 
 # -n:string is not null.

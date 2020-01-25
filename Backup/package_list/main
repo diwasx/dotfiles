@@ -156,6 +156,7 @@ networkmanager
 newsboat
 nmap
 notification-daemon
+noto-fonts-emoji
 npm
 ntfs-3g
 ntp
@@ -232,6 +233,7 @@ scrot
 sed
 shadow
 slock
+sqlitebrowser
 steam
 strace
 subversion
@@ -270,8 +272,6 @@ vulkan-intel
 w3m
 wget
 which
-wicd
-wicd-gtk
 wine-gecko
 wine-mono
 wine-staging

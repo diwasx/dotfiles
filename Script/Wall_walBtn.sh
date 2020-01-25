@@ -3,7 +3,6 @@
 if [ -z $1 ]; then
     # echo "no argumentpasssed "
     pkill -f "xwinwrap"
-    # folder="/DriveE/Pictures/Wallpapers/Collection"
     folder=$WALL_PATH
     file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 
@@ -12,7 +11,7 @@ if [ -z $1 ]; then
     convert /tmp/wal1.jpg -fill black -colorize 50% /tmp/wal2.jpg
     feh --bg-fill /tmp/wal2.jpg
     feh --bg-fill /tmp/wal1.jpg
-    wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
+    wal -i $file; $HOME/Documents/Script/reloadDunst.sh
 
 else
     # echo "argumentpasssed "

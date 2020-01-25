@@ -2,11 +2,11 @@
 # Select different startx environment with tty variable as argument
 
 if [[ $1 -eq 1 ]]; then
-    export WALL_PATH="/DriveE/Pictures/Wallpapers/Collection/"
+    export WALL_PATH="/DriveE/Pictures/wallpaper/Collection/"
     export LOGO=startupLogo.sh
     exec startx > /dev/null 2>&1
 elif [[ $1 -eq 2 ]]; then
-    export WALL_PATH="/DriveE/Pictures/Wallpapers/work_hour/"
+    export WALL_PATH="/DriveE/Pictures/wallpaper_work/Collection"
     export LOGO=startupAscii.sh
     exec startx > /dev/null 2>&1
  fi 

@@ -51,7 +51,7 @@ export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 
 alias p="ping sgp-1.valve.net"
 alias f="fzf"
-alias op="vblank_mode=0 optirun /home/lanaya/Documents/Script/winefps"
+alias op="vblank_mode=0 optirun $HOME/Documents/Script/winefps"
 alias nvd="optirun -b none nvidia-settings -c :8"
 alias ls="ls --color=auto"
 alias grep='grep --color=auto'
@@ -131,8 +131,8 @@ stty -ixon
 #For Fuzzy Finder
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.git/*"'
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-source /home/lanaya/.vim/bundle/fzf/shell/completion.bash
-source /home/lanaya/.vim/bundle/fzf/shell/key-bindings.bash
+source $HOME/.vim/bundle/fzf/shell/completion.bash
+source $HOME/.vim/bundle/fzf/shell/key-bindings.bash
 
 #for steam
 export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)"

@@ -2,7 +2,6 @@
 cp ~/.vimrc /DriveE/Projects/Git/dotfiles/
 cp ~/.linopenrc /DriveE/Projects/Git/dotfiles/
 cp ~/.gitconfig /DriveE/Projects/Git/dotfiles/
-cp /DriveE/Backup/Cygwin/home/Lanaya/.vimrc /DriveE/Projects/Git/dotfiles/.vimrcWin
 cp ~/.Xresources /DriveE/Projects/Git/dotfiles/
 cp ~/.bashrc /DriveE/Projects/Git/dotfiles/
 cp ~/.xsession /DriveE/Projects/Git/dotfiles/

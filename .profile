@@ -16,11 +16,11 @@ appendpath () {
     esac
 }
 
-appendpath '/home/lanaya/.config/composer/vendor/bin'
-appendpath '/home/lanaya/Documents/Script'
-appendpath '/home/lanaya/.vim/bundle/fzf/bin'
-appendpath '/home/lanaya/node_modules/.bin/'
-appendpath '/home/lanaya/go/bin/'
+appendpath "$HOME/.config/composer/vendor/bin"
+appendpath "$HOME/Documents/Script"
+appendpath "$HOME/.vim/bundle/fzf/bin"
+appendpath "$HOME/node_modules/.bin/"
+appendpath "$HOME/go/bin/"
 
 unset appendpath
 

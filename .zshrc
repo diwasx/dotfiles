@@ -9,11 +9,11 @@
 #      ░ ░          ░   ░  ░  ░   ░     ░ ░      
 #    ░                                  ░        
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/home/lanaya/.config/composer/vendor/bin:/home/lanaya/.vim/bundle/fzf/bin:/home/lanaya/node_modules/.bin/:/home/lanaya/Documents/Script:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.config/composer/vendor/bin:$HOME/.vim/bundle/fzf/bin:$HOME/node_modules/.bin/:$HOME/Documents/Script:/usr/local/bin:$PATH
 # Stored in .zprofile
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/lanaya/.oh-my-zsh"
+  export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 alias p="ping sgp-1.valve.net"
 alias sall="subliminal download -l en *"
 alias f="fzf"
-alias op="vblank_mode=0 optirun /home/lanaya/Documents/Script/winefps"
+alias op="vblank_mode=0 optirun $HOME/Documents/Script/winefps"
 alias nvd="optirun -b none nvidia-settings -c :8"
 alias ls="ls --color=auto"
 # alias grep='grep --color=auto'
@@ -128,7 +128,7 @@ alias conzsh="vim ~/.zshrc"
 alias conblock="vim ~/.config/i3/i3blocks.conf"
 alias conman="vim /DriveE/Projects/Git/notes/ManjFoo.sh"
 alias concom="vim ~/.config/compton.conf"
-alias conrif="sudo vim /usr/lib/python3.7/site-packages/ranger/config/rifle.conf"
+alias conrif="vim /home/lanaya/.config/ranger/rifle.conf"
 alias conpac="sudo vim /etc/pacman.conf"
 alias r="ranger"
 alias t="vim /DriveE/Projects/Git/notes/ToDo"
@@ -149,34 +149,34 @@ alias trc="transmission-remote-cli"
 alias rsync="rsync --progress"
 
 #Ranger alias
-alias gib='/usr/lib/i3blocks/'
-alias gbb='/DriveE/Projects/Git/'
-alias gbi='/DriveE/Projects/Git/dotfiles'
-alias gbn='/DriveE/Projects/Git/notes'
-alias gbs='/DriveE/Projects/Git/suckless'
-alias gW='~/.wine/drive_c/'
-alias gV='/VirtualDrive'
-alias gP='/DriveE/Projects'
-alias gE='/DriveE/Backup/Program Files'
-alias gD='/DriveE/Backup/Downloads'
-alias gO='/DriveE/Projects/Data_Science'
-alias gN='/DriveE/Projects/Notes/Resume-Documents'
-alias gM='/DriveE/Movies'
-alias gH='/DriveE/Xampp/htdocs/'
-alias gw='/DriveE/Pictures/Wallpapers'
-alias gv='/DriveE/Videos'
-alias gt='~/.trash'
-alias gs='~/Documents/Script'
-alias gr='/run/media/lanaya'
-alias gp='/DriveE/Pictures'
-alias gf='/FastDrive'
-alias ge='/DriveE'
-alias gd='/home/lanaya/Documents'
-alias gc='~/.config'
-alias gn='/DriveE/Projects/Notes/'
-alias gm='/DriveE/Music'
-alias gk='/DriveKhelkud'
-alias gh='~'
+alias gib="/usr/lib/i3blocks/"
+alias gbb="/DriveE/Projects/Git/"
+alias gbi="/DriveE/Projects/Git/dotfiles"
+alias gbn="/DriveE/Projects/Git/notes"
+alias gbs="/DriveE/Projects/Git/suckless"
+alias gW="~/.wine/drive_c/"
+alias gV="/VirtualDrive"
+alias gP="/DriveE/Projects"
+alias gE="/DriveE/Backup/Program Files"
+alias gD="/DriveE/Backup/Downloads"
+alias gO="/DriveE/Projects/pathao"
+alias gN="/DriveE/Projects/Notes/Resume-Documents"
+alias gM="/DriveE/Movies"
+alias gH="/DriveE/Xampp/htdocs/"
+alias gw="/DriveE/Pictures/wallpaper/Collection"
+alias gv="/DriveE/Videos"
+alias gt="~/.trash"
+alias gs="~/Documents/Script"
+alias gr="/run/media/lanaya"
+alias gp="/DriveE/Pictures"
+alias gf="/FastDrive"
+alias ge="/DriveE"
+alias gd="~/Documents"
+alias gc="~/.config"
+alias gn="/DriveE/Projects/Notes/"
+alias gm="/DriveE/Music"
+alias gk="/DriveKhelkud"
+alias gh="~"
 #end
 
 # Replaced by mouseWatch.sh
@@ -186,8 +186,8 @@ alias gh='~'
 #For CTRL+S disable that freeze termial 
 stty -ixon
 
-source /home/lanaya/.vim/bundle/fzf/shell/completion.zsh
-source /home/lanaya/.vim/bundle/fzf/shell/key-bindings.zsh
+source $HOME/.vim/bundle/fzf/shell/completion.zsh
+source $HOME/.vim/bundle/fzf/shell/key-bindings.zsh
 
 # export NID=0
 EDITOR=vim

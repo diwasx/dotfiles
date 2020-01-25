@@ -1,6 +1,6 @@
 #!/bin/sh
 
-folder_main="/DriveE/Pictures/Wallpapers/Collection"
+folder_main="/DriveE/Pictures/wallpaper/Collection"
 
 # List all wallpaper folders, show in rofi and get selected folder
 folder_collection=`find $folder_main -type d -printf '%d\t%P\n' | cut -f2- | tail -n +2 | rofi -dmenu -i -l 25`
@@ -16,4 +16,4 @@ convert $file -fill black -colorize 50% /tmp/wal1.jpg
 convert /tmp/wal1.jpg -fill black -colorize 50% /tmp/wal2.jpg
 feh --bg-fill /tmp/wal2.jpg
 feh --bg-fill /tmp/wal1.jpg
-wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
+wal -i $file; $HOME/Documents/Script/reloadDunst.sh

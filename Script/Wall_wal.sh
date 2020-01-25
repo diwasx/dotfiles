@@ -1,9 +1,8 @@
 #!/bin/bash
+# $WALL_PATH is set up from startx_select script
 
 pkill -f "Wall_wal_work_hour.sh"
-# echo "/DriveE/Pictures/Wallpapers/Collection" > /tmp/wall-path
 if pidof -o %PPID -x "Wall_wal.sh">/dev/null; then
-    # folder=`cat /tmp/wall-path`
     folder=$WALL_PATH
     file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 
@@ -13,7 +12,7 @@ if pidof -o %PPID -x "Wall_wal.sh">/dev/null; then
     feh --bg-fill /tmp/wal2.jpg
     feh --bg-fill /tmp/wal1.jpg
 
-    wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
+    wal -i $file; $HOME/Documents/Script/reloadDunst.sh
     # echo "Process already running"
 else
     while true; do
@@ -26,7 +25,7 @@ else
         feh --bg-fill /tmp/wal2.jpg
         feh --bg-fill /tmp/wal1.jpg
 
-        wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
+        wal -i $file; $HOME/Documents/Script/reloadDunst.sh
         sleep 3600
     done
 fi

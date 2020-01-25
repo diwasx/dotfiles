@@ -21,7 +21,7 @@ if [ "$1" == "desktop" ]; then
         feh --bg-fill /tmp/wal2.jpg
         feh --bg-fill /tmp/wal1.jpg
 
-        wal -i $file; /home/lanaya/Documents/Script/reloadDunst.sh
+        wal -i $file; $HOME/Documents/Script/reloadDunst.sh
 
     else
         notify-send "No Internet Connection or" \

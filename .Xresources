@@ -50,8 +50,8 @@ URxvt.perl-ext-common:  ...,font-size
 
 /* Key binding */
 /* New shell from current directory */
-URxvt.keysym.Shift-Control-N: /home/lanaya/Documents/Script/shellFromHere.sh urxvt\n
-URxvt.keysym.Shift-Control-M: /home/lanaya/Documents/Script/shellFromHere.sh alacritty\n
+URxvt.keysym.Shift-Control-N: $HOME/Documents/Script/shellFromHere.sh urxvt\n
+URxvt.keysym.Shift-Control-M: $HOME/Documents/Script/shellFromHere.sh alacritty\n
 
 /* Setting working directory */
 URxvt.keysym.Shift-Control-Return: urxvt_workingDir.sh set\n

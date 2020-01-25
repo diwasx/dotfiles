@@ -1,15 +1,15 @@
 #Generates navigation alias for bash, zsh and ranger
 
 declare -A array
-array[gr]='/run/media/lanaya'
-array[gd]='/home/lanaya/Documents'
+array[gr]="/run/media/$USER"
+array[gd]='~/Documents'
 array[gh]='~'
 array[gc]='~/.config'
 array[gt]='~/.trash'
 array[gs]='~/Documents/Script'
 array[gM]='/DriveE/Movies'
 array[gm]='/DriveE/Music'
-array[gw]='/DriveE/Pictures/Wallpapers'
+array[gw]='/DriveE/Pictures/wallpaper/Collection'
 array[gW]='~/.wine/drive_c/'
 array[gP]='/DriveE/Projects'
 array[gH]='/DriveE/Xampp/htdocs/'
@@ -40,7 +40,7 @@ do
     echo "key  : $i"
     key=$i
     echo "value: ${array[$i]}"
-    value="'${array[$i]}'"
+    value="\"${array[$i]}\""
     # sed -i "$line alias $key=$value" ~/.zshrc  #Not a good practise because line number is not static
     # command="alias $key=$value"
     sed -i "/#Ranger alias/a alias $key=$value" ~/.zshrc  #Alway use double quote when using variable

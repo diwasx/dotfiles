@@ -45,6 +45,7 @@ peaclock
 powerline-fonts-git
 proton
 python-wal-steam-git
+python36
 qdirstat
 screenkey
 shadowfox-updater
@@ -64,6 +65,7 @@ ttf-font-awesome-4
 ttf-inconsolata-g
 ttf-ms-fonts
 ttf-roboto-fontconfig
+ttf-twemoji-color
 ttf-vista-fonts
 unity-editor
 unity-editor-standardassets
@@ -74,6 +76,8 @@ viber
 vim-youcompleteme-git
 vkcube-git
 vulkan-caps-viewer
+wicd
+wicd-gtk
 xcursor-breeze-serie-obsidian
 xcursor-human
 xscreensaver-arch-logo

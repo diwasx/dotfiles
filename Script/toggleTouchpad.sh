@@ -9,7 +9,7 @@ then
 
     xinput disable $ID
     echo "Touchpad disabled."
-    notify-send -a 'Touchpad' 'Disabled' -i /home/lanaya/Documents/icons/icons8-touchpadOff-50.png
+    notify-send -a 'Touchpad' 'Disabled' -i $HOME/Documents/icons/icons8-touchpadOff-50.png
 else
 
     pgrep "syndaemon" > /dev/null
@@ -19,5 +19,5 @@ else
 
     xinput enable $ID
     echo "Touchpad enabled."
-    notify-send -a 'Touchpad' 'Enabled' -i /home/lanaya/Documents/icons/icons8-touchpadOn-64.png
+    notify-send -a 'Touchpad' 'Enabled' -i $HOME/Documents/icons/icons8-touchpadOn-64.png
 fi

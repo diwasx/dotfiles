@@ -1,5 +1,5 @@
 Package 
------------------- 
+------------------------ 
 adbs 
 aiohttp 
 appdirs 
@@ -16,6 +16,7 @@ bleach
 blinker 
 btrfsutil 
 CacheControl 
+cachetools 
 cffi 
 chardet 
 cli-helpers 
@@ -35,8 +36,15 @@ dogpile.cache
 entrypoints 
 enzyme 
 evdev 
+google-api-core 
+google-auth 
+google-cloud-bigquery 
+google-cloud-core 
+google-resumable-media 
+googleapis-common-protos 
 guessit 
 gunicorn 
+haversine 
 html5lib 
 httplib2 
 idna 
@@ -84,6 +92,7 @@ pafy
 pandas 
 pandocfilters 
 parso 
+patsy 
 pbr 
 pep517 
 pexpect 
@@ -95,9 +104,12 @@ powerline-status
 progress 
 prometheus-client 
 prompt-toolkit 
+protobuf 
 psutil 
 psycopg2 
 ptyprocess 
+pyasn1 
+pyasn1-modules 
 pycairo 
 pycparser 
 pygame 
@@ -125,6 +137,7 @@ rarfile
 rebulk 
 requests 
 retrying 
+rsa 
 scikit-learn 
 scipy 
 seaborn 
@@ -135,6 +148,7 @@ six
 soupsieve 
 spotify-cli-linux 
 sqlparse 
+statsmodels 
 stevedore 
 subliminal 
 tabulate 
