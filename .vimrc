@@ -142,6 +142,7 @@ map <C-l> <C-w>l
 map <C-e> <C-w>q
 map <leader>i :new<CR>
 map <leader>s :vnew<CR>
+map <leader>S :vsplit<CR>
 nnoremap <Leader>f :NERDTreeToggle<CR>
 " filetype plugin on                  
 

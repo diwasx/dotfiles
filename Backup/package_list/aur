@@ -1,5 +1,4 @@
 adbfs-git
-android-sdk
 anydesk
 bash-git-prompt
 betterdiscord-rauenzi-git
@@ -8,7 +7,6 @@ chromium-widevine
 cli-visualizer
 clipit
 conky-nvidia
-eclim
 edex-ui
 figlet-fonts
 findimagedupes
@@ -23,6 +21,7 @@ html-xml-utils
 htop-vim-git
 i3-gaps-next-git
 i3-vim-syntax-git
+jitsi
 jmtpfs
 jp2a-git
 komorebi
@@ -45,6 +44,7 @@ peaclock
 powerline-fonts-git
 proton
 python-wal-steam-git
+python2-notify
 python36
 qdirstat
 screenkey

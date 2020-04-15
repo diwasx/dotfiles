@@ -5,6 +5,7 @@ export npm_config_prefix=~/.node_modules
 export FILEMANAGER="ranger"
 export BROWSER="chromium"
 export PLAYER="mpv"
+export PYTHONPATH="$HOME/Documents/bq-connector/src"
 # export TZ="Asia/Kathmandu"
 
 #for steam

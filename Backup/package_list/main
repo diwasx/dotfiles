@@ -102,7 +102,6 @@ iputils
 java-openjfx
 java-openjfx-doc
 java-openjfx-src
-jdk8-openjdk
 jfsutils
 jre8-openjdk
 jre8-openjdk-headless
@@ -148,7 +147,6 @@ nano
 ncmpcpp
 neofetch
 neomutt
-netbeans
 netctl
 nethogs
 network-manager-applet
@@ -167,8 +165,6 @@ obs-studio
 offlineimap
 okular
 openbox
-openjdk8-doc
-openjdk8-src
 openshot
 openssh
 openvpn
@@ -209,7 +205,6 @@ putty
 python-pip
 python-pyperclip
 python-pywal
-python2-notify
 python2-pip
 python2-virtualenv
 qbittorrent
@@ -233,6 +228,7 @@ scrot
 sed
 shadow
 slock
+speedtest-cli
 sqlitebrowser
 steam
 strace
@@ -268,7 +264,6 @@ vi
 vim-nerdtree
 virtualbox
 virtualbox-host-modules-arch
-vulkan-intel
 w3m
 wget
 which
