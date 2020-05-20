@@ -1,5 +1,5 @@
 adbfs-git
-anydesk
+anydesk-bin
 bash-git-prompt
 betterdiscord-rauenzi-git
 cava
@@ -21,6 +21,7 @@ html-xml-utils
 htop-vim-git
 i3-gaps-next-git
 i3-vim-syntax-git
+ifuse
 jitsi
 jmtpfs
 jp2a-git
@@ -32,18 +33,21 @@ localepurge
 lyvi-git
 mpd-notification-git
 mps-youtube-git
+ms-office-online
+musixmatch-bin
 mycli
 ncurses5-compat-libs
 nerd-fonts-source-code-pro
 nvidia-xrun
 openvpn-update-resolv-conf-git
+optimus-manager-qt
 otf-font-awesome-4
 package-query
 pcmciautils
 peaclock
+pinta
 powerline-fonts-git
-proton
-python-wal-steam-git
+processing
 python2-notify
 python36
 qdirstat
@@ -57,6 +61,7 @@ spicetify-themes-git
 spotify
 steamos-compositor
 stig
+surf
 tabula
 tizonia-all
 tlpui-git
@@ -84,3 +89,4 @@ xscreensaver-arch-logo
 yaourt
 yay
 youtube-dl-mp3
+zoom

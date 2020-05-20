@@ -6,6 +6,9 @@ export FILEMANAGER="ranger"
 export BROWSER="chromium"
 export PLAYER="mpv"
 export PYTHONPATH="$HOME/Documents/bq-connector/src"
+export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
+export _JAVA_OPTIONS='-Dswing.aatext=TRUE -Dawt.useSystemAAFontSettings=on'
+
 # export TZ="Asia/Kathmandu"
 
 #for steam

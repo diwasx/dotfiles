@@ -153,7 +153,7 @@ bindsym $mod+Shift+Right move right
 #bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $modf fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
@@ -165,7 +165,7 @@ bindsym $mod+f fullscreen toggle
 # bindsym $mod+e exec $term1 -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis
 # vis position
 # bindsym mod1+Shift+1 move down; Resize set 1919 70; move position 0 1010; sticky enable
-for_window [instance="vis floating"] floating enaBLe; 
+for_window [instance="vis floating"] floating enabLe; 
 for_window [instance="vis floating"] Resize set 1919 70; 
 for_window [instance="vis floating"] move position 0 1010; 
 for_window [instance="vis floating"] sticky enable
@@ -192,8 +192,8 @@ bindsym $mod+space floating toggle
 bindsym $mod+Shift+s sticky toggle
 
 # Floating bottom left and bottom right corner
-bindsym $mod+Shift+space floating enable; resize set 655 511; move position 1263 570
-bindsym $mod+control+space floating enable; resize set 655 511; move position 0 570
+bindsym $mod+Shift+space floating enable; resize set 655 370; move position 1265 710
+bindsym $mod+control+space floating enable; resize set 655 370; move position 0 710
 # bindsym $mod+Shift+space floating enable; resize set 610 435; move position 1310 645
 # bindsym $mod+control+space floating enable; resize set 610 435; move position 0 645
 
@@ -625,4 +625,9 @@ exec --no-startup-id "sh -c 'sleep 8;i3-msg workspace \"1. Terminal\"; $LOGO'
 exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 # exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
-exec --no-startup-id "sh -c 'sleep 32; conky-spotify.sh'"
+# exec --no-startup-id "sh -c 'sleep 32; conky-spotify.sh'"
+
+# For optimus-manager
+# exec --no-startup-id /usr/bin/prime-offload
+# exec --no-startup-id optimus-manager-qt
+# exec --no-startup-id /home/lanaya/Documents/Script/i3_shutdown.py

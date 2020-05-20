@@ -46,6 +46,7 @@ discord
 dmenu
 dmidecode
 docker
+docker-compose
 dpkg
 dunst
 e2fsprogs
@@ -90,7 +91,6 @@ i3blocks
 i3lock-color
 i3status
 id3v2
-ifuse
 imwheel
 inetutils
 inkscape
@@ -103,6 +103,7 @@ java-openjfx
 java-openjfx-doc
 java-openjfx-src
 jfsutils
+josm
 jre8-openjdk
 jre8-openjdk-headless
 less
@@ -181,7 +182,6 @@ php
 php-apache
 phpmyadmin
 picom
-pinta
 pkgconf
 playerctl
 playonlinux
@@ -189,7 +189,6 @@ postgresql
 powerline
 prettyping
 primus
-processing
 procps-ng
 psensor
 psmisc
@@ -234,7 +233,6 @@ steam
 strace
 subversion
 sudo
-surf
 swi-prolog
 sxiv
 sysfsutils
@@ -248,6 +246,7 @@ testdisk
 texinfo
 thunar
 time
+tint2
 tk
 tlp
 tmux
@@ -323,5 +322,6 @@ yarn
 youtube-dl
 zathura
 zathura-pdf-poppler
+zip
 zsh
 zsh-completions
