@@ -1,47 +1,67 @@
+[background]
+background = "#151515"
+
+[foreground]
+foreground = "#FFFFFF"
+
 [global]
-    font = "Droid Sans 8"
-    markup = yes
-    format = "<b>%s</b>\n%b"
-    sort = yes
-    indicate_hidden = yes
-    alignment = center
-    bounce_freq = 0
-    show_age_threshold = 60
-    word_wrap = yes
-    transparency = 20
-    ignore_newline = no
-    geometry = "300x5-6+30"
-    idle_threshold = 120
-    monitor = 0
-    follow = mouse
-    sticky_history = yes
-    line_height = 0
-    separator_height = 2 
-    padding = 8
-    horizontal_padding = 8
-    separator_color = frame
-    startup_notification = false 
-
-    frame_width = 2
-    frame_color = "#10444F"
-
-[shortcuts]
-    close = ctrl+space
-    close_all = ctrl+shift+space
-    history = ctrl+grave
-    context = ctrl+shift+period
+monitor = 0
+follow = mouse
+geometry = "360x50-0+20"
+indicate_hidden = true
+shrink = false
+transparency = 20
+separator_height = 0
+padding = 16
+horizontal_padding = 24
+frame_width = 3
+frame_color = "#FF5722"
+idle_threshold = 120
+font = monaco bold 8
+line_height = 4
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = left
+show_age_threshold = 60
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = false
+hide_duplicate_count = yes
+show_indicators = no
+icon_position = left
+max_icon_size = 120
+always_run_script = true
+title = Dunst
+class = Dunst
 
 [urgency_low]
-    background = "#0D363F"
-    foreground = "#899666"
-    timeout = 5
+timeout = 4
 
 [urgency_normal]
-    background = "#0D363F"
-    foreground = "#AFC4DB"
-    timeout = 20
+timeout = 4
 
 [urgency_critical]
-    background = "#0D363F"
-    foreground = "#C2664A"
-    timeout = 0
+timeout = 5
+
+## CUSTOM
+[mpd]
+summary = "Now playing*"
+replace = yes
+
+[Spotify]
+appname = Spotify
+/* format = "Now Playing\n%s\n%b" */
+timeout = 4
+
+[whatsapp]
+appname =  ''
+body = 'web.whatsapp.com'
+/* summary = 'Group' */
+/* summary = "*signed on*" */
+urgency = low
+/* script = do_something.sh */
+
+[gmeet]
+appname =  'meet.google.com'
+body = ''
+urgency = low

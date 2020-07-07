@@ -9,5 +9,6 @@ if [ $? == 0 ]; then
     i3-gaps-all-workspace.sh vis-reset
 else
     echo "Not Running"
-    i3-gaps-all-workspace.sh vis && exec urxvt -name "vis floating" -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis 
+    # i3-gaps-all-workspace.sh vis && exec urxvt -name "vis floating" -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e vis 
+    i3-gaps-all-workspace.sh vis && exec urxvt -name "vis floating" -fn "xft:Bitstream Vera Sans Mono:pixelsize=7" -e cava 
 fi

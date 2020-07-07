@@ -169,7 +169,7 @@ alias gt="~/.trash"
 alias gs="~/Documents/Script"
 alias gr="/run/media/lanaya"
 alias gp="/DriveE/Pictures"
-alias gf="/FastDrive"
+alias gf="/media/FastDrive"
 alias ge="/DriveE"
 alias gd="~/Documents"
 alias gc="~/.config"
@@ -199,3 +199,4 @@ EDITOR=vim
 (cat ~/.cache/wal/sequences &)
 # cat ~/.cache/wal/sequences
 # source ~/.cache/wal/colors-tty.sh
+source ~/.alias_imp

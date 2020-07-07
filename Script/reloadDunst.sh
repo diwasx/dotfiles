@@ -5,17 +5,19 @@
  # Source generated colors.
 . "${HOME}/.cache/wal/colors.sh"
 
- reload_dunst() {
+reload_dunst() {
     pkill dunst
-    dunst \
-	-frame_width 0 \
-        -lb "${color2}" \
-        -nb "${color1}" \
-        -cb "${color3}" \
-        -lf "${color7}" \
-        -bf "${color6}" \
-        -cf "${color5}" \
-        -nf "${color4}" &
+    # dunst \
+	# -frame_width 0 \
+    #     -lb "${color2}" \
+    #     -nb "${color1}" \
+    #     -cb "${color3}" \
+    #     -lf "${color7}" \
+    #     -bf "${color6}" \
+    #     -cf "${color5}" \
+    #     -nf "${color4}" &
+
+    dunst&
 
 }
  # reload_dunst() {

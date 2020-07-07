@@ -13,7 +13,7 @@ if [ "$1" == "desktop" ]; then
     notify-send "Downloading and Setting Random Wallpaper" -i $HOME/Documents/icons/icons8-panorama-48.png
     # url="https://source.unsplash.com/1600x900/?nature,water"
     url="https://source.unsplash.com/"$resolution"?"$keyword
-    wget $url -O $file
+    wget $url -O $file --no-check-certificate
     if [ $? -ne 4 ]; then
         # Transition Effect
         convert $file -fill black -colorize 50% /tmp/wal1.jpg
@@ -32,7 +32,7 @@ elif [ "$1" == "lock" ]; then
     notify-send "Downloading and Setting Random Wallpaper for Lock Screen" -i $HOME/Documents/icons/icons8-panorama-48.png
     # url="https://source.unsplash.com/1600x900/?nature,water"
     url="https://source.unsplash.com/"$resolution"?"$keyword
-    wget $url -O $file
+    wget $url -O $file --no-check-certificate
     if [ $? -ne 4 ]; then
         i3lock_cmd=(i3lock -i $file -e -k --timepos="0+30:h-110" --datepos="0+30:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --timesize=54 --datesize=30 --indpos="w-100:h-90" --time-align=1 --date-align=1 --wrongsize=20 --radius=40 -n )
         value="60"

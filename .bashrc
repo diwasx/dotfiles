@@ -140,3 +140,4 @@ export DBUS_SESSION_BUS_ADDRESS="$(dbus-daemon --session --print-address --fork)
 # export NID=0
 
 EDITOR=vim
+source ~/.alias_imp

@@ -18,7 +18,6 @@ gotop-bin
 grive
 heroku-cli
 html-xml-utils
-htop-vim-git
 i3-gaps-next-git
 i3-vim-syntax-git
 ifuse
@@ -51,7 +50,6 @@ processing
 python2-notify
 python36
 qdirstat
-screenkey
 shadowfox-updater
 shantz-xwinwrap-bzr
 shc
@@ -63,6 +61,7 @@ steamos-compositor
 stig
 surf
 tabula
+teamviewer
 tizonia-all
 tlpui-git
 transmission-remote-cli-git

@@ -23,6 +23,7 @@ set cindent
 set wildmenu
 set showcmd
 set cursorline
+set cursorcolumn
 set showmatch
 set incsearch
 set hlsearch
@@ -180,6 +181,7 @@ Plugin 'pangloss/vim-javascript'
 " Plugin 'w0rp/ale'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'dbeniamine/cheat.sh-vim'
+Plugin 'mtdl9/vim-log-highlighting'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

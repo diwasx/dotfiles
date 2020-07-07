@@ -2,7 +2,9 @@ Package
 ------------------------ 
 adbs 
 aiohttp 
+apache-log-parser 
 appdirs 
+apyori 
 arandr 
 asn1crypto 
 astroid 
@@ -22,6 +24,7 @@ cached-property
 cachetools 
 cffi 
 chardet 
+Cheetah3 
 cli-helpers 
 click 
 click-plugins 
@@ -38,6 +41,7 @@ distro
 dj-database-url 
 Django 
 django-heroku 
+djangorestframework 
 dnspython 
 docker 
 docker-compose 
@@ -47,8 +51,10 @@ docopt
 dogpile.cache 
 entrypoints 
 enzyme 
+et-xmlfile 
 evdev 
 Fiona 
+folium 
 geojson 
 geopandas 
 google-api-core 
@@ -81,6 +87,7 @@ ipywidgets
 isc 
 isort 
 Jade-Application-Kit 
+jdcal 
 jedi 
 Jinja2 
 joblib 
@@ -116,6 +123,7 @@ notebook
 numpy 
 oauth2client 
 oauthlib 
+openpyxl 
 openshot-qt 
 optimus-manager 
 ordered-set 
@@ -152,6 +160,7 @@ pygame
 Pygments 
 PyGObject 
 pylint 
+pymongo 
 PyMySQL 
 PyNaCl 
 pyowm 
@@ -175,6 +184,7 @@ pyzmq
 ranger-fm 
 rarfile 
 rebulk 
+regex 
 requests 
 requests-oauthlib 
 retrying 
@@ -182,6 +192,7 @@ rsa
 schedule 
 scikit-learn 
 scipy 
+scons 
 seaborn 
 selenium 
 Send2Trash 
@@ -210,10 +221,12 @@ tornado
 tqdm 
 traitlets 
 traittypes 
+ua-parser 
 uritemplate 
 urllib3 
 urwid 
 urwidtrees 
+user-agents 
 wcwidth 
 webencodings 
 websocket-client 

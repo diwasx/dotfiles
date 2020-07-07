@@ -37,6 +37,7 @@ colordiff
 composer
 coreutils
 cppunit
+cronie
 cryptsetup
 device-mapper
 dhcpcd
@@ -87,6 +88,7 @@ gtop
 gvim
 gzip
 hsetroot
+htop
 i3blocks
 i3lock-color
 i3status
@@ -223,6 +225,7 @@ ruby-irb
 rxvt-unicode
 s-nail
 screenfetch
+screenkey
 scrot
 sed
 shadow
