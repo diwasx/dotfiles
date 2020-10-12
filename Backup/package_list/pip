@@ -72,6 +72,7 @@ gspread-dataframe
 guessit 
 gunicorn 
 haversine 
+html2text 
 html5lib 
 httplib2 
 i3ipc 
@@ -109,6 +110,7 @@ MarkupSafe
 matplotlib 
 mccabe 
 mistune 
+mock 
 more-itertools 
 msgpack 
 multidict 
@@ -173,6 +175,7 @@ pyrsistent
 pysrt 
 pyte 
 python-dateutil 
+python-dotenv 
 python-libtorrent 
 python-xlib 
 pytoml 
@@ -187,12 +190,14 @@ rebulk
 regex 
 requests 
 requests-oauthlib 
+resolvelib 
 retrying 
 rsa 
 schedule 
 scikit-learn 
 scipy 
 scons 
+screenkey 
 seaborn 
 selenium 
 Send2Trash 
@@ -221,6 +226,7 @@ tornado
 tqdm 
 traitlets 
 traittypes 
+typing-extensions 
 ua-parser 
 uritemplate 
 urllib3 

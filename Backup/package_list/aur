@@ -33,7 +33,6 @@ lyvi-git
 mpd-notification-git
 mps-youtube-git
 ms-office-online
-musixmatch-bin
 mycli
 ncurses5-compat-libs
 nerd-fonts-source-code-pro
@@ -44,12 +43,12 @@ otf-font-awesome-4
 package-query
 pcmciautils
 peaclock
-pinta
 powerline-fonts-git
 processing
 python2-notify
 python36
 qdirstat
+scrcpy
 shadowfox-updater
 shantz-xwinwrap-bzr
 shc

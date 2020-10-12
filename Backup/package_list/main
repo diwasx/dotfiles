@@ -17,7 +17,7 @@ automake
 bash
 bbswitch
 beep
-bind-tools
+bind
 binutils
 bison
 bleachbit
@@ -126,9 +126,11 @@ linux-headers
 logrotate
 lsb-release
 lsof
+luit
 lutris
 lvm2
 lxappearance
+lxinput
 lxrandr
 m4
 maim
@@ -184,6 +186,7 @@ php
 php-apache
 phpmyadmin
 picom
+pinta
 pkgconf
 playerctl
 playonlinux
@@ -281,7 +284,6 @@ xf86-input-synaptics
 xfsprogs
 xorg-bdftopcf
 xorg-iceauth
-xorg-luit
 xorg-mkfontscale
 xorg-server
 xorg-sessreg
