@@ -614,6 +614,9 @@ exec --no-startup-id imwheel
 exec --no-startup-id dunst
 # exec ~/Documents/Script/getForecast.sh
 
+# Set Desktop screen layout
+# exec --no-startup-id $HOME/.screenlayout/2.sh
+
 exec --no-startup-id ncmpcppCheck.sh
 exec --no-startup-id sudo $HOME/Documents/Script/issue_file_generator.sh
 exec --no-startup-id $HOME/Documents/Script/Wall_wal.sh
@@ -631,3 +634,4 @@ exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 # exec --no-startup-id /usr/bin/prime-offload
 # exec --no-startup-id optimus-manager-qt
 # exec --no-startup-id /home/lanaya/Documents/Script/i3_shutdown.py
+

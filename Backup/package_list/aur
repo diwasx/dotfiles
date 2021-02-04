@@ -20,6 +20,7 @@ heroku-cli
 html-xml-utils
 i3-gaps-next-git
 i3-vim-syntax-git
+i3lock-color
 ifuse
 jitsi
 jmtpfs
@@ -43,6 +44,7 @@ otf-font-awesome-4
 package-query
 pcmciautils
 peaclock
+postman-bin
 powerline-fonts-git
 processing
 python2-notify

@@ -90,7 +90,6 @@ gzip
 hsetroot
 htop
 i3blocks
-i3lock-color
 i3status
 id3v2
 imwheel
@@ -152,6 +151,7 @@ nano
 ncmpcpp
 neofetch
 neomutt
+netbeans
 netctl
 nethogs
 network-manager-applet
