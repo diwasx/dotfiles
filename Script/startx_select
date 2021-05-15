@@ -4,9 +4,11 @@
 if [[ $1 -eq 1 ]]; then
     export WALL_PATH="/DriveE/Pictures/wallpaper/Collection/"
     export LOGO=startupLogo.sh
+    export SCREEN="/home/lanaya/.screenlayout/1.sh"
     exec startx > /dev/null 2>&1
 elif [[ $1 -eq 2 ]]; then
     export WALL_PATH="/DriveE/Pictures/wallpaper_work/Collection"
     export LOGO=startupAscii.sh
+    export SCREEN="/home/lanaya/.screenlayout/2.sh"
     exec startx > /dev/null 2>&1
  fi 

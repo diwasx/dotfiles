@@ -46,8 +46,6 @@ diffutils
 discord
 dmenu
 dmidecode
-docker
-docker-compose
 dpkg
 dunst
 e2fsprogs
@@ -64,7 +62,6 @@ filesystem
 filezilla
 findutils
 firefox
-flashplugin
 flex
 gawk
 gcc
@@ -100,13 +97,7 @@ intel-ucode
 iotop
 iproute2
 iputils
-java-openjfx
-java-openjfx-doc
-java-openjfx-src
 jfsutils
-josm
-jre8-openjdk
-jre8-openjdk-headless
 less
 lib32-libpulse
 lib32-mpg123
@@ -151,7 +142,6 @@ nano
 ncmpcpp
 neofetch
 neomutt
-netbeans
 netctl
 nethogs
 network-manager-applet
@@ -187,6 +177,7 @@ php-apache
 phpmyadmin
 picom
 pinta
+pipewire-pulse
 pkgconf
 playerctl
 playonlinux
@@ -197,13 +188,6 @@ primus
 procps-ng
 psensor
 psmisc
-pulseaudio
-pulseaudio-alsa
-pulseaudio-bluetooth
-pulseaudio-equalizer
-pulseaudio-equalizer-ladspa
-pulseaudio-jack
-pulseaudio-zeroconf
 pulseeffects
 putty
 python-pip
@@ -211,7 +195,6 @@ python-pyperclip
 python-pywal
 python2-pip
 python2-virtualenv
-qbittorrent
 qt5-graphicaleffects
 qt5-tools
 qt5-translations
@@ -219,6 +202,7 @@ qt5-wayland
 qt5-xcb-private-headers
 ranger
 redshift
+reflector
 reiserfsprogs
 rlwrap
 rofi
@@ -247,7 +231,6 @@ systemd-sysvcompat
 tar
 terminator
 terminus-font
-termtosvg
 testdisk
 texinfo
 thunar

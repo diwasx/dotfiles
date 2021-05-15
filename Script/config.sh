@@ -31,6 +31,8 @@ cp -r ~/Documents/Script /DriveE/Projects/Git/dotfiles
 cp -r ~/.ncmpcpp /DriveE/Projects/Git/dotfiles/
 cp -r ~/.config/pulse/presets /DriveE/Projects/Git/dotfiles/.config/pulse/
 cp -r ~/.config/pulse/default.pa /DriveE/Projects/Git/dotfiles/.config/pulse/default.pa
+mkdir -p /DriveE/Projects/Git/dotfiles/.config/PulseEffects/
+cp -r ~/.config/PulseEffects/output /DriveE/Projects/Git/dotfiles/.config/PulseEffects/output
 cp ~/.profile /DriveE/Projects/Git/dotfiles/
 cp -r ~/.mplayer/ /DriveE/Projects/Git/dotfiles/
 cp ~/.imwheelrc /DriveE/Projects/Git/dotfiles/

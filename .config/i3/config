@@ -592,6 +592,7 @@ assign [class="Kget"] $workspace8
 for_window [class="Spotify"] move to workspace $workspace9
 for_window [title="ncmpcpp"] move to workspace $workspace10
 
+
 ## Wallpaper
 bindsym $mod+control+b exec $HOME/Documents/Script/Wall_walBtn.sh
 bindsym mod1+control+b exec $HOME/Documents/Script/Wall_randomFromURL.sh desktop
@@ -618,7 +619,10 @@ exec --no-startup-id dunst
 # exec --no-startup-id $HOME/.screenlayout/2.sh
 
 exec --no-startup-id ncmpcppCheck.sh
+exec --no-startup-id pulseeffects --gapplication-service
 exec --no-startup-id sudo $HOME/Documents/Script/issue_file_generator.sh
+# exec --no-startup-id "sh -c 'sleep 4; $SCREEN'"
+# exec --no-startup-id $SCREEN
 exec --no-startup-id $HOME/Documents/Script/Wall_wal.sh
 exec --no-startup-id "sh -c 'sleep 4; spotify_random_theme.sh'"
 exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh

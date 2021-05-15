@@ -10,6 +10,7 @@ conky-nvidia
 edex-ui
 figlet-fonts
 findimagedupes
+flashplugin
 genymotion
 glmark2-git
 google-chrome
@@ -22,7 +23,6 @@ i3-gaps-next-git
 i3-vim-syntax-git
 i3lock-color
 ifuse
-jitsi
 jmtpfs
 jp2a-git
 komorebi
@@ -46,7 +46,6 @@ pcmciautils
 peaclock
 postman-bin
 powerline-fonts-git
-processing
 python2-notify
 python36
 qdirstat
@@ -59,10 +58,9 @@ spicetify-cli
 spicetify-themes-git
 spotify
 steamos-compositor
-stig
 surf
-tabula
 teamviewer
+termtosvg
 tizonia-all
 tlpui-git
 transmission-remote-cli-git
@@ -81,12 +79,9 @@ viber
 vim-youcompleteme-git
 vkcube-git
 vulkan-caps-viewer
-wicd
-wicd-gtk
 xcursor-breeze-serie-obsidian
 xcursor-human
 xscreensaver-arch-logo
 yaourt
 yay
 youtube-dl-mp3
-zoom

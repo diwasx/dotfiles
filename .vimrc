@@ -182,6 +182,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'rafi/awesome-vim-colorschemes'
 Plugin 'dbeniamine/cheat.sh-vim'
 Plugin 'mtdl9/vim-log-highlighting'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
