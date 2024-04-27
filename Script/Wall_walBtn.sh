@@ -9,8 +9,7 @@ if [ -z $1 ]; then
     # Another random wallpaper for dual screen
     file1=`find $folder |shuf -n1`
 
-    #Transition effect
-
+    # Transition effect
     convert $file -fill black -colorize 33% /tmp/wal1.jpg
     convert /tmp/wal1.jpg -fill black -colorize 33% /tmp/wal2.jpg
     convert /tmp/wal2.jpg -fill black -colorize 33% /tmp/wal3.jpg

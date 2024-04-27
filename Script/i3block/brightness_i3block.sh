@@ -13,6 +13,8 @@ echo $percent%
 
 # Mouse interaction in i3blocks
 case $BLOCK_BUTTON in
-  4) light -A 5 && pkill -RTMIN+16 i3blocks ;;# scroll up, increase
-  5) light -U 5 && pkill -RTMIN+16 i3blocks ;;# scroll down, increase
+  # 4) light -A 5 && pkill -RTMIN+16 i3blocks ;;# scroll up, increase
+  # 5) light -U 5 && pkill -RTMIN+16 i3blocks ;;# scroll down, increase
+  4) xbacklight -inc 10 && exec pkill -RTMIN+16 i3blocks;;
+  5) xbacklight -dec 10 && exec pkill -RTMIN+16 i3blocks;;
 esac

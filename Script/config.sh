@@ -25,7 +25,7 @@ cp ~/.config/touchpadrc /DriveE/Projects/Git/dotfiles/.config
 cp -r ~/.config/rofi/ /DriveE/Projects/Git/dotfiles/.config
 cp -r ~/.config/dunst/ /DriveE/Projects/Git/dotfiles/.config
 cp -r ~/.config/vis/ /DriveE/Projects/Git/dotfiles/.config
-cp -r ~/.config/compton.conf /DriveE/Projects/Git/dotfiles/.config
+cp -r ~/.config/picom/ /DriveE/Projects/Git/dotfiles/.config
 rm -r /DriveE/Projects/Git/dotfiles/Script
 cp -r ~/Documents/Script /DriveE/Projects/Git/dotfiles
 cp -r ~/.ncmpcpp /DriveE/Projects/Git/dotfiles/

@@ -1,3 +1,4 @@
 # chromium --force-device-scale-factor=0.93 $1
 chromium-random-wall.sh
-chromium --force-device-scale-factor=0.91 $1
+# chromium --force-device-scale-factor=0.91 $1
+google-chrome-stable --force-device-scale-factor=0.91 $1

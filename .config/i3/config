@@ -1,9 +1,3 @@
-# ██╗██████╗  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗
-# ██║╚════██╗██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝
-# ██║ █████╔╝██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
-# ██║ ╚═══██╗██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
-# ██║██████╔╝╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
-# ╚═╝╚═════╝  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -101,7 +95,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -font "System San Francisco Display 11"
+# bindsym $mod+d exec rofi -show run -config ~/.config/rofi/config2.rasi
+bindsym $mod+d exec rofi_new.sh
 
 # start rofi search in web
 bindsym $mod+s exec $HOME/Documents/Script/rofiSearchBrower.sh
@@ -222,6 +217,9 @@ bindsym mod1+Tab focus mode_toggle
 ##move position center
 #exec --no-startup-id urxvt -name dropdown -e tmux
 
+
+for_window [title="Live Caption"] floating enable
+
 ###---Dropdown---###---Alacritty--##
 for_window [title="dropdown"] floating enable
 for_window [title="dropdown"] resize set 700 500 
@@ -317,8 +315,8 @@ bindsym mod1+control+4 exec $HOME/Documents/Script/bufferMpvAudio.sh
 # bindsym mod1+control+5 exec $HOME/Documents/Script/bufferMp3Download.sh
 
 # --> Programs Shortcut
-# bindsym mod1+control+0 exec chromium
 bindsym mod1+control+0 exec chromiumScaleFactor.sh
+# bindsym mod1+control+0 exec google-chrome-stable
 bindsym mod1+control+e exec pulseaudio-equalizer-gtk
 
 bindsym mod1+control+r workspace $workspace8; exec alacritty -e rtorrent
@@ -399,7 +397,8 @@ bindsym $mod+Shift+r exec reload_i3.sh
 # bindsym mod1+control+BackSpace exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym mod1+control+BackSpace exec "i3-msg exit"
 bindsym $mod+Shift+Delete exec shutdown now
-bindsym $mod+Shift+BackSpace exec reboot
+# bindsym $mod+Shift+BackSpace exec reboot
+bindsym $mod+Shift+End exec reboot
 #bindsym mod1+control+BackSpace exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
@@ -478,6 +477,7 @@ bindsym mod1+control+backslash exec $HOME/Documents/Script/Wall_randomFromURL.sh
 bindsym $mod+backslash exec $HOME/Documents/Script/i3lockRandom.sh
 # bindsym $mod+control+backslash exec $HOME/Documents/Script/i3lockBlur.sh
 bindsym $mod+control+backslash exec $HOME/Documents/Script/i3lock-fancy -t ""
+bindsym $mod+Shift+backslash exec xtrlock
 
 # #--Music Player--#
 
@@ -516,7 +516,8 @@ bindsym mod1+control+slash exec playerctl next && exec pkill -RTMIN+14 i3blocks
 bindsym mod1+control+period exec playerctl previous && exec pkill -RTMIN+14 i3blocks
 
 # bindsym $mod+m exec $term -e ncmpcppCheck.sh
-bindsym $mod+m exec ncmpcppCheck.sh
+# bindsym $mod+m exec ncmpcppCheck.sh
+bindsym $mod+m workspace $workspace9; exec youtube_music.sh
 # bindsym $mod+control+m workspace $workspace9; exec spotify
 bindsym $mod+control+m workspace $workspace9; exec spotify_random_theme.sh
 bindsym mod1+control+m exec musicSelect.sh
@@ -549,10 +550,10 @@ bindsym XF86AudioMute exec pactl_control.sh mute
 # exec pactl set-sink-volume 0 32768
 
 # Sreen brightness controls
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-bindsym XF86MonBrightnessUp exec light -A 5 && exec pkill -RTMIN+16 i3blocks 
-bindsym XF86MonBrightnessDown exec light -U 5 && exec pkill -RTMIN+16 i3blocks
+bindsym XF86MonBrightnessUp exec xbacklight -dec 10 && exec pkill -RTMIN+16 i3blocks # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -inc 10 && exec pkill -RTMIN+16 i3blocks # decrease screen brightness
+# bindsym XF86MonBrightnessUp exec light -A 5 && exec pkill -RTMIN+16 i3blocks 
+# bindsym XF86MonBrightnessDown exec light -U 5 && exec pkill -RTMIN+16 i3blocks
 
 # Touchpad controls
 # Software Enable or Disable
@@ -584,13 +585,18 @@ bindsym $mod+x exec dmenu_run
 # startup
 assign [class="banshee"] $workspace10
 # assign [title="mpsyt"] $workspace10
-assign [class="Chromium"] $workspace2
-assign [class="Google-chrome"] $workspace3
+# assign [class="Chromium"] $workspace2
+assign [class="Google-chrome"] $workspace2
+assign [class="firefox"] $workspace4
 assign [class="Uget-gtk"] $workspace8
 assign [class="Kget"] $workspace8
 # assign [title="ncmpcpp"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace9
+for_window [title="YouTube Music"] move to workspace $workspace9
+for_window [title="Mattermost"] move to workspace $workspace10
+for_window [class="easyeffects"] move to workspace $workspace9
 for_window [title="ncmpcpp"] move to workspace $workspace10
+for_window [class="Slack"] move to workspace $workspace10
 
 
 ## Wallpaper
@@ -601,6 +607,9 @@ bindsym $mod+Shift+b exec $HOME/Documents/Script/Wall_liveWal.sh
 bindsym mod1+control+w exec wallpaperSelect.sh
 # blur wallpaper
 bindsym $mod+control+n exec blurwalCheck.sh 
+
+# Dunst Clear
+bindsym control+space exec dunstctl close-all
 
 ## STARTUP ITEMS
 exec --no-startup-id $HOME/Documents/Script/Touchpad.sh
@@ -618,18 +627,20 @@ exec --no-startup-id dunst
 # Set Desktop screen layout
 # exec --no-startup-id $HOME/.screenlayout/2.sh
 
-exec --no-startup-id ncmpcppCheck.sh
-exec --no-startup-id pulseeffects --gapplication-service
+# exec --no-startup-id ncmpcppCheck.sh
+# exec --no-startup-id pulseeffects --gapplication-service
 exec --no-startup-id sudo $HOME/Documents/Script/issue_file_generator.sh
 # exec --no-startup-id "sh -c 'sleep 4; $SCREEN'"
 # exec --no-startup-id $SCREEN
 exec --no-startup-id $HOME/Documents/Script/Wall_wal.sh
-exec --no-startup-id "sh -c 'sleep 4; spotify_random_theme.sh'"
+# exec --no-startup-id "sh -c 'sleep 4; spotify_random_theme.sh'"
 exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh
 # exec --no-startup-id "sh -c 'i3-msg workspace \"1. Terminal\"; startupLogo.sh'"
-exec --no-startup-id "sh -c 'sleep 8;i3-msg workspace \"1. Terminal\"; $LOGO'"
+# exec --no-startup-id "sh -c 'sleep 8;i3-msg workspace \"1. Terminal\"; $LOGO'"
 # exec chromiumScaleFactor
 exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
+exec --no-startup-id blueman-applet
+exec --no-startup-id slack
 # exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
 # exec --no-startup-id "sh -c 'sleep 32; conky-spotify.sh'"
@@ -638,4 +649,5 @@ exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 # exec --no-startup-id /usr/bin/prime-offload
 # exec --no-startup-id optimus-manager-qt
 # exec --no-startup-id /home/lanaya/Documents/Script/i3_shutdown.py
+# exec --no-startup-id /home/diwash/.screenlayout/1.sh
 

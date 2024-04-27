@@ -2,6 +2,4 @@
 # Apply random theme and starts spotify
 # Use package from aur: spicetify-cli, spicetify-themes-git
 
-easyeffects&
-spotify
-
+/usr/bin/google-chrome-stable --app-id=hniakmgleamonjgifdfjpfpelgdlpndg

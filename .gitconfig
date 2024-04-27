@@ -173,3 +173,27 @@
 [filesystem "N/A|14.0.2|/dev/sdb3"]
 	timestampResolution = 7000 nanoseconds
 	minRacyThreshold = 0 nanoseconds
+[safe]
+	directory = /DriveE/Projects/Git/data_chautari
+	directory = /DriveE/Pictures/wallpaper
+	directory = /DriveE/Projects/Git/ecommerce_scrapping
+	directory = /DriveE/Backup/Downloads/nepali_name
+	directory = /DriveE/Projects/Git/pathao
+	directory = /DriveE/Backup/Downloads/1_script_tmp/marshal_script
+	directory = /DriveE/Backup/Downloads/0620/screenshot
+	directory = /DriveE/Projects/Git/oppenheimer
+	directory = /DriveE/Projects/Git/weather_extract_py
+	directory = /DriveE/Backup/Downloads/test/restaurant_statement_script NEW
+	directory = /DriveE/Backup/Downloads/analysis/2.product/restaurant_statement
+	directory = /DriveE/Backup/Downloads/analysis/2.product/restaurant_bill_parsing
+	directory = /DriveE/Backup/Downloads/queue/docker-compose-laravel-main
+	directory = /DriveE/Backup/Downloads/queue/token_management
+	directory = /DriveE/Projects/Git/geocoding
+	directory = /DriveE/Projects/Git/layer-platform
+	directory = /DriveE/Projects/Git/token_management
+	directory = /DriveE/Projects/Git/marshal_script
+	directory = /DriveE/Projects/Git/restaurant_bill_parsing
+	directory = /DriveE/Projects/Git/restaurant_statement
+	directory = /DriveE/Projects/Git/musicer
+	directory = /DriveE/Projects/Git/center-randomize
+	directory = /DriveE/Projects/Git/dotfiles

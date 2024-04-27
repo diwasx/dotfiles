@@ -3,11 +3,12 @@ export PATH=$HOME/bin:$HOME/.config/composer/vendor/bin:$HOME/.vim/bundle/fzf/bi
 
 export npm_config_prefix=~/.node_modules
 export FILEMANAGER="ranger"
-export BROWSER="chromium"
+export BROWSER="google-chrome-stable"
 export PLAYER="mpv"
 export PYTHONPATH="$HOME/Documents/bq-connector/src"
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 export _JAVA_OPTIONS='-Dswing.aatext=TRUE -Dawt.useSystemAAFontSettings=on'
+# source /etc/profile.d/google-cloud-cli.sh
 
 # export TZ="Asia/Kathmandu"
 
@@ -19,7 +20,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --follow --glob "!.
 # export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 #Google service 
-export GOOGLE_APPLICATION_CREDENTIALS="/DriveE/Projects/Git/notes/back/google-project-209d84b8c845.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="/DriveE/Projects/Git/notes/back/google-project-209d84b8c845.json"
 
 if [ -n "$GTK_MODULES" ]
 then

@@ -7,10 +7,10 @@ if [[ $1 == "inc" ]]; then
     echo $volume
 
     if [ "$volume" -lt 100 ]; then
-        amixer -D default sset Master 5%+ && exec pkill -RTMIN+10 i3blocks 
+        amixer -D pulse sset Master 5%+ && exec pkill -RTMIN+10 i3blocks 
 
     elif [ "$volume" -ge 100 ] && [ "$volume" -lt 150 ]; then
-        pactl set-sink-volume 0 +5%+ unmute && exec pkill -RTMIN+10 i3blocks
+        pactl set-sink-volume 0 +5% && exec pkill -RTMIN+10 i3blocks
 
     else
         echo "Max level exeeded"
@@ -18,11 +18,10 @@ if [[ $1 == "inc" ]]; then
 
 elif [[ $1 == "dec" ]]; then
     # pactl set-sink-volume 0 -5% && exec pkill -RTMIN+10 i3blocks
-    amixer -D default sset Master 5%- && exec pkill -RTMIN+10 i3blocks
+    amixer -D pulse sset Master 5%- && exec pkill -RTMIN+10 i3blocks
 
 elif [[ $1 == "mute" ]]; then
     pactl set-sink-mute 0 toggle 
 else
     echo "use argument inc, dec or mute"
 fi
-

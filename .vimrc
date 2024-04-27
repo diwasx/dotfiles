@@ -72,8 +72,10 @@ execute "set <A-t>=\et"
 map <A-t> :tabnew<CR>
 
 " tab switch
-map <S-k> :tabnext<CR> 
-map <S-j> :tabprevious<CR> 
+" map <S-k> :tabnext<CR> 
+" map <S-j> :tabprevious<CR> 
+map <localleader>k :tabnext<CR> 
+map <localleader>j :tabprevious<CR> 
 " map <S-u> :tabmove<CR>
 " execute "set <A-u>=\eu"
 " map <A-u> :tabmove0<CR>
@@ -99,17 +101,17 @@ execute "set <A-9>=\e9"
 map <A-9> <Esc>:tabn9<CR>
 
 " tab move
-map <localleader>1 :tabmove0<CR>
-map <localleader>2 :tabmove1<CR>
-map <localleader>3 :tabmove2<CR>
-map <localleader>4 :tabmove3<CR>
-map <localleader>5 :tabmove4<CR>
-map <localleader>6 :tabmove5<CR>
-map <localleader>7 :tabmove6<CR>
-map <localleader>8 :tabmove7<CR>
-map <localleader>9 :tabmove8<CR>
-map <localleader>k :tabmove +1<CR>
-map <localleader>j :tabmove -1<CR>
+" map <localleader>1 :tabmove0<CR>
+" map <localleader>2 :tabmove1<CR>
+" map <localleader>3 :tabmove2<CR>
+" map <localleader>4 :tabmove3<CR>
+" map <localleader>5 :tabmove4<CR>
+" map <localleader>6 :tabmove5<CR>
+" map <localleader>7 :tabmove6<CR>
+" map <localleader>8 :tabmove7<CR>
+" map <localleader>9 :tabmove8<CR>
+map <leader>k :tabmove +1<CR>
+map <leader>j :tabmove -1<CR>
 
 "Search highlighted words
 " vnoremap // y/<C-R>"<CR>
@@ -125,7 +127,7 @@ map <leader>r :.,$s/
 map <leader>yf va{Vy
 
 "binary to hex
-map <leader>b :%!xxd<CR>
+" map <leader>b :%!xxd<CR>
 
 " fuzzy search
 nnoremap <C-T> :FZF<CR>
@@ -146,6 +148,10 @@ map <leader>s :vnew<CR>
 map <leader>S :vsplit<CR>
 nnoremap <Leader>f :NERDTreeToggle<CR>
 " filetype plugin on                  
+"json
+map <leader><leader>j :%!jq .<CR>
+
+nnoremap <F5> :match StatusLineTerm /<C-R><C-W>/<CR>
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -188,8 +194,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 "colorscheme turtles
-" colorscheme abstract
-colorscheme dracula
+colorscheme abstract
+" colorscheme dracula
 " colorscheme gruvbox
 " colorscheme wal
 "automatically use wal scheme if not selected
@@ -206,9 +212,23 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 hi Normal guibg=NONE ctermbg=NONE
 " hi Search guibg=peru guifg=wheat
 hi Search cterm=NONE ctermfg=grey ctermbg=lightyellow
+hi Match1 cterm=NONE ctermfg=white ctermbg=238
 hi Error NONE
 hi ErrorMsg NONE
 highlight LineNr ctermfg=grey 
+
+set updatetime=10
+
+function! HighlightWordUnderCursor()
+    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
+        exec 'match' 'Match1' '/\V\<'.expand('<cword>').'\>/' 
+    else 
+        match none 
+    endif
+endfunction
+
+autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
+
 
 " set omnifunc=syntaxcomplete#Complete
 let g:EclimCompletionMethod = 'omnifunc'
@@ -231,6 +251,10 @@ let g:livedown_browser = "firefox"
 " nmap gm :LivedownToggle<CR>
 " port 1337
 nmap gm :LivedownPreview<CR>
+
+
+" Vim fugitive
+nnoremap <Leader>gb :Git blame<CR>
 
 "java
 "processing
@@ -272,3 +296,4 @@ set ttymouse=sgr
 
 " setting for particular file
 autocmd BufRead /DriveE/Projects/Git/notes/notes_dropdown set noswapfile
+

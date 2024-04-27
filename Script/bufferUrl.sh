@@ -1,7 +1,8 @@
 #!/bin/sh
 
 keyword=$(xsel -b) #if you want to search secondary clipboard
-chromiumScaleFactor.sh "$keyword"
+# chromiumScaleFactor.sh "$keyword"
+google-chrome-stable "$keyword"
 
 
 
