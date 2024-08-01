@@ -198,6 +198,7 @@ rtorrent
 ruby-irb
 rxvt-unicode
 s-nail
+scratch
 scrcpy
 screenfetch
 screenkey
@@ -255,6 +256,7 @@ wqy-zenhei
 xclip
 xdotool
 xf86-input-synaptics
+xf86-video-intel
 xfsprogs
 xorg-bdftopcf
 xorg-iceauth

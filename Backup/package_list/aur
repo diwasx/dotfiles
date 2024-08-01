@@ -32,6 +32,7 @@ miraclecast-git
 mpd-notification-git
 ms-office-online
 mycli
+mysql2sqlite-git
 ncurses5-compat-libs
 openvpn-update-resolv-conf-git
 otf-font-awesome-4
@@ -44,6 +45,7 @@ powerline-fonts-git
 protonvpn
 python2-notify
 python310
+python311
 python39
 qdirstat
 shadowfox-updater
@@ -67,5 +69,6 @@ whatsapp-for-linux
 windscribe-v2-bin
 yay
 yay-debug
+yewtube
 youtube-dl
 zoom

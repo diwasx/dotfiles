@@ -1,3 +1,4 @@
+# https://github.com/pwittchen/spotify-cli-linux
 if spotifycli --playbackstatus | grep ▶ >/dev/null # If spotify is playing
 then
     spotifycli --status

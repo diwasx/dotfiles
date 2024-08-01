@@ -52,10 +52,6 @@ map <leader>c :set formatoptions-=cro<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
-"For preview box show function property (display function detail)
-set completeopt-=preview
-map <leader>= :set completeopt+=preview<CR>
-map <leader>- :set completeopt-=preview<CR>
 
 nnoremap j gj
 nnoremap k gk
@@ -65,7 +61,7 @@ nnoremap k gk
 map <C-n> :j<CR>
 
 " Start shell from vim
-map <leader>d :sh<CR> 
+" map <leader>d :sh<CR> 
 
 "" Tabs Bindings
 execute "set <A-t>=\et"
@@ -74,8 +70,10 @@ map <A-t> :tabnew<CR>
 " tab switch
 " map <S-k> :tabnext<CR> 
 " map <S-j> :tabprevious<CR> 
-map <localleader>k :tabnext<CR> 
-map <localleader>j :tabprevious<CR> 
+map <localleader>k :tabmove +1<CR>
+map <localleader>j :tabmove -1<CR>
+map <leader>k :tabnext +1<CR> 
+map <leader>j :tabnext -1<CR> 
 " map <S-u> :tabmove<CR>
 " execute "set <A-u>=\eu"
 " map <A-u> :tabmove0<CR>
@@ -110,8 +108,6 @@ map <A-9> <Esc>:tabn9<CR>
 " map <localleader>7 :tabmove6<CR>
 " map <localleader>8 :tabmove7<CR>
 " map <localleader>9 :tabmove8<CR>
-map <leader>k :tabmove +1<CR>
-map <leader>j :tabmove -1<CR>
 
 "Search highlighted words
 " vnoremap // y/<C-R>"<CR>
@@ -204,8 +200,15 @@ colorscheme abstract
 colorscheme solarized8_flat
 "scriptEnd
 
-" let g:ycm_server_python_interpreter = '/usr/bin/python2'
+" youcompleteme
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
+"For preview box show function property (display function detail)
+set completeopt+=preview
+map <leader>= :set completeopt+=preview<CR>
+map <leader>- :set completeopt-=preview<CR>
+let g:ycm_autoclose_preview_window_after_insertion = 1
+nmap <leader>d <plug>(YCMHover)
+
 
 "hightlighting
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
@@ -237,7 +240,7 @@ let g:EclimCompletionMethod = 'omnifunc'
 
 "Escape(esc) button timeoutb
  " set timeout timeoutlen=5000 ttimeoutlen=100
-set timeout timeoutlen=400 ttimeoutlen=50
+set timeout timeoutlen=200 ttimeoutlen=30
 
 "vim-livedown(Markdown perview)
 " should markdown preview get shown automatically upon opening markdown buffer

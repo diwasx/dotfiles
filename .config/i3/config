@@ -616,7 +616,7 @@ exec --no-startup-id $HOME/Documents/Script/Touchpad.sh
 exec --no-startup-id /usr/bin/bash $HOME/Documents/Script/checkMouse.sh
 # exec ~/Documents/Script/PulseModule.sh
 exec --no-startup-id nm-applet
-exec --no-startup-id compton 
+exec --no-startup-id picom
 # exec ~/Documents/Script/Volume.sh
 # exec ~/.config/i3/hud-menu-service.py
 
