@@ -12,5 +12,5 @@ https://github.com/jacksaur/Gorgeous-GRUB?tab=readme-ov-file
 https://github.com/hagezi/dns-blocklists?tab=readme-ov-file#ultimate
 
 # Block spotify client ads
-# Should be in aur package list as well
 https://github.com/SpotX-Official/SpotX-Bash
+bash <(curl -sSL https://spotx-official.github.io/run.sh)
