@@ -103,7 +103,6 @@ libudev0-shim
 linux
 linux-firmware
 linux-headers
-linux-lts-headers
 logrotate
 lsb-release
 lsof
