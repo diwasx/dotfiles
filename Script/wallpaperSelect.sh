@@ -1,6 +1,6 @@
 #!/bin/sh
 
-folder_main="/DriveE/Pictures/wallpaper/Collection"
+folder_main=$WALL_PATH
 
 # List all wallpaper folders, show in rofi and get selected folder
 folder_collection=`find $folder_main -type d -printf '%d\t%P\n' | cut -f2- | tail -n +2 | rofi -dmenu -i -l 25`

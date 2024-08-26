@@ -1,0 +1,16 @@
+# Use pip install <package-name> --break-system-packages
+
+https://github.com/Raymo111/i3lock-color
+https://github.com/JackHack96/EasyEffects-Presets
+https://github.com/pwittchen/spotify-cli-linux
+
+# Use the package for automatic grub-boot loader 
+https://github.com/jacksaur/Gorgeous-GRUB?tab=readme-ov-file
+
+# Add the block link files url to /etc/pihole/adlists.list
+# https://github.com/x0uid/SpotifyAdBlock
+https://github.com/hagezi/dns-blocklists?tab=readme-ov-file#ultimate
+
+# Block spotify client ads
+# Should be in aur package list as well
+https://github.com/SpotX-Official/SpotX-Bash

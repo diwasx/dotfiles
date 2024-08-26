@@ -473,7 +473,6 @@ client.background       $bg
 
 # bindsym mod1+control+backslash exec $HOME/Documents/Script/xscreenSaver.sh
 bindsym mod1+control+backslash exec $HOME/Documents/Script/Wall_randomFromURL.sh lock
-# bindsym $mod+control+backslash exec i3lock -i /DriveE/Pictures/music.png && xset dpms force off
 bindsym $mod+backslash exec $HOME/Documents/Script/i3lockRandom.sh
 # bindsym $mod+control+backslash exec $HOME/Documents/Script/i3lockBlur.sh
 bindsym $mod+control+backslash exec $HOME/Documents/Script/i3lock-fancy -t ""
@@ -550,8 +549,9 @@ bindsym XF86AudioMute exec pactl_control.sh mute
 # exec pactl set-sink-volume 0 32768
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -dec 10 && exec pkill -RTMIN+16 i3blocks # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -inc 10 && exec pkill -RTMIN+16 i3blocks # decrease screen brightness
+# SOME KEYBOARD HAS THE OPPOSITE BINDING. CHANGE ACCORDINGLY
+bindsym XF86MonBrightnessUp exec light -A 10 && exec pkill -RTMIN+16 i3blocks # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10 && exec pkill -RTMIN+16 i3blocks # decrease screen brightness
 # bindsym XF86MonBrightnessUp exec light -A 5 && exec pkill -RTMIN+16 i3blocks 
 # bindsym XF86MonBrightnessDown exec light -U 5 && exec pkill -RTMIN+16 i3blocks
 
@@ -640,7 +640,7 @@ exec --no-startup-id ~/Documents/Script/i3block/mpdUpdate.sh
 # exec chromiumScaleFactor
 exec --no-startup-id $HOME/Documents/Script/mpvWatch.sh
 exec --no-startup-id blueman-applet
-exec --no-startup-id slack
+# exec --no-startup-id slack
 # exec $HOME/Documents/Script/mouseWatch.sh
 # exec $HOME/Documents/Script/startup_i3block_reload.sh
 # exec --no-startup-id "sh -c 'sleep 32; conky-spotify.sh'"

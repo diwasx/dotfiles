@@ -7,10 +7,14 @@ folder=$WALL_PATH
 file=`find $folder |shuf -n1`   #'find' generates full path and 'shuf' shuffles
 
 # i3lock only support .png file
-convert $file -resize 1920x1080^ -gravity center /tmp/temp.png
+# magick $file -resize 1920x1200^ -gravity center /tmp/temp.png
+
+current_res=`xdpyinfo | awk '/dimensions/{print $2}'`
+magick $file -resize $current_res^ -gravity center /tmp/temp.png
+
 
 # Add blur-extend effect on images with un-equal ratio
-# convert $file \
+# magick $file \
 #        \( -clone 0 -blur 0x5 -resize 1920x1080\! -fill white -colorize 20% \) \
 #        \( -clone 0 -resize 1920x1080 \) \
 #        -delete 0 -gravity center -composite \
@@ -21,7 +25,7 @@ convert $file -resize 1920x1080^ -gravity center /tmp/temp.png
 i3lock_cmd=(i3lock -i /tmp/temp.png -t -e -k --time-pos="0+30:h-110" --date-pos="0+30:h-50" time-font="Comic Sans MS" --date-font="Comic Sans MS" --time-size=54 --date-size=30 --ind-pos="w-100:h-90" --time-align=1 --date-align=1 --wrong-size=20 --radius=40 -n )
 
 value="60"
-color=$(convert "$file" -gravity SouthEast -crop 100x100+0+0 +repage -colorspace hsb \
+color=$(magick "$file" -gravity SouthEast -crop 100x100+0+0 +repage -colorspace hsb \
     -resize 1x1 txt:- | awk -F '[%$]' 'NR==2{gsub(",",""); printf "%.0f\n", $(NF-1)}');
 if [[ $color -gt $value ]]; then 
 # If black background image and use white text

@@ -59,7 +59,6 @@ figlet
 filezilla
 firefox
 flex
-fprintd
 fzf
 gcc
 gimp
@@ -88,10 +87,12 @@ inkscape
 inotify-tools
 intel-ucode
 iotop
+iw
 iwd
 jfsutils
 jq
 kdenlive
+ldns
 lib32-libpulse
 lib32-mpg123
 lib32-virtualgl
@@ -99,6 +100,7 @@ lib32-vulkan-icd-loader
 libpng12
 libreoffice-fresh
 libudev0-shim
+linux
 linux-firmware
 linux-headers
 linux-lts
@@ -120,7 +122,6 @@ man-db
 man-pages
 mariadb
 mdadm
-megasync
 mesa-demos
 minidlna
 mpc
@@ -162,6 +163,7 @@ perl-anyevent-i3
 perl-rename
 php
 php-apache
+php-sqlite
 phpmyadmin
 picom
 pipewire-alsa
@@ -175,7 +177,6 @@ pptpclient
 prettyping
 print-manager
 psensor
-pulseaudio-equalizer-ladspa
 putty
 python-pip
 python-pipx
@@ -251,12 +252,10 @@ wine-gecko
 wine-mono
 wine-staging
 winetricks
-wpa_supplicant
 wqy-zenhei
 xclip
 xdotool
 xf86-input-synaptics
-xf86-video-intel
 xfsprogs
 xorg-bdftopcf
 xorg-iceauth
@@ -281,7 +280,6 @@ xorg-xkill
 xorg-xlsatoms
 xorg-xlsclients
 xorg-xpr
-xorg-xprop
 xorg-xrandr
 xorg-xrefresh
 xorg-xset
