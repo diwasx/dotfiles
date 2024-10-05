@@ -84,7 +84,7 @@ workspace $workspace1 gaps inner 10
 bindsym $mod+Return exec $term
 # bindsym $mod+Shift+Return exec alacritty #i3-sensible-terminal
 bindsym $mod+Shift+Return exec $term1 -e bash
-bindsym mod1+Return exec terminal_workingDir.sh start
+# bindsym mod1+Return exec terminal_workingDir.sh start
 # Setting workingDir is done "set" argument binding
 
 #hide titlebar

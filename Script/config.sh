@@ -33,8 +33,6 @@ cp -r ~/Documents/Script $main
 cp -r ~/.ncmpcpp $main/
 cp -r ~/.config/pulse/presets $main/.config/pulse/
 cp -r ~/.config/pulse/default.pa $main/.config/pulse/default.pa
-mkdir -p $main/.config/PulseEffects/
-cp -r ~/.config/PulseEffects/output $main/.config/PulseEffects/output
 cp ~/.profile $main/
 cp -r ~/.mplayer/ $main/
 cp ~/.imwheelrc $main/
@@ -52,7 +50,9 @@ cp ~/.xinitrc $main/
 cp ~/.zshrc $main/
 cp ~/.zprofile $main/
 cp -r ~/.config/sxiv $main/.config
+cp -r ~/.config/tmux/ $main/.config/
 
+### Notes
 mkdir -p $note/.config/mutt
 cp ~/.config/mutt/muttrc $note/.config/mutt/
 mkdir -p $note/.config/mutt/accounts
